@@ -5,9 +5,11 @@ import "./DescriptionCard.scss";
 
 const DescriptionCard = () => {
   return (
-    <div className="descriptionCard">
-      <Description />
-      <Media />
+    <div class="descriptionWrapper">
+      <div className="descriptionCard">
+        <Description />
+        <Media />
+      </div>
     </div>
   );
 };
