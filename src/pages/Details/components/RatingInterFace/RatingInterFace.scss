@@ -37,6 +37,7 @@
       .movieCategory {
         margin-top: 5px;
         font-size: 17px;
+        color: #7f7f7f;
       }
     }
 
@@ -48,13 +49,6 @@
       border-top: 1px solid;
       border-bottom: 1px solid;
       font-size: 17px;
-    }
-
-    .ratinghandling {
-      @include flexCenter;
-      flex-direction: column;
-      grid-area: ratinghandling;
-      border-right: 1px solid;
     }
 
     .ratingUserInterface {
@@ -79,6 +73,7 @@
           }
 
           .iconText {
+            font-size: 16px;
             margin-left: 7px;
           }
         }
