@@ -2,4 +2,11 @@
   grid-area: thumbnailImage;
   position: relative;
   background-color: aqua;
+
+  .rankingInfoList {
+    display: flex;
+    position: absolute;
+    left: 420px;
+    bottom: 0;
+  }
 }

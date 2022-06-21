@@ -1,12 +1,10 @@
 import React from "react";
-import RankingInfoList from "../RankingInfoList/RankingInfoList";
 import "./ThumbnailImage.scss";
 
 const ThumbnailImage = () => {
   return (
     <div className="thumbnailImage">
-      ThumbnailImage components
-      <RankingInfoList />
+      <ul className="rankingInfoList">RankingInfoList components</ul>
     </div>
   );
 };
