@@ -4,7 +4,8 @@ import "./ThumbnailImage.scss";
 const ThumbnailImage = () => {
   return (
     <div className="thumbnailImage">
-      <ul className="rankingInfoList">RankingInfoList components</ul>
+      ThumbnailImage components
+      <ul className="rankingInfoList" />
     </div>
   );
 };
