@@ -1,8 +1,10 @@
+@import "/src/styles/variables.scss";
+
 .ratingInterface {
   display: flex;
+  flex-grow: 1;
   height: 100%;
-  margin: 0 auto;
-  background-color: salmon;
+  background-color: #ffffff;
 
   .poster {
     width: 20%;
@@ -14,6 +16,79 @@
   }
 
   .ratingDetail {
+    display: grid;
+    grid:
+      "ratingTitle ratingTitle" 1.5fr
+      "ratingInfo ratingInfo" 1fr
+      "ratinghandling ratingUserInterface" 2fr
+      / 2fr 4fr;
+    gap: 10px;
+    width: 100%;
     padding: 20px;
+
+    .ratingTitle {
+      grid-area: ratingTitle;
+
+      .movieTitle {
+        font-size: 33px;
+        font-weight: 700;
+      }
+
+      .movieCategory {
+        margin-top: 5px;
+        font-size: 17px;
+      }
+    }
+
+    .ratingInfo {
+      display: flex;
+      align-items: center;
+      grid-area: ratingInfo;
+      padding: 10px 0;
+      border-top: 1px solid;
+      border-bottom: 1px solid;
+      font-size: 17px;
+    }
+
+    .ratinghandling {
+      @include flexCenter;
+      flex-direction: column;
+      grid-area: ratinghandling;
+      border-right: 1px solid;
+    }
+
+    .ratingUserInterface {
+      display: flex;
+      align-items: center;
+      grid-area: ratingUserInterface;
+
+      .interfaceWrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+
+        .iconButton {
+          display: flex;
+          align-items: center;
+          border: none;
+          background-color: #ffffff;
+
+          .iconImage {
+            width: 15px;
+            height: 15px;
+          }
+
+          .iconText {
+            margin-left: 7px;
+          }
+        }
+
+        .iconButton:hover {
+          .iconImage {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
   }
 }
