@@ -1,5 +1,6 @@
 import React from "react";
 import RatingStar from "../RatingStar/RatingStar";
+import RatingUserInterface from "../RatingUserInterFace/RatingUserInterface";
 import "./RatingInterFace.scss";
 
 const RatingInterFace = () => {
@@ -13,42 +14,7 @@ const RatingInterFace = () => {
         </h1>
         <div className="ratingInfo">평균 ★2.8 &#40;6,414명&#41;</div>
         <RatingStar />
-        <div className="ratingUserInterface">
-          <div className="interfaceWrapper">
-            <button className="iconButton">
-              <img
-                className="iconImage"
-                src="/images/icon/positiveAddIcon.png"
-                alt="bookmaker"
-              />
-              <span className="iconText">보고싶어요</span>
-            </button>
-            <button className="iconButton">
-              <img
-                className="iconImage"
-                src="/images/icon/penIcon.png"
-                alt="bookmaker"
-              />
-              <span className="iconText">코멘트</span>
-            </button>
-            <button className="iconButton">
-              <img
-                className="iconImage"
-                src="/images/icon/eyeIcon.png"
-                alt="bookmaker"
-              />
-              <span className="iconText">보는중</span>
-            </button>
-            <button className="iconButton">
-              <img
-                className="iconImage"
-                src="/images/icon/forbiddenIcon.png"
-                alt="bookmaker"
-              />
-              <span className="iconText">관심없어요</span>
-            </button>
-          </div>
-        </div>
+        <RatingUserInterface />
       </div>
     </div>
   );

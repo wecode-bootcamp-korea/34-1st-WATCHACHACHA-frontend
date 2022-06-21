@@ -50,40 +50,5 @@
       border-bottom: 1px solid;
       font-size: 17px;
     }
-
-    .ratingUserInterface {
-      display: flex;
-      align-items: center;
-      grid-area: ratingUserInterface;
-
-      .interfaceWrapper {
-        display: flex;
-        width: 100%;
-        justify-content: space-evenly;
-
-        .iconButton {
-          display: flex;
-          align-items: center;
-          border: none;
-          background-color: #ffffff;
-
-          .iconImage {
-            width: 15px;
-            height: 15px;
-          }
-
-          .iconText {
-            font-size: 16px;
-            margin-left: 7px;
-          }
-        }
-
-        .iconButton:hover {
-          .iconImage {
-            transform: scale(1.2);
-          }
-        }
-      }
-    }
   }
 }
