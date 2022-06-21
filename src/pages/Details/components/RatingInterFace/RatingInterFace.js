@@ -1,16 +1,12 @@
 import React from "react";
 import "./RatingInterFace.scss";
+import RatingDetail from "../RatingDetail/RatingDetail";
 
 const RatingInterFace = () => {
   return (
     <div className="ratingInterface">
-      <div className="poster">사진임</div>
-      <div className="infomationDetail">
-        <h1>title</h1>
-        <div>ratingInfo</div>
-        <div>ratinghandling</div>
-        <div>ratingUserInterface</div>
-      </div>
+      <div className="poster">이미지 태그 써야할 곳</div>
+      <RatingDetail />
     </div>
   );
 };

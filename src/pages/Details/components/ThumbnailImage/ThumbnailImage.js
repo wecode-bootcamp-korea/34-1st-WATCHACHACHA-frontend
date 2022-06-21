@@ -5,6 +5,7 @@ import "./ThumbnailImage.scss";
 const ThumbnailImage = () => {
   return (
     <div className="thumbnailImage">
+      ThumbnailImage components
       <RankingInfoList />
     </div>
   );
