@@ -1,0 +1,7 @@
+.detailPage {
+  display: grid;
+  grid:
+    "thumbnailImage" 4fr
+    "infomation" 3fr
+    "descriptionCard" 5fr;
+}
