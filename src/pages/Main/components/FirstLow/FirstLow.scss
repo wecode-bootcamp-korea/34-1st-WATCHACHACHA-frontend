@@ -1,0 +1,41 @@
+.firstLow {
+  width: 250px;
+  height: 460px;
+  //background-color: black;
+  margin-right: 25px;
+  margin-top: 20px;
+
+  .film1Detail {
+    text-decoration: none;
+
+    .posterBox {
+      width: 250px;
+      height: 370px;
+
+      .filmPosters {
+        width: 250px;
+        height: 370px;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        border-radius: 5px;
+      }
+    }
+
+    .filmDescription {
+      margin-top: 8px;
+      color: gray;
+
+      .filmName {
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: gray;
+      }
+      .filmYear,
+      .filmAverage {
+        font-size: 14px;
+        color: gray;
+        margin-top: 5px;
+      }
+    }
+  }
+}
