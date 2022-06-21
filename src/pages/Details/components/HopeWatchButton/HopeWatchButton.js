@@ -1,4 +1,5 @@
 import React from "react";
+import "../../../../styles/common.scss";
 import "./HopeWatchButton.scss";
 
 const HopeWatchButton = () => {

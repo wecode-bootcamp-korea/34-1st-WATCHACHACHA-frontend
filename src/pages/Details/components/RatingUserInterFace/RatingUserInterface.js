@@ -1,5 +1,8 @@
 import React from "react";
 import HopeWatchButton from "../HopeWatchButton/HopeWatchButton";
+import CommentButton from "../CommentButton/CommentButton";
+import WatchingButton from "../WatchingButton/WatchingButton";
+import IndifferenceButton from "../IndifferenceButton/IndifferenceButton";
 import "./RatingUserInterface.scss";
 
 const RatingUserInterface = () => {
@@ -7,30 +10,9 @@ const RatingUserInterface = () => {
     <div className="ratingUserInterface">
       <div className="interfaceWrapper">
         <HopeWatchButton />
-        <button className="commentButton iconButton">
-          <img
-            className="iconImage"
-            src="/images/icon/penIcon.png"
-            alt="bookmaker"
-          />
-          <span className="iconText">코멘트</span>
-        </button>
-        <button className="watchingButton iconButton">
-          <img
-            className="iconImage"
-            src="/images/icon/eyeIcon.png"
-            alt="bookmaker"
-          />
-          <span className="iconText">보는중</span>
-        </button>
-        <button className="indifferenceButton iconButton">
-          <img
-            className="iconImage"
-            src="/images/icon/forbiddenIcon.png"
-            alt="bookmaker"
-          />
-          <span className="iconText">관심없어요</span>
-        </button>
+        <CommentButton />
+        <WatchingButton />
+        <IndifferenceButton />
       </div>
     </div>
   );
