@@ -1,0 +1,11 @@
+.descriptionCard {
+  display: grid;
+  grid:
+    ". description media ." 2fr
+    ". description . ." 8fr
+    / 1fr 5fr 3fr 1fr;
+  gap: 100px;
+  grid-area: descriptionCard;
+  padding: 28px 0 48px;
+  background-color: firebrick;
+}
