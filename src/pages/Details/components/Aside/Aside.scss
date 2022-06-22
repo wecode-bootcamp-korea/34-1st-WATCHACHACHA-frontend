@@ -1,4 +1,27 @@
-.media {
+.aside {
   grid-area: media;
+  padding: 20px;
   background-color: #ffffff;
+
+  .galleryTitle {
+    margin: 8px 0;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 28px;
+  }
+
+  .galleryList {
+    display: flex;
+    gap: 10px;
+
+    .galleryListItem {
+      width: 130px;
+      min-width: 49%;
+      height: 90px;
+      border: 1px solid;
+
+      .filmsImage {
+      }
+    }
+  }
 }
