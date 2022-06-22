@@ -3,7 +3,10 @@
     "id": 1,
     "name": "이태권",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/TheGreatGatsby.jpg",
+    "description": {
+      "countery": "미국"
+    }
   },
   {
     "id": 2,
