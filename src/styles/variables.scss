@@ -3,3 +3,47 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin flexCustom($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin flexSlider {
+  width: 49%;
+  min-width: 49%;
+}
+
+@mixin area($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin fontCustom($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin descriptionTitleFont {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 28px;
+}
+
+@mixin descriptionLine {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+@mixin moreButton {
+  font-size: 16px;
+  border: none;
+  color: #ff2f6e;
+  cursor: pointer;
+}
+
+$margin10: 10px;
+$margin20: 20px;
+$padding10: 10px;
+$padding20: 20px;

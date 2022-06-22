@@ -1,14 +1,15 @@
+@import "/src/styles/variables.scss";
+
 .comments {
-  padding-top: 20px;
+  padding-top: $margin20;
+
   .titleWrapper {
-    display: flex;
-    align-items: center;
+    @include flexCustom(flex-start, center);
+    margin-bottom: $margin10;
 
     .commentTitle {
+      @include descriptionTitleFont;
       margin-right: 12px;
-      font-size: 19px;
-      font-weight: 700;
-      line-height: 28px;
     }
 
     .commentCount {
@@ -17,11 +18,8 @@
     }
 
     .commentMore {
-      font-size: 16px;
+      @include moreButton;
       background-color: #ffffff;
-      border: none;
-      color: #ff2f6e;
-      cursor: pointer;
     }
   }
 

@@ -1,15 +1,12 @@
 @import "/src/styles/variables.scss";
 
 .filmCrew {
-  padding-top: 20px;
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 20px;
+  @include descriptionLine;
+  padding-top: $padding20;
 
   .filmCrewTitle {
-    margin: 8px 0;
-    font-size: 19px;
-    font-weight: 700;
-    line-height: 28px;
+    @include descriptionTitleFont;
+    margin-bottom: $margin10;
   }
 
   .filmCrewList {
@@ -19,41 +16,36 @@
     // overflow-x: hidden;
 
     .filmCrewListItem {
-      margin-top: 15px;
-      width: 49%;
-      min-width: 49%;
+      @include flexSlider;
+      margin-top: $margin10;
 
       .threeBundleWrapper {
         display: flex;
-        margin-bottom: 10px;
+        margin-bottom: $margin10;
 
         .imageWrapper {
           @include flexCenter;
-          width: 40px;
-          height: 40px;
+          @include area(40px, 40px);
           border: 1px solid;
           border-radius: 5px;
 
           .directorImage {
-            width: 30px;
-            height: 30px;
+            @include area(30px, 30px);
           }
         }
 
         .filmCrewWrapper {
           flex: 1 auto;
-          margin-left: 10px;
+          margin-left: $margin10;
           border-bottom: 1px solid #f0f0f0;
 
           .directorName {
-            font-size: 17px;
+            @include fontCustom(17px, 22px);
             font-weight: 700;
-            line-height: 22px;
           }
 
           .directorPosition {
-            font-size: 14px;
-            line-height: 22px;
+            @include fontCustom(14px, 22px);
             color: #8c8c8c;
           }
         }

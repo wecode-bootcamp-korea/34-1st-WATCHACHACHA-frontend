@@ -1,45 +1,25 @@
+@import "/src/styles/variables.scss";
+
 .basicInfo {
-  border-bottom: 1px solid #f0f0f0;
-  padding-bottom: 20px;
+  @include descriptionLine;
+  line-height: 24px;
 
   .basicInfoWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexCustom(space-between, center);
 
     .basicInfoTitle {
-      margin: 8px 0;
-      font-size: 19px;
-      font-weight: 700;
-      line-height: 28px;
+      @include descriptionTitleFont;
+      margin-bottom: $margin10;
     }
 
     .basicInfoMore {
-      font-size: 16px;
+      @include moreButton;
       background-color: #ffffff;
-      border: none;
-      color: #ff2f6e;
-      cursor: pointer;
     }
   }
 
   .simplyInfo {
-    margin: 8px 0;
+    margin-bottom: $margin10;
     color: #4a4a4a;
-    .movieTitle {
-      line-height: 24px;
-    }
-
-    .filmCategory {
-      line-height: 24px;
-    }
-
-    .showingTime {
-      line-height: 24px;
-    }
-  }
-
-  .filmDescription {
-    line-height: 24px;
   }
 }

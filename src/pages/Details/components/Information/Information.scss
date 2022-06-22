@@ -29,7 +29,7 @@
         / 2fr 4fr;
       gap: 10px;
       width: 100%;
-      padding: 20px;
+      padding: $padding20;
 
       .ratingTitle {
         grid-area: ratingTitle;
@@ -47,10 +47,9 @@
       }
 
       .ratingInfo {
-        display: flex;
-        align-items: center;
+        @include flexCustom(flex-start, center);
         grid-area: ratingInfo;
-        padding: 10px 0;
+        padding: $padding10 0;
         border-top: 1px solid;
         border-bottom: 1px solid;
         font-size: 17px;
@@ -68,24 +67,20 @@
       }
 
       .ratingUserInterface {
-        display: flex;
-        align-items: center;
+        @include flexCustom(flex-start, center);
         grid-area: ratingUserInterface;
 
         .interfaceWrapper {
-          display: flex;
+          @include flexCustom(space-evenly, flex-start);
           width: 100%;
-          justify-content: space-evenly;
 
           .iconButton {
-            display: flex;
-            align-items: center;
+            @include flexCustom(flex-start, center);
             border: none;
             background-color: #ffffff;
 
             .iconImage {
-              width: 15px;
-              height: 15px;
+              @include area(15px, 15px);
             }
 
             .iconText {

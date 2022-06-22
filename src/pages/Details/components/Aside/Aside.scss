@@ -1,13 +1,13 @@
+@import "/src/styles/variables.scss";
+
 .aside {
   grid-area: media;
-  padding: 20px;
+  padding: $padding20;
   background-color: #ffffff;
 
   .galleryTitle {
-    margin: 8px 0;
-    font-weight: 700;
-    font-size: 19px;
-    line-height: 28px;
+    @include descriptionTitleFont;
+    margin-bottom: 10px;
   }
 
   .galleryList {
@@ -15,13 +15,9 @@
     gap: 10px;
 
     .galleryListItem {
-      width: 130px;
+      @include area(130px, 90px);
       min-width: 49%;
-      height: 90px;
       border: 1px solid;
-
-      .filmsImage {
-      }
     }
   }
 }
