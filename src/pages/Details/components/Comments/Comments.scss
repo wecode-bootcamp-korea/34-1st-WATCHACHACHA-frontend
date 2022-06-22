@@ -1,0 +1,27 @@
+.comments {
+  padding-top: 20px;
+  .titleWrapper {
+    display: flex;
+    align-items: center;
+
+    .commentTitle {
+      margin-right: 12px;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+
+    .commentCount {
+      margin-right: auto;
+      color: #a0a0a0;
+    }
+
+    .commentMore {
+      font-size: 16px;
+      background-color: #ffffff;
+      border: none;
+      color: #ff2f6e;
+      cursor: pointer;
+    }
+  }
+}

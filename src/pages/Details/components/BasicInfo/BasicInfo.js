@@ -6,7 +6,7 @@ const BasicInfo = () => {
     <article className="basicInfo">
       <div class="basicInfoWrapper">
         <h2 className="basicInfoTitle">기본 정보</h2>
-        <div className="basicInfoIcon">더보기</div>
+        <button className="basicInfoMore">더보기</button>
       </div>
       <div className="simplyInfo">
         <p className="filmTitle">마녀(魔女) Part2. The Other One</p>
