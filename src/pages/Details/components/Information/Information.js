@@ -5,7 +5,7 @@ const Information = () => {
   return (
     <section className="information">
       <div className="ratingInterface">
-        <div className="poster">이미지 태그 써야할 곳</div>
+        <div className="poster" />
         <div className="ratingDetail">
           <h1 className="ratingTitle">
             <p className="movieTitle">

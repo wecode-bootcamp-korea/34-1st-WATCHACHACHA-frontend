@@ -1,0 +1,33 @@
+.starScoreGraph {
+  padding: 20px 0;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+
+  .titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .starScoreTitle {
+      margin: 8px 0;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+
+    .ratingLog {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .averageScore {
+        font-size: 17px;
+      }
+
+      .sumPerson {
+        font-size: 14px;
+        color: #787878;
+      }
+    }
+  }
+}
