@@ -1,6 +1,6 @@
 import React from "react";
 import ThumbnailImage from "./components/ThumbnailImage/ThumbnailImage";
-import Infomation from "./components/Infomation/Infomation";
+import Information from "./components/Information/Information";
 import DescriptionCard from "./components/DescriptionCard/DescriptionCard";
 import "./Detail.scss";
 
@@ -8,7 +8,7 @@ const Detail = () => {
   return (
     <div className="detailPage">
       <ThumbnailImage />
-      <Infomation />
+      <Information />
       <DescriptionCard />
     </div>
   );
