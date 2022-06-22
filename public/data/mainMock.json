@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "이태권",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 2,
+    "name": "김민석",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 3,
+    "name": "김은경",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 4,
+    "name": "이현범",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 5,
+    "name": "박민하",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 6,
+    "name": "위대한 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 7,
+    "name": "위대한 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 8,
+    "name": "위대한 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 9,
+    "name": "위대한 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 10,
+    "name": "위대한 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  }
+]
