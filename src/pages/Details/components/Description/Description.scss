@@ -45,7 +45,7 @@
       line-height: 24px;
     }
   }
-
+  // 출연/제작
   .filmCrew {
     padding-top: 20px;
 
@@ -57,31 +57,48 @@
     }
 
     .filmCrewList {
+      display: flex;
+      width: 100%;
+      gap: 10px;
+      // overflow-x: hidden;
+
       .filmCrewListItem {
-        display: flex;
+        width: 49%;
+        min-width: 49%;
 
-        .imageWrapper {
-          @include flexCenter;
+        .threeBundleWrapper {
+          display: flex;
+          margin-bottom: 10px;
 
-          .directorImage {
-            width: 30px;
-            height: 30px;
+          .imageWrapper {
+            @include flexCenter;
+            width: 40px;
+            height: 40px;
+            border: 1px solid;
+            border-radius: 5px;
+
+            .directorImage {
+              width: 30px;
+              height: 30px;
+            }
           }
-        }
 
-        .filmCrewWrapper {
-          margin-left: 10px;
+          .filmCrewWrapper {
+            flex: 1 auto;
+            margin-left: 10px;
+            border-bottom: 1px solid #f0f0f0;
 
-          .directorName {
-            font-size: 17px;
-            font-weight: 700;
-            line-height: 22px;
-          }
+            .directorName {
+              font-size: 17px;
+              font-weight: 700;
+              line-height: 22px;
+            }
 
-          .directorPosition {
-            font-size: 14px;
-            line-height: 22px;
-            color: #8c8c8c;
+            .directorPosition {
+              font-size: 14px;
+              line-height: 22px;
+              color: #8c8c8c;
+            }
           }
         }
       }

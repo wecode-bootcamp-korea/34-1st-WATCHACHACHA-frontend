@@ -6,7 +6,7 @@ const Description = () => {
     <section className="description">
       <article className="basicInfo">
         <div class="basicInfoWrapper">
-          <h1 className="basicInfoTitle">기본 정보</h1>
+          <h2 className="basicInfoTitle">기본 정보</h2>
           <div className="basicInfoIcon">더보기</div>
         </div>
         <div className="simplyInfo">
@@ -22,19 +22,129 @@ const Description = () => {
         </p>
       </article>
       <article className="filmCrew">
-        <h1 className="filmCrewTitle">출연/제작</h1>
+        <h2 className="filmCrewTitle">출연/제작</h2>
         <ul className="filmCrewList">
           <li className="filmCrewListItem">
-            <div className="imageWrapper">
-              <img
-                className="directorImage"
-                src="/images/icon/star.png"
-                alt="personImage"
-              />
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
             </div>
-            <div className="filmCrewWrapper">
-              <p className="directorName">박훈정</p>
-              <p className="directorPosition">감독</p>
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
+            </div>
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
+            </div>
+          </li>
+          <li className="filmCrewListItem">
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
+            </div>
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
+            </div>
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
+            </div>
+          </li>
+          <li className="filmCrewListItem">
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
+            </div>
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
+            </div>
+            <div className="threeBundleWrapper">
+              <div className="imageWrapper">
+                <img
+                  className="directorImage"
+                  src="/images/icon/star.png"
+                  alt="personImage"
+                />
+              </div>
+              <div className="filmCrewWrapper">
+                <p className="directorName">박훈정</p>
+                <p className="directorPosition">감독</p>
+              </div>
             </div>
           </li>
         </ul>
