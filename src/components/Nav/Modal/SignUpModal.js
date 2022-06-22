@@ -3,7 +3,7 @@ import "./../Nav.scss";
 
 const SignUpModal = () => {
   return (
-    <div className="loginModalContainer signUpModalContainer">
+    <div className="loginModalContainer">
       <div className="loginModal">
         <div className="loginBox">
           <header>

@@ -60,10 +60,36 @@ const Nav = () => {
         className={modalBackgroundOn ? "modalBackground" : null}
         onClick={outModalOn}
       />
-      {loginModalOn ? <LoginModal /> : null}
-      {signInModalOn ? <SignUpModal /> : null}
+      {/* {loginModalOn ? <LoginModal /> : null}
+      {signInModalOn ? <SignUpModal /> : null} */}
     </nav>
   );
 };
+
+const SIGNIN_DATA = [
+  {
+    type: "email",
+    text: "이메일",
+  },
+  {
+    type: "password",
+    text: "비밀번호",
+  },
+];
+
+const SIGNUP_DATA = [
+  {
+    type: "name",
+    text: "이름",
+  },
+  {
+    type: "email",
+    text: "이메일",
+  },
+  {
+    type: "password",
+    text: "비밀번호",
+  },
+];
 
 export default Nav;
