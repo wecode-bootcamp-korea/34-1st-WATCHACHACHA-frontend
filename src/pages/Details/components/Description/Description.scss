@@ -1,5 +1,90 @@
+@import "/src/styles/variables.scss";
+
 .description {
   grid-area: description;
   padding: 20px;
   background-color: #ffffff;
+
+  .basicInfo {
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 20px;
+    .basicInfoWrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .basicInfoTitle {
+        margin: 8px 0;
+        font-size: 19px;
+        font-weight: 700;
+        line-height: 28px;
+      }
+
+      .basicInfoIcon {
+        color: #ff2f6e;
+      }
+    }
+
+    .simplyInfo {
+      margin: 8px 0;
+      color: #4a4a4a;
+      .movieTitle {
+        line-height: 24px;
+      }
+
+      .filmCategory {
+        line-height: 24px;
+      }
+
+      .showingTime {
+        line-height: 24px;
+      }
+    }
+
+    .filmDescription {
+      line-height: 24px;
+    }
+  }
+
+  .filmCrew {
+    padding-top: 20px;
+
+    .filmCrewTitle {
+      margin: 8px 0;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 28px;
+    }
+
+    .filmCrewList {
+      .filmCrewListItem {
+        display: flex;
+
+        .imageWrapper {
+          @include flexCenter;
+
+          .directorImage {
+            width: 30px;
+            height: 30px;
+          }
+        }
+
+        .filmCrewWrapper {
+          margin-left: 10px;
+
+          .directorName {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 22px;
+          }
+
+          .directorPosition {
+            font-size: 14px;
+            line-height: 22px;
+            color: #8c8c8c;
+          }
+        }
+      }
+    }
+  }
 }

@@ -11,5 +11,10 @@
     gap: 20px;
     grid-area: descriptionCard;
     padding: 28px 0 48px;
+
+    .media {
+      grid-area: media;
+      background-color: #ffffff;
+    }
   }
 }

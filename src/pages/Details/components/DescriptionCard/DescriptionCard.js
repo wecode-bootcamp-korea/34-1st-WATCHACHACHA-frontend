@@ -1,6 +1,6 @@
 import React from "react";
 import Description from "../Description/Description";
-import Media from "../Media/Media";
+import Aside from "../Aside/Aside";
 import "./DescriptionCard.scss";
 
 const DescriptionCard = () => {
@@ -8,7 +8,7 @@ const DescriptionCard = () => {
     <div class="descriptionWrapper">
       <div className="descriptionCard">
         <Description />
-        <Media />
+        <Aside />
       </div>
     </div>
   );
