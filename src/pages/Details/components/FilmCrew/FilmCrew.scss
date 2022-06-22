@@ -1,0 +1,43 @@
+@import "/src/styles/variables.scss";
+
+.filmCrew {
+  padding-top: 20px;
+
+  .filmCrewTitle {
+    margin: 8px 0;
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .filmCrewList {
+    .filmCrewListItem {
+      display: flex;
+
+      .imageWrapper {
+        @include flexCenter;
+
+        .directorImage {
+          width: 30px;
+          height: 30px;
+        }
+      }
+
+      .filmCrewWrapper {
+        margin-left: 10px;
+
+        .directorName {
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 22px;
+        }
+
+        .directorPosition {
+          font-size: 14px;
+          line-height: 22px;
+          color: #8c8c8c;
+        }
+      }
+    }
+  }
+}
