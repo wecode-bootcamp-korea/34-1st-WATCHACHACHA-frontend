@@ -9,8 +9,6 @@
   .navList {
     display: flex;
     align-items: center;
-    .logoBtn {
-    }
     .movieBtn {
       margin-left: 30px;
       Button {
@@ -86,10 +84,13 @@
 }
 .nav {
   position: relative;
+
   .loginModalContainer {
     position: absolute;
     top: 30px;
     left: 450px;
+    z-index: 11;
+
     .loginModal {
       position: relative;
       background: rgb(255, 255, 255);
@@ -153,6 +154,33 @@
                 border-radius: 6px;
                 margin: 16px 0px 0px;
               }
+              .languageBtn {
+                background: none;
+                padding: 0px;
+                border: none;
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                color: rgb(74, 74, 74);
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: -0.5px;
+                line-height: 20px;
+                cursor: pointer;
+                .global {
+                  margin-right: 12px;
+                }
+                .languageSelect {
+                  text-decoration: underline;
+                }
+                .downBtn {
+                  color: rgb(74, 74, 74);
+                  font-size: 15px;
+                  letter-spacing: -0.5px;
+                  line-height: 20px;
+                  margin-left: 10px;
+                }
+              }
             }
             .findPasswordBox {
               font-size: 15px;
@@ -169,6 +197,9 @@
                 cursor: pointer;
                 color: rgb(255, 47, 110);
               }
+            }
+            .alreadySignInContent {
+              margin-top: 20px;
             }
             .signInBox {
               font-size: 15px;
@@ -271,4 +302,13 @@
       }
     }
   }
+}
+
+.modalBackground {
+  display: block;
+  position: fixed;
+  inset: 0px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.56);
+  overflow: hidden scroll;
 }
