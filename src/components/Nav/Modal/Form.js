@@ -1,44 +1,66 @@
 import React from "react";
 import FormLayout from "./FormLayout";
+import Input from "./Input";
 import "./../Nav.scss";
 
-const Input = () => {
-  return (
-    <div className="loginFormInput">
-      <input type="text" name="name" placeholder="이름" />
-    </div>
-  );
-};
+export default function Form({
+  type,
+  title,
+  inputData,
+  setSignUpModalOn,
+  setLoginModalOn,
+}) {
+  const moveToSignUp = () => {
+    setSignUpModalOn(true);
+    setLoginModalOn(false);
+  };
+  const moveToLogin = () => {
+    setLoginModalOn(true);
+    setSignUpModalOn(false);
+  };
 
-export default function Form({ type, title, inputData }) {
   return (
     <FormLayout>
       <h2>{title}</h2>
       <section>
         <div className="loginContainer">
           <form className="loginForm">
-            <div className="loginFormInput">
-              <input type="text" name="name" placeholder="이름" />
-            </div>
-            <div className="loginFormInput">
-              <input type="email" name="email" placeholder="이메일" />
-            </div>
-            <div className="loginFormInput">
-              <input type="password" name="password" placeholder="비밀번호" />
-            </div>
-            <button className="languageBtn">
-              <i className="fa-solid fa-lg fa-globe global" />
-              <span className="languageSelect">한국어(대한민국)</span>
-              <i className="fa-solid fa-caret-down downBtn" />
-            </button>
-            <button className="loginBtn" type="submit">
-              회원가입
+            {inputData.map((input, idx) => (
+              <Input key={idx} type={input.type} text={input.text} />
+            ))}
+            {type === "login" ? null : (
+              <button className="languageBtn">
+                <i className="fa-solid fa-lg fa-globe global" />
+                <span className="languageSelect">한국어(대한민국)</span>
+                <i className="fa-solid fa-caret-down downBtn" />
+              </button>
+            )}
+            <button className="loginBtn" type="submit" value={title}>
+              {title}
             </button>
           </form>
-
-          <div className="signInBox alreadySignInContent">
-            이미 가입하셨나요? <button className="signInBtn">로그인</button>
-          </div>
+          {type === "login" ? (
+            <>
+              <div className="findPasswordBox">
+                <button className="findPasswordBtn">
+                  비밀번호를 잊어버리셨나요?
+                </button>
+              </div>
+              <div className="signInBox">
+                계정이 없으신가요?{" "}
+                <button className="signInBtn" onClick={moveToSignUp}>
+                  회원가입
+                </button>
+              </div>
+            </>
+          ) : (
+            <div className="signInBox alreadySignInContent">
+              이미 가입하셨나요?{" "}
+              <button className="signInBtn" onClick={moveToLogin}>
+                로그인
+              </button>
+            </div>
+          )}
           <hr className="orLine" />
           <ul className="snsContainer">
             <li className="snsList">
@@ -57,6 +79,12 @@ export default function Form({ type, title, inputData }) {
               </button>
             </li>
           </ul>
+          {type === "login" ? (
+            <div className="tip">
+              TIP.왓챠 계정이 있으신가요? 왓챠와 왓챠피디아는 같은 계정을
+              사용해요.
+            </div>
+          ) : null}
         </div>
       </section>
     </FormLayout>

@@ -1,12 +1,11 @@
 import React from "react";
-import "./Nav.scss";
 import LoginModal from "./Modal/LoginModal";
-import SignUpModal from "./Modal/SignUpModal";
 import { useState } from "react";
+import "./Nav.scss";
 
 const Nav = () => {
   const [loginModalOn, setLoginModalOn] = useState(false);
-  const [signInModalOn, setSignInModalOn] = useState(false);
+  const [signUpModalOn, setSignUpModalOn] = useState(false);
   const [modalBackgroundOn, setModalBackgroundOn] = useState(false);
 
   const enterLoginModalOn = () => {
@@ -15,13 +14,13 @@ const Nav = () => {
   };
 
   const enterSignInModalOn = () => {
-    setSignInModalOn(true);
+    setSignUpModalOn(true);
     setModalBackgroundOn(true);
   };
 
   const outModalOn = () => {
     setLoginModalOn(false);
-    setSignInModalOn(false);
+    setSignUpModalOn(false);
     setModalBackgroundOn(false);
   };
 
@@ -60,13 +59,29 @@ const Nav = () => {
         className={modalBackgroundOn ? "modalBackground" : null}
         onClick={outModalOn}
       />
-      {/* {loginModalOn ? <LoginModal /> : null}
-      {signInModalOn ? <SignUpModal /> : null} */}
+      {loginModalOn ? (
+        <LoginModal
+          type="login"
+          title="로그인"
+          inputData={LOGIN_DATA}
+          setSignUpModalOn={setSignUpModalOn}
+          setLoginModalOn={setLoginModalOn}
+        />
+      ) : null}
+      {signUpModalOn ? (
+        <LoginModal
+          type="signup"
+          title="회원가입"
+          inputData={SIGNUP_DATA}
+          setLoginModalOn={setLoginModalOn}
+          setSignUpModalOn={setSignUpModalOn}
+        />
+      ) : null}
     </nav>
   );
 };
 
-const SIGNIN_DATA = [
+const LOGIN_DATA = [
   {
     type: "email",
     text: "이메일",

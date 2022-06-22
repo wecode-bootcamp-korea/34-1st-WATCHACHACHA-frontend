@@ -1,7 +1,7 @@
 import React from "react";
 import "./../Nav.scss";
 
-export default function FormLayout(props) {
+export default function FormLayout({ children }) {
   return (
     <div className="loginBox">
       <header>
@@ -9,7 +9,7 @@ export default function FormLayout(props) {
           <span className="watchaPointColor">WATCHA</span> CLASSIC
         </span>
       </header>
-      {props.children}
+      {children}
     </div>
   );
 }

@@ -125,6 +125,7 @@
               flex-direction: column;
               .loginFormInput {
                 padding: 4px 0px 4px 0px;
+                position: relative;
                 input {
                   font-weight: 400;
                   font-size: 16px;
@@ -136,6 +137,30 @@
                   padding: 0px 12px;
                   border-radius: 6px;
                   border: none;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  caret-color: rgb(255, 47, 110);
+                  &:focus {
+                    outline: none;
+                  }
+                }
+                .deleteBtn {
+                  position: absolute;
+                  opacity: 0.3;
+                  top: 18px;
+                  right: 65px;
+                  cursor: pointer;
+                }
+                .checkBtn {
+                  position: absolute;
+                  color: lightseagreen;
+                  top: 25px;
+                  right: 15px;
+                }
+                .warningBtn {
+                  position: absolute;
+                  top: 18px;
+                  right: 17px;
                 }
               }
               .loginBtn {
