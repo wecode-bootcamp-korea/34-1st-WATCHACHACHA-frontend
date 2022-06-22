@@ -1,9 +1,9 @@
 import React from "react";
 import "./Information.scss";
 
-const Infomation = () => {
+const Information = () => {
   return (
-    <section className="infomation">
+    <section className="information">
       <div className="ratingInterface">
         <div className="poster">이미지 태그 써야할 곳</div>
         <div className="ratingDetail">
@@ -36,4 +36,4 @@ const Infomation = () => {
   );
 };
 
-export default Infomation;
+export default Information;
