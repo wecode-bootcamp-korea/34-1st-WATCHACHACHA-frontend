@@ -2,9 +2,16 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./FirstLow.scss";
 
-const FirstLow = ({ id, name, date, url }) => {
+const FirstLow = ({ id, name, date, url, slide }) => {
   return (
-    <li className="firstLow" id={id}>
+    <li
+      className="firstLow"
+      id={id}
+      style={{
+        transform: `translateX(${slide}px)`,
+        transition: "0.5s ease",
+      }}
+    >
       <Link to="/details" className="film1Detail">
         <div className="posterBox">
           <img src={url} alt="개츠비" className="filmPosters" />

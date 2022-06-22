@@ -4,8 +4,8 @@
     "name": "이태권",
     "release_date": 1920,
     "image_url": "/images/poster/TheGreatGatsby.jpg",
-    "description": {
-      "countery": "미국"
+    "films_countries": {
+      "countries": "미국"
     }
   },
   {
@@ -34,31 +34,55 @@
   },
   {
     "id": 6,
-    "name": "위대한 개츠비",
+    "name": "조촐한 개츠비",
     "release_date": 1920,
     "image_url": "/images/poster/TheGreatGatsby.jpg"
   },
   {
     "id": 7,
-    "name": "위대한 개츠비",
+    "name": "코딩중 개츠비",
     "release_date": 1920,
     "image_url": "/images/poster/TheGreatGatsby.jpg"
   },
   {
     "id": 8,
-    "name": "위대한 개츠비",
+    "name": "돈많은 개츠비",
     "release_date": 1920,
     "image_url": "/images/poster/TheGreatGatsby.jpg"
   },
   {
     "id": 9,
-    "name": "위대한 개츠비",
+    "name": "배고픈 개츠비",
     "release_date": 1920,
     "image_url": "/images/poster/TheGreatGatsby.jpg"
   },
   {
     "id": 10,
-    "name": "위대한 개츠비",
+    "name": "쿨한 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 11,
+    "name": "어쩌라고 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 12,
+    "name": "코딩하는 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 13,
+    "name": "그만하자 개츠비",
+    "release_date": 1920,
+    "image_url": "/images/poster/TheGreatGatsby.jpg"
+  },
+  {
+    "id": 14,
+    "name": "저리가 개츠비",
     "release_date": 1920,
     "image_url": "/images/poster/TheGreatGatsby.jpg"
   }
