@@ -2,43 +2,4 @@
   grid-area: description;
   padding: 20px;
   background-color: #ffffff;
-
-  .basicInfoWrapper {
-    .basicInfo {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .basicInfoTitle {
-        margin: 8px 0;
-        font-size: 19px;
-        font-weight: 700;
-        line-height: 28px;
-      }
-
-      .basicInfoIcon {
-        color: #ff2f6e;
-      }
-    }
-
-    .simplyInfo {
-      margin: 8px 0;
-      color: #4a4a4a;
-      .movieTitle {
-        line-height: 24px;
-      }
-
-      .movieCategory {
-        line-height: 24px;
-      }
-
-      .showingTime {
-        line-height: 24px;
-      }
-    }
-
-    .movieDescription {
-      line-height: 24px;
-    }
-  }
 }
