@@ -1,0 +1,75 @@
+@import "/src/styles/variables.scss";
+
+.commentsListItem {
+  width: 49%;
+  min-width: 49%;
+  border: none;
+  border-radius: 5px;
+  padding: 0 12px;
+  background-color: #f2f2f2;
+
+  .commentUserInfo {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    .imageWrapper {
+      @include flexCenter;
+      width: 40px;
+      height: 40px;
+
+      .userImage {
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    .userId {
+      margin-left: 3px;
+    }
+    .userIcon {
+      margin-right: auto;
+    }
+    .userRatingPoint {
+      padding: 5px 10px;
+
+      border-radius: 45%;
+      background-color: #ffffff;
+      .starIcon {
+      }
+      .userRatingScore {
+      }
+    }
+  }
+  .commentContent {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 20px;
+  }
+  .likeWarpper {
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e5e5;
+    .likeIcon {
+      margin-right: 5px;
+    }
+    .likeCount {
+      margin-right: 10px;
+    }
+    .othersComment {
+      margin-right: 5px;
+    }
+    .othersCommentCount {
+    }
+  }
+
+  .likeButton {
+    margin: 10px 0;
+    font-size: 16px;
+    background-color: #f2f2f2;
+    border: none;
+    color: #ff2f6e;
+    cursor: pointer;
+  }
+}
