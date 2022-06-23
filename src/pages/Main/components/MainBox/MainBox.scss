@@ -1,17 +1,14 @@
-.mainBox1 {
+.mainBox {
   width: 1350px;
-
   height: auto;
-  //background-color: blue;
   margin-bottom: 35px;
   display: flex;
   position: relative;
   flex-direction: column;
 
-  .filmTheme1 {
-    width: 1350px;
+  .filmTheme {
+    width: 100%;
     height: 60px;
-    //background-color: gray;
     display: flex;
     align-items: flex-end;
     font-size: 25px;
@@ -19,35 +16,8 @@
   }
 
   .filmList {
-    width: 1350px;
-    color: white;
-    //background-color: red;
+    width: 100%;
     overflow: hidden;
     display: flex;
-  }
-
-  .prevBtn,
-  .nextBtn {
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    box-shadow: 2px 2px 2px gray;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    bottom: 250px;
-    border: none;
-    cursor: pointer;
-    position: absolute;
-    font-size: 15px;
-    color: #aeaeb1;
-  }
-
-  .prevBtn {
-    left: -20px;
-  }
-  .nextBtn {
-    right: -20px;
   }
 }

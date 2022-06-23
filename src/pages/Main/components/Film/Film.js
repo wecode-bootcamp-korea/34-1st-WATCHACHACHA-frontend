@@ -1,18 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./FirstLow.scss";
+import "./Film.scss";
 
-const FirstLow = ({ id, name, date, url, slide }) => {
+const Film = ({ id, name, date, url, slide }) => {
   return (
     <li
-      className="firstLow"
+      className="film"
       id={id}
       style={{
         transform: `translateX(${slide}px)`,
         transition: "0.5s ease",
       }}
     >
-      <Link to="/details" className="film1Detail">
+      <Link to="/details" className="filmDetail">
         <div className="posterBox">
           <img src={url} alt="개츠비" className="filmPosters" />
         </div>
@@ -26,4 +26,4 @@ const FirstLow = ({ id, name, date, url, slide }) => {
   );
 };
 
-export default FirstLow;
+export default Film;

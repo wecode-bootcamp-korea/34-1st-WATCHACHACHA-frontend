@@ -1,29 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./MainBox.scss";
-import FirstLow from "./../FirstLow/FirstLow";
+import Film from "./../Film/Film";
 
 const MainBox = ({ movies }) => {
   const [slidePx, setSlidePx] = useState(0);
   const [btnShow, setBtnShow] = useState("none");
+
   const toPrev = () => {
+    console.log("toPrev", slidePx);
     if (slidePx < -1374) {
       setSlidePx(slidePx + 1375);
     } else {
       setBtnShow("none");
     }
   };
+
   const toNext = () => {
+    console.log("toNext", slidePx);
     if (slidePx > -1376) {
       setSlidePx(slidePx - 1375);
       setBtnShow("");
+    } else if (slidePx > 0) {
+      setBtnShow("none");
     }
   };
+
   return (
-    <div className="mainBox1">
-      <p className="filmTheme1">1970's Films</p>
+    <div className="mainBox">
+      <p className="filmTheme">1970's Films</p>
       <ul className="filmList">
         {movies.map(movie => (
-          <FirstLow
+          <Film
             slide={slidePx}
             key={movie.id}
             id={movie.id}

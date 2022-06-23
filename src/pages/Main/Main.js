@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
 import "./Main.scss";
-//import FirstLow from "./components/FirstLow/FirstLow";
 import MainBox from "./components/MainBox/MainBox";
 
 const Main = () => {
