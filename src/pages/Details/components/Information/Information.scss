@@ -2,104 +2,113 @@
 
 .information {
   height: 250px;
-  padding: 0 200px;
-  background-color: #ffffff;
 
-  .ratingInterface {
+  .midWrapper {
+    @include area(70%, 100%);
     display: flex;
-    flex-grow: 1;
-    height: 100%;
-    background-color: #ffffff;
+    padding: $padding20;
+    margin: 0 auto;
+    position: relative;
 
     .poster {
-      width: 20%;
-      position: relative;
-      bottom: 30px;
-      border: 2px solid #ffffff;
+      @include area(200px, 250px);
+      position: absolute;
+      bottom: 50px;
+      border: #ffffff;
       border-radius: 5px;
-      background-color: sandybrown;
+      background-color: coral;
     }
 
-    .ratingDetail {
-      display: grid;
-      grid:
-        "ratingTitle ratingTitle" 1.5fr
-        "ratingInfo ratingInfo" 1fr
-        "ratinghandling ratingUserInterface" 2fr
-        / 2fr 4fr;
-      gap: 10px;
+    .posterWrapper {
+      @include flexCustom(flex-end, flex-start);
       width: 100%;
-      padding: $padding20;
 
-      .ratingTitle {
-        grid-area: ratingTitle;
+      .posterDescription {
+        @include area(740px, 100%);
 
-        .movieTitle {
-          font-size: 33px;
-          font-weight: 700;
-        }
+        .posterTextWrapper {
+          height: 30%;
+          border-bottom: 1px solid;
 
-        .movieCategory {
-          margin-top: 5px;
-          font-size: 17px;
-          color: #7f7f7f;
-        }
-      }
-
-      .ratingInfo {
-        @include flexCustom(flex-start, center);
-        grid-area: ratingInfo;
-        padding: $padding10 0;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        font-size: 17px;
-
-        .ratingInfoText {
-          margin: 3px;
-        }
-
-        .ratingAverage {
-          margin: 3px;
-        }
-      }
-
-      .ratingStar {
-        @include flexCenter;
-        flex-direction: column;
-        grid-area: ratinghandling;
-        border-right: 1px solid;
-
-        .rating {
-          color: #7f7f7f;
-        }
-      }
-
-      .ratingUserInterface {
-        @include flexCustom(flex-start, center);
-        grid-area: ratingUserInterface;
-
-        .interfaceWrapper {
-          @include flexCustom(space-evenly, flex-start);
-          width: 100%;
-
-          .iconButton {
-            @include flexCustom(flex-start, center);
-            border: none;
-            background-color: #ffffff;
-
-            .iconImage {
-              @include area(15px, 15px);
-            }
-
-            .iconText {
-              font-size: 16px;
-              margin-left: 7px;
-            }
+          .posterTitle {
+            font-size: 33px;
+            font-weight: 700;
           }
 
-          .iconButton:hover {
-            .iconImage {
-              transform: scale(1.2);
+          .posterCategoryWrapper {
+            margin-top: 5px;
+            font-size: 17px;
+            opacity: 0.5;
+
+            .posterRelease {
+              margin-right: $margin10;
+            }
+
+            .posterTextDivide {
+              margin-right: $margin10;
+            }
+
+            .posterCategory {
+              margin-right: $margin10;
+            }
+          }
+        }
+
+        .ratingScoreWrapper {
+          @include flexCustom(flex-start, center);
+          height: 20%;
+          border-bottom: 1px solid;
+          font-size: 17px;
+
+          .scoreAverage {
+            margin-right: $margin05;
+          }
+
+          .ratingScore {
+            margin-right: $margin05;
+          }
+        }
+
+        .posterRatingButton {
+          height: 50%;
+          padding: 15px;
+
+          .buttonWrapper {
+            display: flex;
+            @include area(100%, 100%);
+
+            .ratingScoreStar {
+              @include flexCenter;
+              @include area(35%, 100%);
+              display: flex;
+              flex-direction: column;
+              border-right: 1px solid;
+
+              .ratingScoreTitle {
+                @include flexCenter;
+                font-size: 12px;
+                color: rgb(120, 120, 120);
+              }
+            }
+
+            .ratingButtonWrapper {
+              @include flexCustom(space-evenly, center);
+              @include area(65%, 100%);
+
+              .iconButton {
+                @include flexCustom(flex-start, center);
+                border: none;
+                background-color: #ffffff;
+
+                .iconImage {
+                  @include area(20px, 20px);
+                }
+
+                .markerButton {
+                  font-size: 17px;
+                  margin-left: 7px;
+                }
+              }
             }
           }
         }

@@ -23,7 +23,6 @@
 @mixin descriptionTitleFont {
   font-weight: 700;
   font-size: 19px;
-  line-height: 28px;
 }
 
 @mixin descriptionLine {
@@ -38,6 +37,7 @@
   cursor: pointer;
 }
 
+$margin05: 5px;
 $margin10: 10px;
 $margin20: 20px;
 $padding10: 10px;
