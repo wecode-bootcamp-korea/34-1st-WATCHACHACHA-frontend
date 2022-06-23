@@ -4,7 +4,7 @@ import "./Comments.scss";
 
 const Comments = () => {
   return (
-    <article className="comments">
+    <div className="comments">
       <div className="titleWrapper">
         <h2 className="commentTitle">코멘트</h2>
         <p className="commentCount">1000+</p>
@@ -13,7 +13,7 @@ const Comments = () => {
       <ul className="commentsList">
         <Comment />
       </ul>
-    </article>
+    </div>
   );
 };
 

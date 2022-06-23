@@ -3,7 +3,7 @@ import "./FilmCrew.scss";
 
 const FilmCrew = () => {
   return (
-    <article className="filmCrew">
+    <div className="filmCrew">
       <h2 className="filmCrewTitle">출연/제작</h2>
       <ul className="filmCrewList">
         <li className="filmCrewListItem">
@@ -130,7 +130,7 @@ const FilmCrew = () => {
           </div>
         </li>
       </ul>
-    </article>
+    </div>
   );
 };
 

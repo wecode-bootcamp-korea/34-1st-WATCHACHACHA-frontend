@@ -3,7 +3,7 @@ import "./BasicInfo.scss";
 
 const BasicInfo = () => {
   return (
-    <article className="basicInfo">
+    <div className="basicInfo">
       <div class="basicInfoWrapper">
         <h2 className="basicInfoTitle">기본 정보</h2>
         <button className="basicInfoMore">더보기</button>
@@ -19,7 +19,7 @@ const BasicInfo = () => {
         초토화된다. 그곳에서 홀로 살아남은 `소녀`는 생애 처음 세상 밖으로 발을
         내딛고 우연히 만난 `경희`의 도움으로 ...
       </p>
-    </article>
+    </div>
   );
 };
 
