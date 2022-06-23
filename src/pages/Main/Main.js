@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./Main.scss";
 import MainBox from "./components/MainBox/MainBox";
+import "./Main.scss";
 
 const Main = () => {
   const [movies, setMovies] = useState([]);

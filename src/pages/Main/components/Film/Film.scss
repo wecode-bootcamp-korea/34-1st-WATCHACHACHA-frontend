@@ -1,22 +1,21 @@
 .film {
   width: 250px;
-  height: 440px;
-  margin-right: 25px;
+  height: 420px;
   margin-top: 15px;
+  margin-right: 25px;
+  padding: 1px;
 
   .filmDetail {
     text-decoration: none;
 
     .posterBox {
-      width: 250px;
-      height: 370px;
+      height: 350px;
 
       .filmPosters {
-        width: 250px;
-        height: 370px;
+        height: 350px;
         background-repeat: no-repeat;
-        object-fit: cover;
         border-radius: 5px;
+        object-fit: cover;
       }
     }
 
@@ -25,15 +24,15 @@
       color: gray;
 
       .filmName {
-        font-weight: bold;
         margin-bottom: 10px;
+        font-weight: bold;
         color: gray;
       }
       .filmYear,
       .filmAverage {
+        margin-top: 5px;
         font-size: 14px;
         color: gray;
-        margin-top: 5px;
       }
     }
   }

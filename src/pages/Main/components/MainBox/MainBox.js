@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./MainBox.scss";
 import Film from "./../Film/Film";
+import "./MainBox.scss";
 
 const MainBox = ({ movies }) => {
   const [slidePx, setSlidePx] = useState(0);
@@ -30,14 +30,7 @@ const MainBox = ({ movies }) => {
       <p className="filmTheme">1970's Films</p>
       <ul className="filmList">
         {movies.map(movie => (
-          <Film
-            slide={slidePx}
-            key={movie.id}
-            id={movie.id}
-            name={movie.name}
-            date={movie.release_date}
-            url={movie.image_url}
-          />
+          <Film slide={slidePx} key={movie.id} movie={movie} />
         ))}
       </ul>
       <div
