@@ -7,6 +7,7 @@ const Nav = () => {
   const [loginModalOn, setLoginModalOn] = useState(false);
   const [signUpModalOn, setSignUpModalOn] = useState(false);
   const [modalBackgroundOn, setModalBackgroundOn] = useState(false);
+  // const [testModal, setTestModal] = useState(); // "login", "signup", "" -> state 값이 "login" 일때 ~
 
   const enterLoginModalOn = () => {
     setLoginModalOn(true);
@@ -64,6 +65,8 @@ const Nav = () => {
           type="login"
           title="로그인"
           inputData={LOGIN_DATA}
+          loginModalOn={loginModalOn}
+          signUpModalOn={signUpModalOn}
           setSignUpModalOn={setSignUpModalOn}
           setLoginModalOn={setLoginModalOn}
         />
@@ -73,6 +76,8 @@ const Nav = () => {
           type="signup"
           title="회원가입"
           inputData={SIGNUP_DATA}
+          loginModalOn={loginModalOn}
+          signUpModalOn={signUpModalOn}
           setLoginModalOn={setLoginModalOn}
           setSignUpModalOn={setSignUpModalOn}
         />
@@ -85,10 +90,12 @@ const LOGIN_DATA = [
   {
     type: "email",
     text: "이메일",
+    unValidClass: "unValidClass",
   },
   {
     type: "password",
     text: "비밀번호",
+    unValidClass: "unValidClass",
   },
 ];
 
@@ -96,14 +103,17 @@ const SIGNUP_DATA = [
   {
     type: "name",
     text: "이름",
+    unValidClass: "unValidClass",
   },
   {
     type: "email",
     text: "이메일",
+    unValidClass: "unValidClass",
   },
   {
     type: "password",
     text: "비밀번호",
+    unValidClass: "unValidClass",
   },
 ];
 

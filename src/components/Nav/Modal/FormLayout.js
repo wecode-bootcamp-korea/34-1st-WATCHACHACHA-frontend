@@ -1,5 +1,5 @@
 import React from "react";
-import "./../Nav.scss";
+import "./Modal.scss";
 
 export default function FormLayout({ children }) {
   return (

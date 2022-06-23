@@ -1,0 +1,287 @@
+@import "/src/styles/variables.scss";
+
+.nav {
+  position: relative;
+
+  .loginModalContainer {
+    position: absolute;
+    top: 30px;
+    left: 450px;
+    z-index: 11;
+
+    .loginModal {
+      position: relative;
+      background: rgb(255, 255, 255);
+      width: 100%;
+      height: 100%;
+      box-shadow: rgb(0 0 0 / 12%) 0px 0px 6px 0px;
+      border-radius: 6px;
+      overflow: hidden;
+
+      .loginBox {
+        width: 375px;
+        height: auto;
+        padding: 32px 0px 16px 0px;
+        header {
+          text-align: center;
+          margin-bottom: 14px;
+        }
+        h2 {
+          font-size: 17px;
+          letter-spacing: -0.5px;
+          line-height: 22px;
+          font-weight: 700;
+          text-align: center;
+          margin: 24px 0px 20px;
+        }
+        section {
+          padding: 0px 20px 0px 20px;
+
+          .loginContainer {
+            display: flex;
+            flex-direction: column;
+
+            .loginForm {
+              display: flex;
+              flex-direction: column;
+
+              .loginFormInput {
+                padding: 4px 0px 4px 0px;
+                position: relative;
+
+                .unValidClass {
+                  display: flex;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  background: rgb(255, 240, 240);
+                  box-sizing: border-box;
+                  width: 100%;
+                  height: 44px;
+                  padding: 0px 12px;
+                  border: 1px solid rgb(245, 0, 0);
+                  border-radius: 6px;
+                }
+                input {
+                  font-weight: 400;
+                  font-size: 16px;
+                  letter-spacing: -0.6px;
+                  line-height: 21px;
+                  background: rgb(245, 245, 245);
+                  height: 44px;
+                  width: 100%;
+                  padding: 0px 12px;
+                  border-radius: 6px;
+                  border: none;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  caret-color: rgb(255, 47, 110);
+                  &:focus {
+                    outline: none;
+                  }
+                }
+
+                .deleteBtn {
+                  position: absolute;
+                  opacity: 0.3;
+                  top: 18px;
+                  right: 65px;
+                  cursor: pointer;
+                }
+
+                .checkBtn {
+                  position: absolute;
+                  color: lightseagreen;
+                  top: 25px;
+                  right: 15px;
+                }
+
+                .warningBtn {
+                  position: absolute;
+                  top: 18px;
+                  right: 17px;
+                  color: rgb(245, 0, 0);
+                }
+
+                .unValidMessage {
+                  color: rgb(245, 0, 0);
+                  font-size: 13px;
+                  font-weight: 400;
+                  letter-spacing: -0.2px;
+                  line-height: 18px;
+                  margin: 6px 12px 4px;
+                }
+              }
+
+              .loginBtn {
+                padding: 0px;
+                border: none;
+                cursor: pointer;
+                background: rgb(255, 47, 110);
+                color: rgb(255, 255, 255);
+                text-align: center;
+                font-size: 17px;
+                font-weight: 400;
+                letter-spacing: -0.7px;
+                line-height: 22px;
+                width: 100%;
+                height: 44px;
+                border-radius: 6px;
+                margin: 16px 0px 0px;
+              }
+
+              .languageBtn {
+                background: none;
+                padding: 0px;
+                border: none;
+                margin: 0px;
+                display: flex;
+                align-items: center;
+                color: rgb(74, 74, 74);
+                font-size: 15px;
+                font-weight: 400;
+                letter-spacing: -0.5px;
+                line-height: 20px;
+                cursor: pointer;
+
+                .global {
+                  margin-right: 12px;
+                }
+
+                .languageSelect {
+                  text-decoration: underline;
+                }
+
+                .downBtn {
+                  color: rgb(74, 74, 74);
+                  font-size: 15px;
+                  letter-spacing: -0.5px;
+                  line-height: 20px;
+                  margin-left: 10px;
+                }
+              }
+            }
+
+            .findPasswordBox {
+              @include loginModalBoxCss;
+              text-align: center;
+              margin: 20px 0px 14px;
+
+              .findPasswordBtn {
+                @include loginModalBtnCSS;
+              }
+            }
+
+            .alreadySignInContent {
+              margin-top: 20px;
+            }
+
+            .signInBox {
+              @include loginModalBoxCss;
+              color: rgb(140, 140, 140);
+              text-align: center;
+
+              .signInBtn {
+                @include loginModalBtnCSS;
+              }
+            }
+
+            .orLine {
+              position: relative;
+              color: black;
+              text-align: center;
+              height: 1.5em;
+              border: 0px;
+              outline: 0px;
+              margin: 24px 0px;
+              &:before {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0px;
+                width: 100%;
+                border-top: 1px solid rgb(216, 216, 216);
+              }
+              &:after {
+                content: "OR";
+                display: inline-block;
+                position: relative;
+                top: 4px;
+                background-color: rgb(255, 255, 255);
+                color: rgb(160, 160, 160);
+                font-size: 14px;
+                font-weight: 400;
+                letter-spacing: -0.3px;
+                line-height: 19px;
+                vertical-align: middle;
+                padding: 0px 14px;
+              }
+            }
+
+            .snsContainer {
+              @include flexCenter;
+              justify-content: space-evenly;
+              list-style: none;
+
+              .kakaoBtn {
+                @include flexCenter;
+                position: relative;
+                background: rgb(247, 227, 23);
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+              }
+
+              .googleBtn {
+                @include flexCenter;
+                position: relative;
+                background-color: rgb(255, 255, 255);
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                border: 1px solid rgb(227, 228, 230);
+                border-radius: 50px;
+                cursor: pointer;
+              }
+
+              .twiterBtn {
+                @include flexCenter;
+                position: relative;
+                background-color: rgb(29, 161, 243);
+                font-weight: 700;
+                width: 50px;
+                height: 50px;
+                border: none;
+                border-radius: 50px;
+                cursor: pointer;
+              }
+            }
+
+            .tip {
+              background-color: rgb(247, 247, 247);
+              color: rgb(140, 140, 140);
+              font-size: 15px;
+              font-weight: 400;
+              letter-spacing: -0.2px;
+              line-height: 20px;
+              text-align: center;
+              margin-top: 48px;
+              padding: 10px 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.modalBackground {
+  display: block;
+  position: fixed;
+  inset: 0px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.56);
+  overflow: hidden scroll;
+}

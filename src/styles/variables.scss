@@ -3,3 +3,27 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin btnCss {
+  background: none;
+  letter-spacing: -0.3px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin loginModalBtnCSS {
+  background: none;
+  padding: 0px;
+  border: none;
+  margin: 0px;
+  cursor: pointer;
+  color: rgb(255, 47, 110);
+}
+
+@mixin loginModalBoxCss {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+}

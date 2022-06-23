@@ -1,6 +1,6 @@
 import React from "react";
-import "./../Nav.scss";
 import Form from "./Form";
+import "./Modal.scss";
 
 const LoginModal = ({
   type,
@@ -8,6 +8,9 @@ const LoginModal = ({
   inputData,
   setSignUpModalOn,
   setLoginModalOn,
+  unValidClass,
+  loginModalOn,
+  signUpModalOn,
 }) => {
   return (
     <div className="loginModalContainer">
@@ -18,6 +21,9 @@ const LoginModal = ({
           inputData={inputData}
           setSignUpModalOn={setSignUpModalOn}
           setLoginModalOn={setLoginModalOn}
+          unValidClass={unValidClass}
+          loginModalOn={loginModalOn}
+          signUpModalOn={signUpModalOn}
         />
       </div>
     </div>
