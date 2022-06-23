@@ -1,6 +1,8 @@
 @import "/src/styles/variables.scss";
 
 .aside {
+  width: 30%;
+  height: 150px;
   grid-area: media;
   padding: $padding20;
   background-color: #ffffff;
