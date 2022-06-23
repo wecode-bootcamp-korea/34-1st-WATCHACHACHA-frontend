@@ -13,9 +13,6 @@ const Aside = () => {
           <li className="galleryListItem">
             {/* <img className="filmsImage" /> */}
           </li>
-          <li className="galleryListItem">
-            {/* <img className="filmsImage" /> */}
-          </li>
         </ul>
       </section>
     </aside>

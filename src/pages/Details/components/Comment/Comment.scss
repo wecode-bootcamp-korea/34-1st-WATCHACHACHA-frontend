@@ -1,7 +1,8 @@
 @import "/src/styles/variables.scss";
 
 .commentsListItem {
-  @include flexSlider;
+  width: 49%;
+  min-width: 49%;
   border: none;
   border-radius: 5px;
   padding: 0 $padding10;

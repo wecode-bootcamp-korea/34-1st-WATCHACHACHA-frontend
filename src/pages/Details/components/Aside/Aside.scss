@@ -16,7 +16,7 @@
 
     .galleryListItem {
       @include area(130px, 90px);
-      min-width: 49%;
+      width: 50%;
       border: 1px solid;
     }
   }

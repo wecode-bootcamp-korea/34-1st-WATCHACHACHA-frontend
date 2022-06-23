@@ -16,7 +16,7 @@
     // overflow-x: hidden;
 
     .filmCrewListItem {
-      @include flexSlider;
+      width: 50%;
       margin-top: $margin10;
 
       .threeBundleWrapper {

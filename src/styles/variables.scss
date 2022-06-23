@@ -10,11 +10,6 @@
   align-items: $align;
 }
 
-@mixin flexSlider {
-  width: 49%;
-  min-width: 49%;
-}
-
 @mixin area($w, $h) {
   width: $w;
   height: $h;
