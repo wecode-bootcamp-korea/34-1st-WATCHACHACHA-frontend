@@ -53,6 +53,14 @@
         border-top: 1px solid;
         border-bottom: 1px solid;
         font-size: 17px;
+
+        .ratingInfoText {
+          margin: 3px;
+        }
+
+        .ratingAverage {
+          margin: 3px;
+        }
       }
 
       .ratingStar {
