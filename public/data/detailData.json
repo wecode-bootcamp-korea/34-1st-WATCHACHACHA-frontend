@@ -9,11 +9,6 @@
         "films_countries": {
           "countries": "미국"
         },
-        "score": "4.2",
-        "reservation_rate": "60%",
-        "cumulative_audience": "25만",
-        "reserved_list": "1위(60%)",
-        "release": "3일째",
         "genres": "액션",
         "running_time_min": "2시간 11분",
         "description": "통제불능의 존재가 세상 밖으로 나왔다! `자윤`이 사라진 뒤, 정체불명의 집단의 무차별 습격으로 마녀 프로젝트가 진행되고 있는 `아크`가 초토화된다. 그곳에서 홀로 살아남은 `소녀`는 생애 처음 세상 밖으로 발을 내딛고 우연히 만난 `경희`의 도움으로 ...",
@@ -52,6 +47,23 @@
     ]
   },
   {
-    "users": "유저"
+    "users": [
+      {
+        "user": {
+          "id": 1,
+          "nickname": "리얼리스트",
+          "image_url": "/images/icon/penguin-img.png",
+          "comment": "css지옥에서 벗어났다!"
+        }
+      },
+      {
+        "user": {
+          "id": 2,
+          "nickname": "펭토족",
+          "image_url": "/images/icon/penguin-img.png",
+          "comment": "벗어난줄 알았지만 아직 많다.."
+        }
+      }
+    ]
   }
 ]
