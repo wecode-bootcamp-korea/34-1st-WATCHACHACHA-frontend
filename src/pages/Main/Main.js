@@ -11,6 +11,7 @@ const Main = () => {
         setMovies(data);
       });
   }, []);
+
   return (
     <>
       <div>

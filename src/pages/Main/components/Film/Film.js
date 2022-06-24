@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import "./Film.scss";
 
 const Film = ({ movie, slide }) => {
-  const { name, release_date, image_url } = movie;
+  const { id, name, release_date, image_url, country, rate_stars } = movie;
   return (
     <li
       className="film"
+      id={id}
       style={{
         transform: `translateX(${slide}px)`,
         transition: "0.5s ease",
@@ -18,8 +19,10 @@ const Film = ({ movie, slide }) => {
         </div>
         <div className="filmDescription">
           <p className="filmName">{name}</p>
-          <p className="filmYear">{release_date} ▪ 미국</p>
-          <p className="filmAverage">평균★3.7</p>
+          <p className="filmYear">
+            {release_date} ▪ {country}
+          </p>
+          <p className="filmAverage">{rate_stars}</p>
         </div>
       </Link>
     </li>

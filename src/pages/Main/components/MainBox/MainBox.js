@@ -1,33 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Film from "./../Film/Film";
 import "./MainBox.scss";
 
 const MainBox = ({ movies }) => {
   const [slidePx, setSlidePx] = useState(0);
-  const [btnShow, setBtnShow] = useState("none");
 
   const toPrev = () => {
-    console.log("toPrev", slidePx);
-    if (slidePx < -1374) {
-      setSlidePx(slidePx + 1375);
-    } else {
-      setBtnShow("none");
-    }
+    //if (slidePx < 0) setSlidePx(slidePx + 1375);
+    slidePx < 0 && setSlidePx(slidePx + 1375);
   };
 
   const toNext = () => {
-    console.log("toNext", slidePx);
-    if (slidePx > -1376) {
-      setSlidePx(slidePx - 1375);
-      setBtnShow("");
-    } else if (slidePx > 0) {
-      setBtnShow("none");
-    }
+    //if (slidePx > -2750) setSlidePx(slidePx - 1375);
+    slidePx > -2750 && setSlidePx(slidePx - 1375);
   };
 
   return (
     <div className="mainBox">
-      <p className="filmTheme">1970's Films</p>
+      {/*목데이터에 따로 작성해야 한다*/}
+      <p className="filmTheme">{movies.length && movies[1].country}</p>
+      {/* <p className="filmTheme">{movies[1]?.theme}</p> */}
+      {/* <p className="filmTheme">{movies[0].theme}</p> */}
       <ul className="filmList">
         {movies.map(movie => (
           <Film slide={slidePx} key={movie.id} movie={movie} />
@@ -36,14 +29,14 @@ const MainBox = ({ movies }) => {
       <div
         className="prevBtn"
         onClick={toPrev}
-        style={{ display: `${btnShow}` }}
+        style={{ display: slidePx === 0 ? "none" : "" }}
       >
         <i className="fa-solid fa-chevron-left" />
       </div>
       <div
         className="nextBtn"
         onClick={toNext}
-        style={{ display: `${!btnShow}` }}
+        style={{ display: slidePx === -2750 ? "none" : "" }}
       >
         <i className="fa-solid fa-chevron-right" />
       </div>

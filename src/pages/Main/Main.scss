@@ -9,29 +9,4 @@
   width: 1350px;
   padding-top: 60px;
   margin: 0 auto;
-
-  .prevBtn,
-  .nextBtn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    bottom: 250px;
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    box-shadow: 2px 1px 2px gray;
-    border: none;
-    border-radius: 50%;
-    font-size: 15px;
-    color: #aeaeb1;
-    cursor: pointer;
-  }
-
-  .prevBtn {
-    left: -20px;
-  }
-  .nextBtn {
-    right: -20px;
-  }
 }

@@ -1,89 +1,106 @@
 [
   {
     "id": 1,
-    "name": "이태권",
+    "name": "개개",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg",
-    "films_countries": {
-      "countries": "미국"
-    }
+    "image_url": "/images/poster/copyrightfree.jpg",
+    "country": "한국",
+    "rate_stars": "평균★3.5"
   },
   {
     "id": 2,
-    "name": "김민석",
+    "name": "츠츠",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree_ocean.jpg",
+    "country": "미국",
+    "rate_stars": "평균★4.2"
   },
   {
     "id": 3,
-    "name": "김은경",
+    "name": "비비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree.jpg",
+    "country": "미국",
+    "rate_stars": "평균★1.5"
   },
   {
     "id": 4,
-    "name": "이현범",
+    "name": "개츠",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree_ocean.jpg",
+    "country": "스페인",
+    "rate_stars": "평균★5.0"
   },
   {
     "id": 5,
-    "name": "박민하",
+    "name": "츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree.jpg",
+    "country": "캐나다",
+    "rate_stars": "평균★2.5"
   },
   {
     "id": 6,
     "name": "조촐한 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree_ocean.jpg",
+    "country": "영국",
+    "rate_stars": "평균★3.7"
   },
   {
     "id": 7,
     "name": "코딩중 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree.jpg",
+    "country": "브라질",
+    "rate_stars": "평균★0.5"
   },
   {
     "id": 8,
     "name": "돈많은 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree_ocean.jpg",
+    "country": "태국",
+    "rate_stars": "평균★2.3"
   },
   {
     "id": 9,
     "name": "배고픈 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree.jpg",
+    "country": "프랑스",
+    "rate_stars": "평균★3.3"
   },
   {
     "id": 10,
     "name": "쿨한 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree_ocean.jpg",
+    "country": "독일",
+    "rate_stars": "평균★4.5"
   },
   {
     "id": 11,
-    "name": "어쩌라고 개츠비",
+    "name": "안녕 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree_ocean.jpg",
+    "country": "나이지리아",
+    "rate_stars": "평균★5.5"
   },
   {
     "id": 12,
-    "name": "코딩하는 개츠비",
+    "name": "잘가 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree.jpg",
+    "country": "아르헨티나",
+    "rate_stars": "평균★2.3"
   },
   {
     "id": 13,
-    "name": "그만하자 개츠비",
+    "name": "에러 개츠비",
     "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
-  },
-  {
-    "id": 14,
-    "name": "저리가 개츠비",
-    "release_date": 1920,
-    "image_url": "/images/poster/TheGreatGatsby.jpg"
+    "image_url": "/images/poster/copyrightfree_ocean.jpg",
+    "country": "호주",
+    "rate_stars": "평균★4.7"
   }
 ]
