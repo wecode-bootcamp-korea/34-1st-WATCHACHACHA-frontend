@@ -2,6 +2,8 @@ import React from "react";
 import "./Information.scss";
 
 const Information = () => {
+  // 폰트어썸 사용법 익히기
+  // 해당 코드 분석하기
   return (
     <section className="information">
       <div className="midWrapper">
