@@ -5,13 +5,13 @@ import StarScoreGraph from "../StarScoreGraph/StarScoreGraph";
 import Comments from "../Comments/Comments";
 import "./Description.scss";
 
-const Description = () => {
+const Description = ({ filmsData }) => {
   return (
     <section className="description">
-      <BasicInfo />
-      <FilmCrew />
+      <BasicInfo filmsData={filmsData} />
+      <FilmCrew filmsData={filmsData} />
       <StarScoreGraph />
-      <Comments />
+      <Comments filmsData={filmsData} />
     </section>
   );
 };

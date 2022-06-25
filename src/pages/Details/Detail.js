@@ -15,3 +15,13 @@ const Detail = () => {
 };
 
 export default Detail;
+
+// const [filmsData, setFilmsData] = useState([]);
+
+// useEffect(() => {
+//   fetch("data/detailData.json", {
+//     method: "GET",
+//   })
+//     .then(data => data.json())
+//     .then(data => setFilmsData(data));
+// }, []);

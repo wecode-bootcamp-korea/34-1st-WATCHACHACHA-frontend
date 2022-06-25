@@ -27,4 +27,17 @@
       }
     }
   }
+
+  .graphWrapper {
+    @include area(100%, 100%);
+
+    .graph {
+      @include area(100%, 100%);
+      @include flexCustom(center, flex-start);
+
+      .graphImage {
+        @include area(50%, 50%);
+      }
+    }
+  }
 }

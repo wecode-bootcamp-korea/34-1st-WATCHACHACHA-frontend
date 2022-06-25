@@ -19,33 +19,40 @@
       width: 50%;
       margin-top: $margin10;
 
-      .threeBundleWrapper {
+      .bundleWrapper {
         display: flex;
         margin-bottom: $margin10;
 
         .imageWrapper {
           @include flexCenter;
           @include area(40px, 40px);
-          border: 1px solid;
-          border-radius: 5px;
 
-          .directorImage {
-            @include area(30px, 30px);
+          .crewImage {
+            @include area(100%, 100%);
+            border: none;
+            border-radius: 5px;
           }
         }
 
         .filmCrewWrapper {
-          flex: 1 auto;
           margin-left: $margin10;
           border-bottom: 1px solid #f0f0f0;
 
-          .directorName {
+          .crewName {
             @include fontCustom(17px, 22px);
             font-weight: 700;
           }
 
-          .directorPosition {
+          .crewPosition {
             @include fontCustom(14px, 22px);
+            color: #8c8c8c;
+            padding-right: $padding10;
+            border-right: 1px solid;
+          }
+
+          .crewCaster {
+            @include fontCustom(14px, 22px);
+            padding-left: $padding10;
             color: #8c8c8c;
           }
         }

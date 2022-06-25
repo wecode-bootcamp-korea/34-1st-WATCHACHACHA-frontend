@@ -5,30 +5,36 @@ const Information = () => {
   return (
     <section className="information">
       <div className="midWrapper">
-        <div className="poster" />
+        <div className="poster">
+          <img
+            className="posterImage"
+            src="https://upload.wikimedia.org/wikipedia/ko/thumb/d/df/%ED%84%B0%EB%AF%B8%EB%84%A4%EC%9D%B4%ED%84%B01_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg/220px-%ED%84%B0%EB%AF%B8%EB%84%A4%EC%9D%B4%ED%84%B01_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg"
+            alt="poster_image"
+          />
+        </div>
         <div className="posterWrapper">
           <div className="posterDescription">
             <div className="posterTextWrapper">
-              <h1 className="posterTitle">마녀 Part2. The Other One</h1>
+              <h1 className="posterTitle">터미네이터</h1>
               <p className="posterCategoryWrapper">
-                <span className="posterRelease">2021</span>
+                <span className="posterRelease">1984</span>
                 <span className="posterTextDivide">・</span>
-                <span className="posterCategory">액션</span>
+                <span className="posterCategory">액션/SF</span>
                 <span className="posterTextDivide">・</span>
-                <span className="posterCountries">한국</span>
+                <span className="posterCountries">영국/미국</span>
               </p>
             </div>
             <div className="ratingScoreWrapper">
               <span className="scoreAverage">평균</span>
               <span className="scoreStar">★</span>
-              <span className="ratingScore">2.8</span>
-              <span className="ratingSumPerson">{`(${"7,454명"})`}</span>
+              <span className="ratingScore">3.9</span>
+              <span className="ratingSumPerson">{`(${"27만명"})`}</span>
             </div>
             <div className="posterRatingButton">
               <div className="buttonWrapper">
                 <div className="ratingScoreStar">
                   <p className="ratingScoreTitle">평가하기</p>
-                  <div className="starImageWrapper">{/* <img /> */}</div>
+                  <div className="starImageWrapper" />
                 </div>
                 <div className="ratingButtonWrapper">
                   <button className="iconButton">

@@ -1,8 +1,7 @@
 @import "/src/styles/variables.scss";
 
 .commentsListItem {
-  width: 49%;
-  min-width: 49%;
+  width: 50%;
   border: none;
   border-radius: 5px;
   padding: 0 $padding10;
@@ -18,7 +17,8 @@
       @include area(40px, 40px);
 
       .userImage {
-        @include area(30px, 30px);
+        @include area(100%, 100%);
+        border: none;
         border-radius: 50%;
       }
     }

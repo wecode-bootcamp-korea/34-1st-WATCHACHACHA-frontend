@@ -1,69 +1,68 @@
-[
-  {
-    "films": [
+{
+  "films": {
+    "id": 1,
+    "poster_url": "https://upload.wikimedia.org/wikipedia/ko/thumb/d/df/%ED%84%B0%EB%AF%B8%EB%84%A4%EC%9D%B4%ED%84%B01_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg/220px-%ED%84%B0%EB%AF%B8%EB%84%A4%EC%9D%B4%ED%84%B01_%ED%8F%AC%EC%8A%A4%ED%84%B0.jpg",
+    "image_url": "",
+    "name": "터미네이터",
+    "release_date": 1984,
+    "countries": "영국/미국",
+    "genres": "액션/SF",
+    "running_time_min": "1시간 48분",
+    "description": "1997년, 인간이 만든 인공지능 컴퓨터 전략 방어 네트워크가 스스로의 지능을 갖추고는 인류를 핵전쟁의 참화를 일으켜 30억이라는 인류를 잿더미 속에 묻어버린다. 그리고 남은 인간들은 기계의 지배를 받아 시체를 처리하는 일 등에 동원된다. 이때 비상한 지...",
+    "director": {
+      "name": "제임스 카메론",
+      "role": "감독",
+      "image": "https://an2-img.amz.wtchn.net/image/v2/dE54RRrvr5gUjosqISgscQ.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qUXdlREkwTUNKZExDSndJam9pTDNZeEwzQmxiM0JzWlM5dFpXUnBkVzB2WkdNek9Ea3dNVEZtTW1ZeU1UWTFNRE5qTVRndWFuQm5JbjAuakhRQzBOSFFrVjFyR0NCUWdIa0NaS2J4dk8yOGFWRjZvWDNxanFpSTNaQQ"
+    },
+    "actors": [
       {
-        "id": 1,
-        "image_url": "/images/poster/TheGreatGatsby.jpg",
-        "name": "위대한 개츠비",
-        "release_date": 1920,
-        "films_countries": {
-          "countries": "미국"
-        },
-        "genres": "액션",
-        "running_time_min": "2시간 11분",
-        "description": "통제불능의 존재가 세상 밖으로 나왔다! `자윤`이 사라진 뒤, 정체불명의 집단의 무차별 습격으로 마녀 프로젝트가 진행되고 있는 `아크`가 초토화된다. 그곳에서 홀로 살아남은 `소녀`는 생애 처음 세상 밖으로 발을 내딛고 우연히 만난 `경희`의 도움으로 ...",
-        "director": {
-          "name": "박훈정",
-          "role": "감독"
-        },
-        "actors": [
-          {
-            "name": "신시아",
-            "role": "주연",
-            "cast": "소녀"
-          },
-          {
-            "name": "진구",
-            "role": "조연",
-            "cast": "용두"
-          },
-          {
-            "name": "진구",
-            "role": "조연",
-            "cast": "용두"
-          },
-          {
-            "name": "진구",
-            "role": "조연",
-            "cast": "용두"
-          },
-          {
-            "name": "진구",
-            "role": "조연",
-            "cast": "용두"
-          }
-        ]
+        "name": "아놀드 슈왈제네거",
+        "role": "주연",
+        "cast": "터미네이터",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/0G7OM973Jl8CSu2vI1H_LA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qUXdlREkwTUNKZExDSndJam9pTDNZeEwzQmxiM0JzWlM5dFpXUnBkVzB2TlRRMlpqTmtaV1JpWmpnd09UYzRNV0l5TTJJdWFuQm5JbjAuNUVYVnBvc3BycnMySmV5RzBrWmxQNFhzUGxWZlp5UUFkMnhQSUs5elFSYw"
+      },
+      {
+        "name": "마이클 빈",
+        "role": "조연",
+        "cast": "카일 리스",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/prJjKM1MPyYyVPBwUhMWdA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qUXdlREkwTUNKZExDSndJam9pTDNZeEwzQmxiM0JzWlM5dFpXUnBkVzB2T0dReFlXTXlaamt6T1RBMVpXUmxNamczWVRRdWFuQm5JbjAuV2lYczNDTVZhUjdETnJIeXJhRWdlZThFc2doR2xlZWNYWUdpemQ2OFdaMA"
+      },
+      {
+        "name": "린다 해밀턴",
+        "role": "조연",
+        "cast": "사라 코너",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/JykvOFPV3QJvJVKc0c9rbw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qUXdlREkwTUNKZExDSndJam9pTDNZeEwzQmxiM0JzWlM5dFpXUnBkVzB2TlRVM01qRTVOMlEzTkdJNFltTXlaR1ptTWpZdWFuQm5JbjAuRXgtVmNDbzVUakI0aVJzUXQ5U1k3d2g0R3o2bmZOMEE2RFJqUFhTWHBkYw"
+      },
+      {
+        "name": "랜스 헨릭슨",
+        "role": "조연",
+        "cast": "할 부코비치 형사",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/aZ2LraUio1Ivr9Np8li0WA.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qUXdlREkwTUNKZExDSndJam9pTDNZeEwzQmxiM0JzWlM5dFpXUnBkVzB2Wm1FM01URXlOak00TkdKa1pUVmtNVEUxWkRjdWFuQm5JbjAuaUxEUnVGSm1HVVlvcHFlSGVZd3ctZ0xpMU53akNUT1VXUDVLRVV0M1lVdw"
+      },
+      {
+        "name": "폴 윈필드",
+        "role": "조연",
+        "cast": "에드 트랙슬러 반장",
+        "image": "https://an2-img.amz.wtchn.net/image/v2/OEYYzjq27SM1BjqPaB-INw.jpg?jwt=ZXlKaGJHY2lPaUpJVXpJMU5pSjkuZXlKdmNIUnpJanBiSW1SZk1qUXdlREkwTUNKZExDSndJam9pTDNZeEwzQmxiM0JzWlM5dFpXUnBkVzB2TjJVNU1XWmpOekppTXpsbFpEZzNNV014T1dVdWFuQm5JbjAuZjZCdnFMck11U3gzbVJoeUY3YUZFV1I3VmxnSU1SUGhOelh2U202TTJZTQ"
       }
     ]
   },
-  {
-    "users": [
-      {
-        "user": {
-          "id": 1,
-          "nickname": "리얼리스트",
-          "image_url": "/images/icon/penguin-img.png",
-          "comment": "css지옥에서 벗어났다!"
-        }
-      },
-      {
-        "user": {
-          "id": 2,
-          "nickname": "펭토족",
-          "image_url": "/images/icon/penguin-img.png",
-          "comment": "벗어난줄 알았지만 아직 많다.."
-        }
+  "users": [
+    {
+      "user": {
+        "id": 1,
+        "nickname": "치즈케이크",
+        "image_url": "/images/icon/penguin-img.png",
+        "comment": "한계를 매력으로 바꾸어 낸 제임스 캐머런의 창의성"
       }
-    ]
-  }
-]
+    },
+    {
+      "user": {
+        "id": 2,
+        "nickname": "치킨치킨",
+        "image_url": "/images/icon/penguin-img.png",
+        "comment": "터미네이터가 주인공이 아니고.. 사라코너가 주인공"
+      }
+    }
+  ]
+}

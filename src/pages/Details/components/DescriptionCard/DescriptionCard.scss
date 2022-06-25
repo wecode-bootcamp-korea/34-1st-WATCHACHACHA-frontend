@@ -1,14 +1,14 @@
 .descriptionWrapper {
   background-color: #f8f8f8;
-  padding: 0 235px;
 
   .descriptionCard {
     display: flex;
     gap: 20px;
     padding: 28px 0 48px;
+    width: 900px;
+    margin: 0 auto;
 
     .media {
-      grid-area: media;
       background-color: #ffffff;
     }
   }

@@ -3,11 +3,11 @@ import Description from "../Description/Description";
 import Aside from "../Aside/Aside";
 import "./DescriptionCard.scss";
 
-const DescriptionCard = () => {
+const DescriptionCard = ({ filmsData }) => {
   return (
-    <div class="descriptionWrapper">
+    <div className="descriptionWrapper">
       <div className="descriptionCard">
-        <Description />
+        <Description filmsData={filmsData} />
         <Aside />
       </div>
     </div>

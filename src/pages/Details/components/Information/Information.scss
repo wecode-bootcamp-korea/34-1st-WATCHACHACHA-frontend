@@ -4,7 +4,7 @@
   height: 250px;
 
   .midWrapper {
-    @include area(70%, 100%);
+    @include area(930px, 100%);
     display: flex;
     padding: $padding20;
     margin: 0 auto;
@@ -16,7 +16,10 @@
       bottom: 50px;
       border: #ffffff;
       border-radius: 5px;
-      background-color: coral;
+
+      .posterImage {
+        @include area(100%, 100%);
+      }
     }
 
     .posterWrapper {
@@ -24,7 +27,8 @@
       width: 100%;
 
       .posterDescription {
-        @include area(740px, 100%);
+        @include area(100%, 100%);
+        padding-left: 25%;
 
         .posterTextWrapper {
           height: 30%;

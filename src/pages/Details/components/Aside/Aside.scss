@@ -1,9 +1,8 @@
 @import "/src/styles/variables.scss";
 
 .aside {
-  width: 30%;
-  height: 170px;
-  grid-area: media;
+  align-self: flex-start;
+  width: 1000px;
   padding: $padding20;
   background-color: #ffffff;
 
@@ -17,9 +16,17 @@
     gap: 10px;
 
     .galleryListItem {
-      @include area(130px, 90px);
       width: 50%;
-      border: 1px solid;
+
+      .imageWrapper {
+        @include area(100%, 100%);
+
+        .filmsImage {
+          @include area(100%, 100%);
+          border: none;
+          border-radius: 5px;
+        }
+      }
     }
   }
 }
