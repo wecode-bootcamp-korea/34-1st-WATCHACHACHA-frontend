@@ -22,25 +22,22 @@ const Detail = () => {
     setIsLoading(false);
   }, []);
 
+  if (isLoading) return <SkeletonUi />;
+
   return (
-    <div>
-      {isLoading && <SkeletonUi />}
-      {!isLoading && (
-        <div className="detailPage">
-          <ThumbnailImage filmsData={filmsData} />
-          <Information
-            isSeeingCondition={isSeeingCondition}
-            setIsSeeingCondition={setIsSeeingCondition}
-            isCommentCondition={isCommentCondition}
-            addCommentButton={addCommentButton}
-          />
-          <DescriptionCard
-            isSeeingCondition={isSeeingCondition}
-            isCommentCondition={isCommentCondition}
-            addCommentButton={addCommentButton}
-          />
-        </div>
-      )}
+    <div className="detailPage">
+      <ThumbnailImage filmsData={filmsData} />
+      <Information
+        isSeeingCondition={isSeeingCondition}
+        setIsSeeingCondition={setIsSeeingCondition}
+        isCommentCondition={isCommentCondition}
+        addCommentButton={addCommentButton}
+      />
+      <DescriptionCard
+        isSeeingCondition={isSeeingCondition}
+        isCommentCondition={isCommentCondition}
+        addCommentButton={addCommentButton}
+      />
     </div>
   );
 };
