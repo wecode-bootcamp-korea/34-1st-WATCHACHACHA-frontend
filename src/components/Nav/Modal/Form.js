@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import FormLayout from "./FormLayout";
 import Input from "./Input";
 import "./Modal.scss";
@@ -7,18 +9,130 @@ export default function Form({
   type,
   title,
   inputData,
-  setSignUpModalOn,
-  setLoginModalOn,
-  loginModalOn,
-  signUpModalOn,
+  handleModal,
+  handleProfileNav,
 }) {
-  const moveToSignUp = () => {
-    setSignUpModalOn(true);
-    setLoginModalOn(false);
+  const navigate = useNavigate();
+  const [loginUserInfo, setLoginUserInfo] = useState({
+    email: "",
+    password: "",
+  });
+
+  const [signupUserInfo, setSignupUserInfo] = useState({
+    signName: "",
+    signEmail: "",
+    signPassword: "",
+    signBirth: "",
+  });
+
+  const { email, password } = loginUserInfo;
+  const { signName, signEmail, signPassword, signBirth } = signupUserInfo;
+
+  const LOGIN_ERROR_MESSAGE = {
+    INVALID_USER: "이메일이나 비밀번호를 확인 해 주세요",
   };
-  const moveToLogin = () => {
-    setLoginModalOn(true);
-    setSignUpModalOn(false);
+
+  const SIGN_ERROR_MESSAGE = {
+    EMAIL_ALREADY_EXISTS: "이미 가입된 이메일 입니다.",
+    INVALID_PASSWORD: "비밀번호를 확인 해 주세요",
+    INVALID_USERNAME: "이름을 확인 해 주세요",
+    INVALID_EMAIL: "이메일을 확인 해 주세요",
+    INVALID_BIRTH: "생년월일을 확인 해 주세요",
+  };
+
+  const getUserInfo = e => {
+    const { value, name } = e.target;
+
+    if (type === "login") {
+      setLoginUserInfo({ ...loginUserInfo, [name]: value });
+    } else {
+      setSignupUserInfo({ ...signupUserInfo, [name]: value });
+    }
+  };
+
+  const onReset = () => {
+    setLoginUserInfo({
+      email: "",
+      password: "",
+    });
+    setSignupUserInfo({
+      signName: "",
+      signEmail: "",
+      signPassword: "",
+      signBirth: "",
+    });
+  };
+
+  const loginService = e => {
+    e.preventDefault();
+    fetch("http://10.58.1.143:8000/users/signin", {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.access_token) {
+          localStorage.setItem("token", result.access_token);
+          handleModal("");
+          handleProfileNav("loginSuccess");
+          navigate("/");
+        } else {
+          alert(LOGIN_ERROR_MESSAGE[result.message]);
+        }
+      })
+      .catch(error => console.log(error));
+  };
+
+  const signupService = e => {
+    e.preventDefault();
+    fetch("http://10.58.1.143:8000/users/signup", {
+      method: "POST",
+      body: JSON.stringify({
+        username: signName,
+        email: signEmail,
+        password: signPassword,
+        date_of_birth: signBirth,
+      }),
+    })
+      .then(response => response.json())
+      .then(result => {
+        if (result.message === "SUCCESS") {
+          alert("회원가입 성공");
+          handleModal("");
+          handleProfileNav("loginSuccess");
+          navigate("/");
+        } else {
+          alert(SIGN_ERROR_MESSAGE[result.message]);
+        }
+      });
+  };
+
+  const validator = {
+    email: input => {
+      const regExp =
+        /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+      return regExp.test(input);
+    },
+    password: input => input.length >= 6,
+    signName: input => input.length >= 2,
+    signEmail: input => {
+      const regExp =
+        /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+      return regExp.test(input);
+    },
+    signPassword: input => {
+      const regExp =
+        /^((?=.*[A-Za-z])(?=.*\d)|(?=.*[A-Za-z])(?=.*[\^@$!%*#?&])|(?=.*\d)(?=.*[\^@$!%*#?&])).{10,}$/;
+      return regExp.test(input);
+    },
+    signBirth: input => {
+      const regExp =
+        /^(19[0-9][0-9]|20[0-9][0-9])*-(0[1-9]|1[0-2])*-(0[1-9]|[1-2][0-9]|3[0-1])$/;
+      return regExp.test(input);
+    },
   };
 
   return (
@@ -30,11 +144,19 @@ export default function Form({
             {inputData.map((input, idx) => (
               <Input
                 key={idx}
+                status={type}
                 type={input.type}
                 text={input.text}
+                value={
+                  type === "login"
+                    ? loginUserInfo[input.type]
+                    : signupUserInfo[input.type]
+                }
                 unValidClass={input.unValidClass}
-                loginModalOn={loginModalOn}
-                signUpModalOn={signUpModalOn}
+                errorMessage={input.errorMessage}
+                getUserInfo={getUserInfo}
+                handleValid={validator[input.type]}
+                onReset={onReset}
               />
             ))}
             {type === "signup" && (
@@ -44,7 +166,12 @@ export default function Form({
                 <i className="fa-solid fa-caret-down downBtn" />
               </button>
             )}
-            <button className="loginBtn" type="submit" value={title}>
+            <button
+              className="loginBtn"
+              type="submit"
+              value={title}
+              onClick={type === "login" ? loginService : signupService}
+            >
               {title}
             </button>
           </form>
@@ -57,7 +184,13 @@ export default function Form({
               </div>
               <div className="signInBox">
                 계정이 없으신가요?
-                <button className="signInBtn" onClick={moveToSignUp}>
+                <button
+                  className="signInBtn"
+                  onClick={e => {
+                    e.preventDefault();
+                    handleModal("signup");
+                  }}
+                >
                   회원가입
                 </button>
               </div>
@@ -65,7 +198,13 @@ export default function Form({
           ) : (
             <div className="signInBox alreadySignInContent">
               이미 가입하셨나요?
-              <button className="signInBtn" onClick={moveToLogin}>
+              <button
+                className="signInBtn"
+                onClick={e => {
+                  e.preventDefault();
+                  handleModal("login");
+                }}
+              >
                 로그인
               </button>
             </div>
@@ -108,3 +247,6 @@ export default function Form({
     </FormLayout>
   );
 }
+// else {
+//   alert(LOGIN_ERROR_MESSAGE[result.message]);
+// }

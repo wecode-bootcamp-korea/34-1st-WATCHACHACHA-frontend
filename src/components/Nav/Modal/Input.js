@@ -1,67 +1,34 @@
+import { toHaveFormValues } from "@testing-library/jest-dom/dist/matchers";
 import React from "react";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Modal.scss";
 
 export default function Input({
   type,
   text,
+  status,
   unValidClass,
-  loginModalOn,
-  signUpModalOn,
+  getUserInfo,
+  value,
+  errorMessage,
+  handleValid,
+  onReset,
 }) {
-  const [userInfo, setUserInfo] = useState({
-    email: "",
-    password: "",
-    name: "",
-  });
-  const { email, password, name } = userInfo;
   const [isUnValidEmail, setIsUnValidEmail] = useState(false);
   const [isValidEmail, setIsValidEmail] = useState(false);
 
-  // useEffect(() => {
-  //   console.log(userInfo);
-  // }, [userInfo]);
-
-  const getUserInfo = e => {
-    const { value, name } = e.target;
-    setUserInfo({ ...userInfo, [name]: value });
-  };
-
-  const inValidIconOn = () => {
-    if (
-      (email.length >= 5 && email.includes("@")) ||
-      password.length >= 6 ||
-      name.length >= 2
-    ) {
-      setIsValidEmail(true);
-      setIsUnValidEmail(false);
-    } else if (
-      (email.indexOf("@") < 1 && email.length >= 1) ||
-      password.length >= 1 ||
-      (name.length && name.length < 2)
-    ) {
-      setIsUnValidEmail(true);
-      setIsValidEmail(false);
-    } else {
-      setIsValidEmail(false);
-      setIsUnValidEmail(false);
-    }
-  };
+  const isValid = handleValid(value);
 
   const UnValidIcon = () => {
     return (
       <>
-        {/* <i className="fa-solid fa-circle-xmark deleteBtn" /> */}
+        <i
+          className="fa-solid fa-circle-xmark deleteBtn"
+          onClick={inputValueHandle}
+        />
         <i className="fa-solid fa-circle-exclamation warningBtn " />
-        <p className="unValidMessage">
-          {email.length >= 1
-            ? `정확하지 않은 이메일입니다.`
-            : password.length >= 1
-            ? `비밀번호는 최소 6자리 이상이어야 합니다.`
-            : name.length >= 1
-            ? `정확하지 않은 이름입니다.`
-            : null}
-        </p>
+        <p className="unValidMessage">{errorMessage}</p>
       </>
     );
   };
@@ -69,24 +36,54 @@ export default function Input({
   const ValidIcon = () => {
     return (
       <>
-        {/* <i className="fa-solid fa-circle-xmark deleteBtn" /> */}
+        <i
+          className="fa-solid fa-circle-xmark deleteBtn"
+          onClick={inputValueHandle}
+        />
         <i className="fa-regular fa-lg fa-circle-check checkBtn" />
       </>
     );
   };
 
+  const isValidHandle = () => {
+    if (isValid) {
+      setIsValidEmail(true);
+      setIsUnValidEmail(false);
+    } else if (value.length < 1) {
+      setIsUnValidEmail(false);
+      setIsValidEmail(false);
+    } else {
+      setIsValidEmail(false);
+      setIsUnValidEmail(true);
+    }
+  };
+
+  const inputValueHandle = () => {
+    setIsUnValidEmail(false);
+    setIsValidEmail(false);
+    onReset();
+  };
+
+  useEffect(() => {
+    inputValueHandle();
+  }, [status]);
+
   return (
     <div className="loginFormInput">
       <input
         className={isUnValidEmail ? unValidClass : null}
-        type={type}
+        type={type === "signPassword" ? "password" : type}
         name={type}
+        value={value}
         placeholder={text}
         onChange={getUserInfo}
-        onKeyUp={inValidIconOn}
+        onKeyUp={isValidHandle}
       />
       {isUnValidEmail ? <UnValidIcon /> : null}
       {isValidEmail ? <ValidIcon /> : null}
     </div>
   );
+}
+{
+  /* <i className="fa-solid fa-circle-xmark deleteBtn" /> */
 }

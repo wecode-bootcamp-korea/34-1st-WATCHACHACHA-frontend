@@ -3,26 +3,44 @@ import LoginModal from "./Modal/LoginModal";
 import { useState } from "react";
 import "./Nav.scss";
 
+const ModalOnBtn = ({ handleModal }) => {
+  return (
+    <>
+      <li className="loginBtn">
+        <button onClick={() => handleModal("login")}>로그인</button>
+      </li>
+      <li className="signInBtn">
+        <button onClick={() => handleModal("signup")}>회원가입</button>
+      </li>
+    </>
+  );
+};
+
+const ProfileNav = () => {
+  return (
+    <>
+      <li className="evaluationBtn">
+        <a>평가하기</a>
+      </li>
+      <li className="profileIcon">
+        <a>
+          <i className="fa-regular fa-lg fa-user" />
+        </a>
+      </li>
+    </>
+  );
+};
+
 const Nav = () => {
-  const [loginModalOn, setLoginModalOn] = useState(false);
-  const [signUpModalOn, setSignUpModalOn] = useState(false);
-  const [modalBackgroundOn, setModalBackgroundOn] = useState(false);
-  // const [testModal, setTestModal] = useState(); // "login", "signup", "" -> state 값이 "login" 일때 ~
+  const [modalStatus, setModalStatus] = useState("");
+  const [loginStatus, setLoginStatus] = useState("");
 
-  const enterLoginModalOn = () => {
-    setLoginModalOn(true);
-    setModalBackgroundOn(true);
+  const handleModal = status => {
+    setModalStatus(status);
   };
 
-  const enterSignInModalOn = () => {
-    setSignUpModalOn(true);
-    setModalBackgroundOn(true);
-  };
-
-  const outModalOn = () => {
-    setLoginModalOn(false);
-    setSignUpModalOn(false);
-    setModalBackgroundOn(false);
+  const handleProfileNav = status => {
+    setLoginStatus(status);
   };
 
   return (
@@ -48,40 +66,34 @@ const Nav = () => {
               <i className="fa-solid fa-magnifying-glass" />
             </form>
           </li>
-          <li className="loginBtn">
-            <button onClick={enterLoginModalOn}>로그인</button>
+          {loginStatus === "loginSuccess" ? (
+            <ProfileNav />
+          ) : (
+            <ModalOnBtn handleModal={handleModal} />
+          )}
+          {/* <ModalOnBtn handleModal={handleModal} /> */}
+
+          {/* <li className="loginBtn">
+            <button onClick={() => handleModal("login")}>로그인</button>
           </li>
           <li className="signInBtn">
-            <button onClick={enterSignInModalOn}>회원가입</button>
-          </li>
+            <button onClick={() => handleModal("signup")}>회원가입</button>
+          </li> */}
         </ul>
       </div>
       <div
-        className={modalBackgroundOn ? "modalBackground" : null}
-        onClick={outModalOn}
+        className={modalStatus ? "modalBackground" : null}
+        onClick={() => handleModal("")}
       />
-      {loginModalOn ? (
+      {modalStatus && (
         <LoginModal
-          type="login"
-          title="로그인"
-          inputData={LOGIN_DATA}
-          loginModalOn={loginModalOn}
-          signUpModalOn={signUpModalOn}
-          setSignUpModalOn={setSignUpModalOn}
-          setLoginModalOn={setLoginModalOn}
+          type={modalStatus}
+          title={modalStatus === "login" ? "로그인" : "회원가입"}
+          inputData={modalStatus === "login" ? LOGIN_DATA : SIGNUP_DATA}
+          handleModal={handleModal}
+          handleProfileNav={handleProfileNav}
         />
-      ) : null}
-      {signUpModalOn ? (
-        <LoginModal
-          type="signup"
-          title="회원가입"
-          inputData={SIGNUP_DATA}
-          loginModalOn={loginModalOn}
-          signUpModalOn={signUpModalOn}
-          setLoginModalOn={setLoginModalOn}
-          setSignUpModalOn={setSignUpModalOn}
-        />
-      ) : null}
+      )}
     </nav>
   );
 };
@@ -91,29 +103,41 @@ const LOGIN_DATA = [
     type: "email",
     text: "이메일",
     unValidClass: "unValidClass",
+    errorMessage: "정확하지 않은 이메일 입니다.",
   },
   {
     type: "password",
     text: "비밀번호",
     unValidClass: "unValidClass",
+    errorMessage: "비밀번호는 최소 6자리 이상이어야 합니다.",
   },
 ];
 
 const SIGNUP_DATA = [
   {
-    type: "name",
+    type: "signName",
     text: "이름",
     unValidClass: "unValidClass",
+    errorMessage: "정확하지 않은 이름입니다.",
   },
   {
-    type: "email",
+    type: "signEmail",
     text: "이메일",
     unValidClass: "unValidClass",
+    errorMessage: "정확하지 않은 이메일입니다.",
   },
   {
-    type: "password",
+    type: "signPassword",
     text: "비밀번호",
     unValidClass: "unValidClass",
+    errorMessage:
+      "비밀번호는 영문, 숫자, 특수문자 중 2개 이상을 조합하여 최소 10자리 이상이여야 합니다.",
+  },
+  {
+    type: "signBirth",
+    text: "생년월일",
+    unValidClass: "unValidClass",
+    errorMessage: "정확하지 않은 생년월일입니다.",
   },
 ];
 

@@ -6,11 +6,8 @@ const LoginModal = ({
   type,
   title,
   inputData,
-  setSignUpModalOn,
-  setLoginModalOn,
-  unValidClass,
-  loginModalOn,
-  signUpModalOn,
+  handleModal,
+  handleProfileNav,
 }) => {
   return (
     <div className="loginModalContainer">
@@ -19,11 +16,8 @@ const LoginModal = ({
           type={type}
           title={title}
           inputData={inputData}
-          setSignUpModalOn={setSignUpModalOn}
-          setLoginModalOn={setLoginModalOn}
-          unValidClass={unValidClass}
-          loginModalOn={loginModalOn}
-          signUpModalOn={signUpModalOn}
+          handleModal={handleModal}
+          handleProfileNav={handleProfileNav}
         />
       </div>
     </div>
