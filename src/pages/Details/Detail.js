@@ -12,15 +12,15 @@ const Detail = () => {
   const [isChangedCondition, setIsChangedCondition] = useState(true);
 
   useEffect(() => {
-    setTimeout(async () => {
-      const res = await fetch("data/detailData.json");
-      const data = await res.json();
-      setFilmsData(data);
-      setIsLoading(false);
-    }, 500);
+    fetch("data/detailData.json")
+      .then(res => res.json())
+      .then(setFilmsData);
+    setIsLoading(false);
   }, []);
+
   return (
     <div>
+      {isLoading && <SkeletonUi />}
       {!isLoading && (
         <div className="detailPage">
           <ThumbnailImage filmsData={filmsData} />
@@ -31,7 +31,6 @@ const Detail = () => {
           <DescriptionCard isChangedCondition={isChangedCondition} />
         </div>
       )}
-      {isLoading && <SkeletonUi />}
     </div>
   );
 };
