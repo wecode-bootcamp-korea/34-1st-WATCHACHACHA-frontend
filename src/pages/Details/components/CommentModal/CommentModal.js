@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faComments } from "@fortawesome/free-solid-svg-icons";
@@ -6,6 +7,14 @@ import { faSkull } from "@fortawesome/free-solid-svg-icons";
 import "./CommentModal.scss";
 
 const CommentModal = ({ addCommentButton }) => {
+  const [userComment, setUserComment] = useState("");
+  const enabled = userComment.length > 0;
+
+  const enabledSave = event => {
+    const { value } = event.target;
+    setUserComment(value);
+  };
+
   return (
     <div className="modal">
       <div onClick={addCommentButton} className="commentModal" />
@@ -17,6 +26,7 @@ const CommentModal = ({ addCommentButton }) => {
           </button>
         </div>
         <input
+          onChange={enabledSave}
           className="commentText"
           placeholder="이 작품에 대한 생각을 자유롭게 표현해주세요."
           type="text"
@@ -30,7 +40,7 @@ const CommentModal = ({ addCommentButton }) => {
             />
             <FontAwesomeIcon icon={faSkull} size="1x" className="skullIcon" />
           </div>
-          <button disabled={true} className="saveButton">
+          <button disabled={!enabled} className="saveButton">
             저장
           </button>
         </div>
