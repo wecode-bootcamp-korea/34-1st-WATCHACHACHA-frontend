@@ -16,7 +16,7 @@ const Information = ({ isChangedCondition, setIsChangedCondition }) => {
         <div className="posterWrapper">
           <div className="posterDescription">
             <div className="posterTextWrapper">
-              <h1 className="posterTitle pink">터미네이터</h1>
+              <h1 className="posterTitle">터미네이터</h1>
               <p className="posterCategoryWrapper">
                 <span className="posterRelease">1984</span>
                 <span className="posterTextDivide">・</span>
