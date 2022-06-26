@@ -4,12 +4,21 @@ import Description from "../Description/Description";
 import Aside from "../Aside/Aside";
 import "./DescriptionCard.scss";
 
-const DescriptionCard = ({ isSeeingCondition }) => {
+const DescriptionCard = ({
+  isSeeingCondition,
+  isCommentCondition,
+  addCommentButton,
+}) => {
   return (
     <div className="descriptionWrapper">
       <div className="descriptionCard">
         <div className="cardWrapper">
-          {isSeeingCondition ? null : <CommentCard />}
+          {isSeeingCondition ? null : (
+            <CommentCard
+              isCommentCondition={isCommentCondition}
+              addCommentButton={addCommentButton}
+            />
+          )}
           <Description />
         </div>
         <Aside />

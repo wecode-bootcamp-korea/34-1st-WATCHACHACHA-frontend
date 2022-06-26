@@ -13,6 +13,8 @@ const Detail = () => {
   const [isSeeingCondition, setIsSeeingCondition] = useState(true);
   const [isCommentCondition, setIsCommentCondition] = useState(true);
 
+  const addCommentButton = () => setIsCommentCondition(!isCommentCondition);
+
   useEffect(() => {
     fetch("data/detailData.json")
       .then(res => res.json())
@@ -29,8 +31,14 @@ const Detail = () => {
           <Information
             isSeeingCondition={isSeeingCondition}
             setIsSeeingCondition={setIsSeeingCondition}
+            isCommentCondition={isCommentCondition}
+            addCommentButton={addCommentButton}
           />
-          <DescriptionCard isSeeingCondition={isSeeingCondition} />
+          <DescriptionCard
+            isSeeingCondition={isSeeingCondition}
+            isCommentCondition={isCommentCondition}
+            addCommentButton={addCommentButton}
+          />
         </div>
       )}
     </div>

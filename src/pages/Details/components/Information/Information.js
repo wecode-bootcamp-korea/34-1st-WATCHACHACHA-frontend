@@ -3,7 +3,12 @@ import CommentButton from "../CommentButton/CommentButton";
 import PositiveButton from "../PositiveButton/PositiveButton";
 import "./Information.scss";
 
-const Information = ({ isSeeingCondition, setIsSeeingCondition }) => {
+const Information = ({
+  isSeeingCondition,
+  setIsSeeingCondition,
+  isCommentCondition,
+  addCommentButton,
+}) => {
   return (
     <section className="information">
       <div className="midWrapper">
@@ -43,7 +48,10 @@ const Information = ({ isSeeingCondition, setIsSeeingCondition }) => {
                     isSeeingCondition={isSeeingCondition}
                     setIsSeeingCondition={setIsSeeingCondition}
                   />
-                  <CommentButton />
+                  <CommentButton
+                    isCommentCondition={isCommentCondition}
+                    addCommentButton={addCommentButton}
+                  />
                 </div>
               </div>
             </div>
