@@ -2,7 +2,7 @@ import React from "react";
 import PositiveButton from "../PositiveButton/PositiveButton";
 import "./Information.scss";
 
-const Information = ({ isChangedCondition, setIsChangedCondition }) => {
+const Information = ({ isSeeingCondition, setIsSeeingCondition }) => {
   return (
     <section className="information">
       <div className="midWrapper">
@@ -39,8 +39,8 @@ const Information = ({ isChangedCondition, setIsChangedCondition }) => {
                 </div>
                 <div className="ratingButtonWrapper">
                   <PositiveButton
-                    isChangedCondition={isChangedCondition}
-                    setIsChangedCondition={setIsChangedCondition}
+                    isChangedCondition={isSeeingCondition}
+                    setIsChangedCondition={setIsSeeingCondition}
                   />
                 </div>
               </div>

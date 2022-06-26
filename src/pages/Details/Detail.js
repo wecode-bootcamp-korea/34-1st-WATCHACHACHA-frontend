@@ -9,7 +9,7 @@ import "./Detail.scss";
 const Detail = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [filmsData, setFilmsData] = useState([]);
-  const [isChangedCondition, setIsChangedCondition] = useState(true);
+  const [isSeeingCondition, setIsSeeingCondition] = useState(true);
 
   useEffect(() => {
     fetch("data/detailData.json")
@@ -25,10 +25,10 @@ const Detail = () => {
         <div className="detailPage">
           <ThumbnailImage filmsData={filmsData} />
           <Information
-            isChangedCondition={isChangedCondition}
-            setIsChangedCondition={setIsChangedCondition}
+            isSeeingCondition={isSeeingCondition}
+            setIsSeeingCondition={setIsSeeingCondition}
           />
-          <DescriptionCard isChangedCondition={isChangedCondition} />
+          <DescriptionCard isSeeingCondition={isSeeingCondition} />
         </div>
       )}
     </div>
