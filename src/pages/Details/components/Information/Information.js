@@ -1,4 +1,5 @@
 import React from "react";
+import CommentButton from "../CommentButton/CommentButton";
 import PositiveButton from "../PositiveButton/PositiveButton";
 import "./Information.scss";
 
@@ -39,9 +40,10 @@ const Information = ({ isSeeingCondition, setIsSeeingCondition }) => {
                 </div>
                 <div className="ratingButtonWrapper">
                   <PositiveButton
-                    isChangedCondition={isSeeingCondition}
-                    setIsChangedCondition={setIsSeeingCondition}
+                    isSeeingCondition={isSeeingCondition}
+                    setIsSeeingCondition={setIsSeeingCondition}
                   />
+                  <CommentButton />
                 </div>
               </div>
             </div>

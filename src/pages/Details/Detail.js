@@ -7,9 +7,11 @@ import DescriptionCard from "./components/DescriptionCard/DescriptionCard";
 import "./Detail.scss";
 
 const Detail = () => {
-  const [isLoading, setIsLoading] = useState(true);
   const [filmsData, setFilmsData] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
   const [isSeeingCondition, setIsSeeingCondition] = useState(true);
+  const [isCommentCondition, setIsCommentCondition] = useState(true);
 
   useEffect(() => {
     fetch("data/detailData.json")

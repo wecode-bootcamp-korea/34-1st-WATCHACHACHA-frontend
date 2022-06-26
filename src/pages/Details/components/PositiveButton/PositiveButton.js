@@ -4,7 +4,7 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import "./PositiveButton.scss";
 
-const PositiveButton = ({ isChangedCondition, setIsChangedCondition }) => {
+const PositiveButton = ({ isSeeingCondition, setIsSeeingCondition }) => {
   const seeingButton = () => (
     <FontAwesomeIcon className="seeingIcon" icon={faPlus} size="1x" />
   );
@@ -12,23 +12,21 @@ const PositiveButton = ({ isChangedCondition, setIsChangedCondition }) => {
   const bookMakerButton = () => (
     <FontAwesomeIcon
       className={
-        isChangedCondition ? "bookMakerIcon" : "bookMakerIcon bookMakerIconPink"
+        isSeeingCondition ? "bookMakerIcon" : "bookMakerIcon bookMakerIconPink"
       }
       icon={faBookmark}
       size="1x"
     />
   );
 
-  const changedLikeButton = () =>
+  const changedSeeingButton = () =>
     setTimeout(() => {
-      setIsChangedCondition(!isChangedCondition);
+      setIsSeeingCondition(!isSeeingCondition);
     }, 100);
   return (
-    <button onClick={changedLikeButton} className="positiveButton">
-      {isChangedCondition ? seeingButton() : bookMakerButton()}
-      <div
-        className={isChangedCondition ? "iconText" : "iconText iconTextPink"}
-      >
+    <button onClick={changedSeeingButton} className="positiveButton">
+      {isSeeingCondition ? seeingButton() : bookMakerButton()}
+      <div className={isSeeingCondition ? "iconText" : "iconText iconTextPink"}>
         보고싶어요
       </div>
     </button>
