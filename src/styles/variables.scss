@@ -37,6 +37,11 @@
   cursor: pointer;
 }
 
+@mixin cardBorder {
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+}
+
 $margin05: 5px;
 $margin10: 10px;
 $margin20: 20px;

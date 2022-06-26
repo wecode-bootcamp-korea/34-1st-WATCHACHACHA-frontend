@@ -1,9 +1,8 @@
 import React from "react";
+import PositiveButton from "../PositiveButton/PositiveButton";
 import "./Information.scss";
 
-const Information = () => {
-  // 폰트어썸 사용법 익히기
-  // 해당 코드 분석하기
+const Information = ({ isChangedCondition, setIsChangedCondition }) => {
   return (
     <section className="information">
       <div className="midWrapper">
@@ -17,7 +16,7 @@ const Information = () => {
         <div className="posterWrapper">
           <div className="posterDescription">
             <div className="posterTextWrapper">
-              <h1 className="posterTitle">터미네이터</h1>
+              <h1 className="posterTitle pink">터미네이터</h1>
               <p className="posterCategoryWrapper">
                 <span className="posterRelease">1984</span>
                 <span className="posterTextDivide">・</span>
@@ -39,14 +38,10 @@ const Information = () => {
                   <div className="starImageWrapper" />
                 </div>
                 <div className="ratingButtonWrapper">
-                  <button className="iconButton">
-                    <img
-                      className="iconImage"
-                      src="/images/icon/positiveAddIcon.png"
-                      alt="icon"
-                    />
-                    <div className="markerButton">보고싶어요</div>
-                  </button>
+                  <PositiveButton
+                    isChangedCondition={isChangedCondition}
+                    setIsChangedCondition={setIsChangedCondition}
+                  />
                 </div>
               </div>
             </div>

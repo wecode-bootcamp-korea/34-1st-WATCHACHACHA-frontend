@@ -5,6 +5,7 @@
   width: 1000px;
   padding: $padding20;
   background-color: #ffffff;
+  @include cardBorder;
 
   .galleryTitle {
     @include descriptionTitleFont;

@@ -1,4 +1,7 @@
+@import "/src/styles/variables.scss";
+
 .description {
   padding: 20px;
   background-color: #ffffff;
+  @include cardBorder;
 }

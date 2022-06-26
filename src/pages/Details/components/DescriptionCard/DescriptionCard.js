@@ -1,13 +1,17 @@
 import React from "react";
+import CommentCard from "../CommentCard/CommentCard";
 import Description from "../Description/Description";
 import Aside from "../Aside/Aside";
 import "./DescriptionCard.scss";
 
-const DescriptionCard = ({ filmsData }) => {
+const DescriptionCard = ({ isChangedCondition }) => {
   return (
     <div className="descriptionWrapper">
       <div className="descriptionCard">
-        <Description filmsData={filmsData} />
+        <div className="cardWrapper">
+          {isChangedCondition ? null : <CommentCard />}
+          <Description />
+        </div>
         <Aside />
       </div>
     </div>
