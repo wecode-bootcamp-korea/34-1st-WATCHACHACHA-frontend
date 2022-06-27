@@ -7,7 +7,7 @@
         "release_date": 1930,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "한국",
-        "rate_stars": "평균★3.5"
+        "score_average": "평균★3.5"
       },
       {
         "id": 2,
@@ -15,7 +15,7 @@
         "release_date": 1920,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "미국",
-        "rate_stars": "평균★4.2"
+        "score_average": "평균★4.2"
       },
       {
         "id": 3,
@@ -23,7 +23,7 @@
         "release_date": 1931,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "미국",
-        "rate_stars": "평균★1.5"
+        "score_average": "평균★1.5"
       },
       {
         "id": 4,
@@ -31,7 +31,7 @@
         "release_date": 1943,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "스페인",
-        "rate_stars": "평균★5.0"
+        "score_average": "평균★5.0"
       },
       {
         "id": 5,
@@ -39,7 +39,7 @@
         "release_date": 1955,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "캐나다",
-        "rate_stars": "평균★2.5"
+        "score_average": "평균★2.5"
       },
       {
         "id": 6,
@@ -47,7 +47,7 @@
         "release_date": 1919,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "영국",
-        "rate_stars": "평균★3.7"
+        "score_average": "평균★3.7"
       },
       {
         "id": 7,
@@ -55,7 +55,7 @@
         "release_date": 1945,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "브라질",
-        "rate_stars": "평균★0.5"
+        "score_average": "평균★0.5"
       },
       {
         "id": 8,
@@ -63,7 +63,7 @@
         "release_date": 1923,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "태국",
-        "rate_stars": "평균★2.3"
+        "score_average": "평균★2.3"
       },
       {
         "id": 9,
@@ -71,7 +71,7 @@
         "release_date": 1932,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "프랑스",
-        "rate_stars": "평균★3.3"
+        "score_average": "평균★3.3"
       },
       {
         "id": 10,
@@ -79,7 +79,7 @@
         "release_date": 1949,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "독일",
-        "rate_stars": "평균★4.5"
+        "score_average": "평균★4.5"
       }
     ]
   },
@@ -91,7 +91,7 @@
         "release_date": 1933,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "나이지리아",
-        "rate_stars": "평균★5.5"
+        "score_average": "평균★5.5"
       },
       {
         "id": 12,
@@ -99,7 +99,7 @@
         "release_date": 1911,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "아르헨티나",
-        "rate_stars": "평균★2.3"
+        "score_average": "평균★2.3"
       },
       {
         "id": 13,
@@ -107,7 +107,7 @@
         "release_date": 1932,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "호주",
-        "rate_stars": "평균★4.7"
+        "score_average": "평균★4.7"
       },
       {
         "id": 14,
@@ -115,7 +115,7 @@
         "release_date": 1943,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "스페인",
-        "rate_stars": "평균★5.0"
+        "score_average": "평균★5.0"
       },
       {
         "id": 15,
@@ -123,7 +123,7 @@
         "release_date": 1955,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "캐나다",
-        "rate_stars": "평균★2.5"
+        "score_average": "평균★2.5"
       },
       {
         "id": 16,
@@ -131,7 +131,7 @@
         "release_date": 1919,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "영국",
-        "rate_stars": "평균★3.7"
+        "score_average": "평균★3.7"
       },
       {
         "id": 17,
@@ -139,7 +139,7 @@
         "release_date": 1945,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "브라질",
-        "rate_stars": "평균★0.5"
+        "score_average": "평균★0.5"
       },
       {
         "id": 18,
@@ -147,7 +147,7 @@
         "release_date": 1923,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "태국",
-        "rate_stars": "평균★2.3"
+        "score_average": "평균★2.3"
       },
       {
         "id": 19,
@@ -155,7 +155,7 @@
         "release_date": 1932,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "프랑스",
-        "rate_stars": "평균★3.3"
+        "score_average": "평균★3.3"
       },
       {
         "id": 20,
@@ -163,7 +163,7 @@
         "release_date": 1949,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "독일",
-        "rate_stars": "평균★4.5"
+        "score_average": "평균★4.5"
       }
     ]
   },
@@ -175,7 +175,7 @@
         "release_date": 1945,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "브라질",
-        "rate_stars": "평균★0.5"
+        "score_average": "평균★0.5"
       },
       {
         "id": 22,
@@ -183,7 +183,7 @@
         "release_date": 1923,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "태국",
-        "rate_stars": "평균★2.3"
+        "score_average": "평균★2.3"
       },
       {
         "id": 23,
@@ -191,7 +191,7 @@
         "release_date": 1932,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "프랑스",
-        "rate_stars": "평균★3.3"
+        "score_average": "평균★3.3"
       },
       {
         "id": 24,
@@ -199,7 +199,7 @@
         "release_date": 1949,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "독일",
-        "rate_stars": "평균★4.5"
+        "score_average": "평균★4.5"
       },
       {
         "id": 25,
@@ -207,7 +207,7 @@
         "release_date": 1930,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "한국",
-        "rate_stars": "평균★3.5"
+        "score_average": "평균★3.5"
       },
       {
         "id": 26,
@@ -215,7 +215,7 @@
         "release_date": 1920,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "미국",
-        "rate_stars": "평균★4.2"
+        "score_average": "평균★4.2"
       },
       {
         "id": 27,
@@ -223,7 +223,7 @@
         "release_date": 1931,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "미국",
-        "rate_stars": "평균★1.5"
+        "score_average": "평균★1.5"
       },
       {
         "id": 28,
@@ -231,7 +231,7 @@
         "release_date": 1943,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "스페인",
-        "rate_stars": "평균★5.0"
+        "score_average": "평균★5.0"
       },
       {
         "id": 29,
@@ -239,7 +239,7 @@
         "release_date": 1955,
         "image_url": "/images/poster/copyrightfree.jpg",
         "country": "캐나다",
-        "rate_stars": "평균★2.5"
+        "score_average": "평균★2.5"
       },
       {
         "id": 30,
@@ -247,7 +247,7 @@
         "release_date": 1919,
         "image_url": "/images/poster/copyrightfree_ocean.jpg",
         "country": "영국",
-        "rate_stars": "평균★3.7"
+        "score_average": "평균★3.7"
       }
     ]
   }

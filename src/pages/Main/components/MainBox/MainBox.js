@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Film from "./../Film/Film";
 import "./MainBox.scss";
 
-const MainBox = ({ movies, theme }) => {
+const MainBox = ({ movies, theme, loading }) => {
   const [slidePx, setSlidePx] = useState(0);
 
   const toPrev = () => {
@@ -12,10 +12,10 @@ const MainBox = ({ movies, theme }) => {
 
   const toNext = () => {
     //if (slidePx > -2750) setSlidePx(slidePx - 1375);
-    slidePx > -2750 && setSlidePx(slidePx - 1375);
+    slidePx > -1375 && setSlidePx(slidePx - 1375);
   };
 
-  if (movies === undefined) return;
+  //if (movies === undefined) return;
 
   return (
     <div className="mainBox">
@@ -38,7 +38,7 @@ const MainBox = ({ movies, theme }) => {
       <div
         className="nextBtn"
         onClick={toNext}
-        style={{ display: slidePx === -2750 ? "none" : "" }}
+        style={{ display: slidePx === -1375 ? "none" : "" }}
       >
         <i className="fa-solid fa-chevron-right" />
       </div>

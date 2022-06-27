@@ -10,7 +10,10 @@ const Routers = () => {
       <Nav />
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/detail" element={<Detail />} />
+        {/* <Route path="/:ggg/:ddd" element={<Main />} /> */}
+        {/* <Route path="/:parameter" element={<Main />} /> */}
+        {/* <Route path="/films/main?genre=드라마" element={<Main />} /> */}
+        <Route path="/detail/:id" element={<Detail />} />
       </Routes>
       <Footer />
     </BrowserRouter>
