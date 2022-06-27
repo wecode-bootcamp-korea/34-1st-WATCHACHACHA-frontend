@@ -135,7 +135,7 @@ const SIGNUP_DATA = [
   },
   {
     type: "signBirth",
-    text: "생년월일",
+    text: "생년월일 8자리를 입력하세요.",
     unValidClass: "unValidClass",
     errorMessage: "정확하지 않은 생년월일입니다.",
   },

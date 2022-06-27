@@ -63,9 +63,20 @@ export default function Form({
     });
   };
 
+  useEffect(() => {
+    if (signBirth.length === 8) {
+      let copy = { ...signupUserInfo };
+      const num = copy.signBirth.toString();
+      const result =
+        num.substr(0, 4) + "-" + num.substr(4, 2) + "-" + num.substr(6);
+      copy.signBirth = result;
+      setSignupUserInfo(copy);
+    }
+  }, [signBirth]);
+
   const loginService = e => {
     e.preventDefault();
-    fetch("http://10.58.1.143:8000/users/signin", {
+    fetch("http://10.58.2.194:8000/users/signin", {
       method: "POST",
       body: JSON.stringify({
         email: email,
@@ -88,7 +99,7 @@ export default function Form({
 
   const signupService = e => {
     e.preventDefault();
-    fetch("http://10.58.1.143:8000/users/signup", {
+    fetch("http://10.58.2.194:8000/users/signup", {
       method: "POST",
       body: JSON.stringify({
         username: signName,
@@ -134,7 +145,6 @@ export default function Form({
       return regExp.test(input);
     },
   };
-
   return (
     <FormLayout>
       <h2>{title}</h2>
@@ -247,6 +257,3 @@ export default function Form({
     </FormLayout>
   );
 }
-// else {
-//   alert(LOGIN_ERROR_MESSAGE[result.message]);
-// }
