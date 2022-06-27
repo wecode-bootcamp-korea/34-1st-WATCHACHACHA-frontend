@@ -1,11 +1,11 @@
 @import "/src/styles/variables.scss";
 
 .aside {
+  @include cardBorder;
   align-self: flex-start;
   width: 1000px;
   padding: $padding20;
   background-color: #ffffff;
-  @include cardBorder;
 
   .galleryTitle {
     @include descriptionTitleFont;

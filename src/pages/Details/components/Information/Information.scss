@@ -78,8 +78,8 @@
           padding: 15px;
 
           .buttonWrapper {
-            display: flex;
             @include area(100%, 100%);
+            display: flex;
 
             .ratingScoreStar {
               @include flexCenter;
