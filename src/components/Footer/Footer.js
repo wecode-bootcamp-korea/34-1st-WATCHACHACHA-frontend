@@ -2,7 +2,7 @@ import React from "react";
 import "./Footer.scss";
 
 const Footer = () => {
-  return <div>안녕하셍됴</div>;
+  return <div className="footer" />;
 };
 
 export default Footer;

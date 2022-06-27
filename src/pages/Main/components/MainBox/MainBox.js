@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Film from "./../Film/Film";
 import "./MainBox.scss";
 
-const MainBox = ({ movies }) => {
+const MainBox = ({ movies, theme }) => {
   const [slidePx, setSlidePx] = useState(0);
 
   const toPrev = () => {
@@ -15,10 +15,12 @@ const MainBox = ({ movies }) => {
     slidePx > -2750 && setSlidePx(slidePx - 1375);
   };
 
+  if (movies === undefined) return;
+
   return (
     <div className="mainBox">
       {/*목데이터에 따로 작성해야 한다*/}
-      <p className="filmTheme">{movies.length && movies[1].country}</p>
+      <p className="filmTheme">{theme.title}</p>
       {/* <p className="filmTheme">{movies[1]?.theme}</p> */}
       {/* <p className="filmTheme">{movies[0].theme}</p> */}
       <ul className="filmList">

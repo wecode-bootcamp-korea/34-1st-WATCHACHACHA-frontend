@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Film.scss";
 
 const Film = ({ movie, slide }) => {
-  const { id, name, release_date, image_url, country, rate_stars } = movie;
+  const { id, name, release_date, image_url, country, score_average } = movie;
   return (
     <li
       className="film"
@@ -20,9 +20,9 @@ const Film = ({ movie, slide }) => {
         <div className="filmDescription">
           <p className="filmName">{name}</p>
           <p className="filmYear">
-            {release_date} ▪ {country}
+            {release_date} • {country}
           </p>
-          <p className="filmAverage">{rate_stars}</p>
+          <p className="filmAverage">{score_average}</p>
         </div>
       </Link>
     </li>
