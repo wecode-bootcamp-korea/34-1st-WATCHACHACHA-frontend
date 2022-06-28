@@ -5,7 +5,7 @@ import "./Film.scss";
 const Film = ({ movie, slide }) => {
   const { id, name, release_date, image_url, country, running_time_min } =
     movie;
-  //if (movie === undefined) return;
+
   return (
     <li
       className="film"
