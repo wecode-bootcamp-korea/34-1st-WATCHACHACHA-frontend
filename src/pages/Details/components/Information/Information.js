@@ -1,6 +1,9 @@
 import React from "react";
+import { useState } from "react";
 import CommentButton from "../CommentButton/CommentButton";
 import PositiveButton from "../PositiveButton/PositiveButton";
+import ReviewTextBox from "../ReviewTextBox/ReviewTextBox";
+import StarScore from "../StarScore/StarScore";
 import "./Information.scss";
 
 const Information = ({
@@ -10,6 +13,10 @@ const Information = ({
   addCommentButton,
 }) => {
   const data = null;
+
+  const [hovered, setHovered] = useState(null);
+  const [clicked, setClicked] = useState(null);
+
   return (
     <section className="information">
       <div className="midWrapper">
@@ -37,8 +44,15 @@ const Information = ({
             <div className="posterRatingButton">
               <div className="buttonWrapper">
                 <div className="ratingScoreStar">
-                  <p className="ratingScoreTitle">평가하기</p>
-                  <div className="starImageWrapper" />
+                  <div className="starImageWrapper">
+                    <ReviewTextBox clicked={clicked} />
+                    <StarScore
+                      hovered={hovered}
+                      setHovered={setHovered}
+                      clicked={clicked}
+                      setClicked={setClicked}
+                    />
+                  </div>
                 </div>
                 <div className="ratingButtonWrapper">
                   <PositiveButton
