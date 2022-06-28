@@ -10,7 +10,7 @@ const MainBox = ({ movies, theme }) => {
   };
 
   const toNext = () => {
-    slidePx > -1375 && setSlidePx(slidePx - 1375);
+    slidePx > -4125 && setSlidePx(slidePx - 1375);
   };
 
   return (
@@ -31,7 +31,7 @@ const MainBox = ({ movies, theme }) => {
       <div
         className="nextBtn"
         onClick={toNext}
-        style={{ display: slidePx === -1375 ? "none" : "" }}
+        style={{ display: slidePx === -4125 ? "none" : "" }}
       >
         <i className="fa-solid fa-chevron-right" />
       </div>
