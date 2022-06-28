@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <section className="accumulated">
-        <p className="signiture">지금까지 3453개의 평가가 쌓였어요.</p>
+        {/* <p className="signiture">지금까지 <em>3453개의 평가가<em/> 쌓였어요.</p> */}
       </section>
       <section className="information">
         <article className="service">
