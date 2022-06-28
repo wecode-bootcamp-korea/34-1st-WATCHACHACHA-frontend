@@ -1,4 +1,3 @@
-import { toHaveFormValues } from "@testing-library/jest-dom/dist/matchers";
 import React from "react";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -14,15 +13,25 @@ export default function Input({
   errorMessage,
   handleValid,
   onReset,
+  onTargetReset,
 }) {
   const [isUnValidInfo, setIsUnValidInfo] = useState(false);
   const [isValidInfo, setIsValidInfo] = useState(false);
 
   const isValid = handleValid(value);
 
-  const UnValidIcon = () => {
+  const UnValidIcon = ({ type, status }) => {
     return (
       <>
+        <i
+          className="fa-solid fa-circle-xmark deleteBtn"
+          onClick={e => {
+            e.preventDefault();
+            onTargetReset(type, status);
+            setIsUnValidInfo(false);
+            setIsValidInfo(false);
+          }}
+        />
         <i className="fa-solid fa-circle-exclamation warningBtn " />
         <p className="unValidMessage">{errorMessage}</p>
       </>
@@ -30,7 +39,20 @@ export default function Input({
   };
 
   const ValidIcon = () => {
-    return <i className="fa-regular fa-lg fa-circle-check checkBtn" />;
+    return (
+      <>
+        <i
+          className="fa-solid fa-circle-xmark deleteBtn"
+          onClick={e => {
+            e.preventDefault();
+            onTargetReset(type, status);
+            setIsUnValidInfo(false);
+            setIsValidInfo(false);
+          }}
+        />
+        <i className="fa-regular fa-lg fa-circle-check checkBtn" />
+      </>
+    );
   };
 
   const isValidHandle = () => {
@@ -67,11 +89,9 @@ export default function Input({
         onChange={getUserInfo}
         onKeyUp={isValidHandle}
       />
-      {isUnValidInfo ? <UnValidIcon /> : null}
+
+      {isUnValidInfo ? <UnValidIcon type={type} status={status} /> : null}
       {isValidInfo ? <ValidIcon /> : null}
     </div>
   );
-}
-{
-  /* <i className="fa-solid fa-circle-xmark deleteBtn" /> -> 삭제버튼 */
 }

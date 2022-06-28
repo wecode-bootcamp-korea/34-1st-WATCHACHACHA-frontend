@@ -50,6 +50,16 @@ export default function Form({
     }
   };
 
+  const onTargetReset = (type, status) => {
+    if (status === "login") {
+      console.log(type);
+      setLoginUserInfo({ ...loginUserInfo, [type]: "" });
+    }
+    if (status === "signup") {
+      setSignupUserInfo({ ...signupUserInfo, [type]: "" });
+    }
+  };
+
   const onReset = () => {
     setLoginUserInfo({
       email: "",
@@ -145,6 +155,7 @@ export default function Form({
       return regExp.test(input);
     },
   };
+
   return (
     <FormLayout>
       <h2>{title}</h2>
@@ -167,6 +178,7 @@ export default function Form({
                 getUserInfo={getUserInfo}
                 handleValid={validator[input.type]}
                 onReset={onReset}
+                onTargetReset={onTargetReset}
               />
             ))}
             {type === "signup" && (

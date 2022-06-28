@@ -2,44 +2,17 @@ import React from "react";
 import LoginModal from "./Modal/LoginModal";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import data from "./data";
+import LogoutNav from "./LogoutNav";
+import LoginOnNav from "./LoginOnNav";
 import "./Nav.scss";
-
-const ModalOnBtn = ({ handleModal }) => {
-  return (
-    <>
-      <li className="loginBtn">
-        <button onClick={() => handleModal("login")}>로그인</button>
-      </li>
-      <li className="signInBtn">
-        <button onClick={() => handleModal("signup")}>회원가입</button>
-      </li>
-    </>
-  );
-};
-
-const ProfileNav = () => {
-  const navigate = useNavigate();
-  return (
-    <>
-      <li className="evaluationBtn">
-        <a>평가하기</a>
-      </li>
-      <li className="profileIcon">
-        <i
-          className="fa-regular fa-lg fa-user"
-          onClick={e => {
-            e.preventDefault();
-            navigate("/profile");
-          }}
-        />
-      </li>
-    </>
-  );
-};
 
 const Nav = () => {
   const [modalStatus, setModalStatus] = useState("");
   const [loginStatus, setLoginStatus] = useState("");
+  const [inputData, setInputData] = useState(data);
+
+  const [{ LOGIN_DATA, SIGNUP_DATA }] = inputData;
 
   const handleModal = status => {
     setModalStatus(status);
@@ -54,11 +27,9 @@ const Nav = () => {
       <div className="navBox">
         <ul className="navList">
           <li className="logoBtn">
-            <a>
-              <span className="logo">
-                <span className="watchaPointColor">WATCHA</span> CLASSIC
-              </span>
-            </a>
+            <span className="logo">
+              <span className="watchaPointColor">WATCHA</span> CLASSIC
+            </span>
           </li>
           <li className="movieBtn">
             <button>영화</button>
@@ -73,18 +44,10 @@ const Nav = () => {
             </form>
           </li>
           {loginStatus === "loginSuccess" ? (
-            <ProfileNav />
+            <LoginOnNav />
           ) : (
-            <ModalOnBtn handleModal={handleModal} />
+            <LogoutNav handleModal={handleModal} />
           )}
-          {/* <ModalOnBtn handleModal={handleModal} /> */}
-
-          {/* <li className="loginBtn">
-            <button onClick={() => handleModal("login")}>로그인</button>
-          </li>
-          <li className="signInBtn">
-            <button onClick={() => handleModal("signup")}>회원가입</button>
-          </li> */}
         </ul>
       </div>
       <div
@@ -103,48 +66,5 @@ const Nav = () => {
     </nav>
   );
 };
-
-const LOGIN_DATA = [
-  {
-    type: "email",
-    text: "이메일",
-    unValidClass: "unValidClass",
-    errorMessage: "정확하지 않은 이메일 입니다.",
-  },
-  {
-    type: "password",
-    text: "비밀번호",
-    unValidClass: "unValidClass",
-    errorMessage: "비밀번호는 최소 6자리 이상이어야 합니다.",
-  },
-];
-
-const SIGNUP_DATA = [
-  {
-    type: "signName",
-    text: "이름",
-    unValidClass: "unValidClass",
-    errorMessage: "정확하지 않은 이름입니다.",
-  },
-  {
-    type: "signEmail",
-    text: "이메일",
-    unValidClass: "unValidClass",
-    errorMessage: "정확하지 않은 이메일입니다.",
-  },
-  {
-    type: "signPassword",
-    text: "비밀번호",
-    unValidClass: "unValidClass",
-    errorMessage:
-      "비밀번호는 영문, 숫자, 특수문자 중 2개 이상을 조합하여 최소 10자리 이상이여야 합니다.",
-  },
-  {
-    type: "signBirth",
-    text: "생년월일 8자리를 입력하세요.",
-    unValidClass: "unValidClass",
-    errorMessage: "정확하지 않은 생년월일입니다.",
-  },
-];
 
 export default Nav;
