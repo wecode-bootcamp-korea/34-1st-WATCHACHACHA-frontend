@@ -14,9 +14,9 @@ const CommentCard = ({ isCommentCondition, addCommentButton }) => {
           코멘트 남기기
         </button>
       </section>
-      {!isCommentCondition ? (
+      {!isCommentCondition && (
         <CommentModal addCommentButton={addCommentButton} />
-      ) : null}
+      )}
     </div>
   );
 };

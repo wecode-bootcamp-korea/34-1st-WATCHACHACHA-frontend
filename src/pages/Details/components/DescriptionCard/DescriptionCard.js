@@ -13,7 +13,7 @@ const DescriptionCard = ({
     <div className="descriptionWrapper">
       <div className="descriptionCard">
         <div className="cardWrapper">
-          {isSeeingCondition && isCommentCondition ? null : (
+          {!(isSeeingCondition && isCommentCondition) && (
             <CommentCard
               isCommentCondition={isCommentCondition}
               addCommentButton={addCommentButton}
