@@ -4,7 +4,11 @@
   background-color: #101113;
   color: white;
   .signiture {
-    background-color: pink;
+    //background-color: pink;
+    em {
+      font-weight: bold;
+      color: red;
+    }
   }
 }
 .information {
