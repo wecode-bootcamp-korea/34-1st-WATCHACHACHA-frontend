@@ -2,27 +2,20 @@ import React, { useState } from "react";
 import Film from "./../Film/Film";
 import "./MainBox.scss";
 
-const MainBox = ({ movies, theme, loading }) => {
+const MainBox = ({ movies, theme }) => {
   const [slidePx, setSlidePx] = useState(0);
 
   const toPrev = () => {
-    //if (slidePx < 0) setSlidePx(slidePx + 1375);
     slidePx < 0 && setSlidePx(slidePx + 1375);
   };
 
   const toNext = () => {
-    //if (slidePx > -2750) setSlidePx(slidePx - 1375);
     slidePx > -1375 && setSlidePx(slidePx - 1375);
   };
 
-  //if (movies === undefined) return;
-
   return (
     <div className="mainBox">
-      {/*목데이터에 따로 작성해야 한다*/}
       <p className="filmTheme">{theme.title}</p>
-      {/* <p className="filmTheme">{movies[1]?.theme}</p> */}
-      {/* <p className="filmTheme">{movies[0].theme}</p> */}
       <ul className="filmList">
         {movies.map(movie => (
           <Film slide={slidePx} key={movie.id} movie={movie} />
