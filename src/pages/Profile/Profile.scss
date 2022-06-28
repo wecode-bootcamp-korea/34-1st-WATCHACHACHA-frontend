@@ -206,4 +206,12 @@
       }
     }
   }
+  .modalBackground {
+    display: block;
+    position: fixed;
+    inset: 0px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.56);
+    overflow: hidden scroll;
+  }
 }

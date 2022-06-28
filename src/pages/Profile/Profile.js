@@ -1,7 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import "./Profile.scss";
 
 const Profile = () => {
+  const [modalStatus, setModalStatus] = useState("");
+
+  const handleModal = status => {
+    setModalStatus(status);
+  };
+
   return (
     <section className="profileBackground">
       <div className="profileContainer">
@@ -52,6 +59,10 @@ const Profile = () => {
           </div>
         </div>
       </div>
+      <div
+        className={modalStatus ? "modalBackground" : null}
+        onClick={() => handleModal("")}
+      />
     </section>
   );
 };
