@@ -1,0 +1,209 @@
+@import "/src/styles/variables.scss";
+
+.profileBackground {
+  padding-top: 62px;
+  padding-bottom: unset;
+  .profileContainer {
+    background: rgb(248, 248, 248);
+    overflow: hidden;
+    margin-bottom: 30px;
+    display: block;
+    .profileContain {
+      max-width: 640px;
+      margin: 0px auto;
+      display: block;
+      .profileBox {
+        background: rgb(255, 255, 255);
+        overflow: hidden;
+        border: 1px solid;
+        border-radius: 6px;
+        margin: 28px 0px 30px;
+        .profileTop {
+          position: relative;
+          height: 0px;
+          padding-top: 32%;
+          background-color: palevioletred;
+          margin: 0px 0px -20px;
+          background-size: cover;
+          display: block;
+          i {
+            position: absolute;
+            color: white;
+            top: 20px;
+            right: 15px;
+            cursor: pointer;
+          }
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            left: 0px;
+            background-image: linear-gradient(
+              -180deg,
+              rgba(0, 0, 0, 0.4) 0%,
+              rgba(0, 0, 0, 0) 100%
+            );
+            height: 44px;
+          }
+        }
+        .profileBottom {
+          display: block;
+          .profileUser {
+            margin: 0px 20px;
+            display: block;
+            .profileUserHeader {
+              position: relative;
+              padding-bottom: 26px;
+              border-bottom: 1px solid rgb(237, 237, 237);
+              display: block;
+              .profileUserIconBox {
+                border: 1px solid rgba(0, 0, 0, 0.08);
+                border-radius: 50%;
+                display: flex;
+                position: relative;
+                -webkit-box-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                align-items: center;
+                width: 56px;
+                height: 56px;
+                overflow: hidden;
+                .profileUserIcon {
+                  width: 100%;
+                  height: 100%;
+                  background-color: tomato;
+                  @include flexCenter;
+                  i {
+                    color: white;
+                    font-size: 30px;
+                  }
+                }
+              }
+              .profileUserBox {
+                display: flex;
+                flex-direction: column;
+                -webkit-box-align: center;
+                margin-top: 4px;
+                .profileUserName {
+                  color: rgb(0, 0, 0);
+                  font-size: 25px;
+                  font-weight: 700;
+                  letter-spacing: -0.9px;
+                  line-height: 30px;
+                  width: 100%;
+                  word-break: break-all;
+                }
+                .profileUSerContent {
+                  color: rgb(74, 74, 74);
+                  font-size: 15px;
+                  font-weight: 400;
+                  letter-spacing: -0.5px;
+                  line-height: 20px;
+                  margin-top: 5px;
+                  display: block;
+                }
+              }
+            }
+            .profileUserUl {
+              list-style: none;
+              padding: 0px;
+              margin: 0px;
+              li {
+                display: list-item;
+                text-align: -webkit-match-parent;
+                a {
+                  display: flex;
+                  -webkit-box-align: center;
+                  align-items: center;
+                  color: rgb(0, 0, 0);
+                  font-size: 17px;
+                  font-weight: 400;
+                  letter-spacing: -0.7px;
+                  line-height: 22px;
+                  text-decoration: none;
+                  height: 48px;
+                  .graph {
+                    display: inline-block;
+                    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPHBhdGggZD0iTTAgMGgyNHYyNEgweiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNFRjY5MkUiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTEuMTggMTEuOTZoMy43NHY4LjM2SDEuMTh6TTE1Ljc1IDE2LjgzaDMuNzR2My40OWgtMy43NHpNNi4wNCA5LjEyaDMuNzR2MTEuMkg2LjA0ek0xMC45IDEzLjg0aDMuNzR2Ni40OEgxMC45eiIvPgogICAgICAgIDxwYXRoIGZpbGw9IiNGRkNBMjIiIGQ9Ik0xNy40NCAxLjM3bDEuNjYgNCA0LjMxLjM0LTMuMjggMi44MSAxIDQuMjEtMy42OS0yLjI2LTMuNjkgMi4yNiAxLjAxLTQuMjEtMy4yOS0yLjgxIDQuMzItLjM0eiIvPgogICAgPC9nPgo8L3N2Zz4K)
+                      center center / contain no-repeat;
+                    width: 24px;
+                    height: 24px;
+                    margin: 0px 12px 0px 0px;
+                  }
+                  .graphText {
+                    flex: 1 1 0%;
+                    padding: 13px 0px;
+                    border-bottom: 1px solid rgb(237, 237, 237);
+                  }
+                }
+              }
+            }
+          }
+
+          .profileLike {
+            @include flexCenter;
+            width: 100%;
+            padding: 20px 0px 20px 0px;
+
+            a {
+              display: inline-block;
+              position: relative;
+              background: linear-gradient(
+                44.75deg,
+                rgb(130, 217, 87) 43.19%,
+                rgb(191, 232, 116) 100%
+              );
+              vertical-align: middle;
+              width: 200px;
+              height: 200px;
+              border-radius: 6px;
+
+              ul {
+                list-style: none;
+                margin: 0px;
+                background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYyIiBoZWlnaHQ9IjE2MiIgdmlld0JveD0iMCAwIDE2MiAxNjIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF81NDE6NTA2MTEpIj4KPGcgb3BhY2l0eT0iMC4yIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNDYuMDgzIDg4LjM3NUg1Ni45MTY2QzU0LjQ2NDUgODguMzc1IDUyLjQ1ODMgOTAuMzgxMiA1Mi40NTgzIDkyLjgzMzNWMTY0LjE2N0M1Mi40NTgzIDE2Ni42MTkgNTQuNDY0NSAxNjguNjI1IDU2LjkxNjYgMTY4LjYyNUgxNDYuMDgzQzE0OC41MzUgMTY4LjYyNSAxNTAuNTQyIDE2Ni42MTkgMTUwLjU0MiAxNjQuMTY3VjEzMS44NDRWMTI1LjE1NlY5Mi44MzMzQzE1MC41NDIgOTAuMzgxMiAxNDguNTM1IDg4LjM3NSAxNDYuMDgzIDg4LjM3NVpNMTQzLjg1NCAxMDYuNzQzSDEzMy44MjNWOTUuMDYyNUgxNDMuODU0VjEwNi43NDNaTTEyNy4xMzUgMTYxLjkzN0g3NS44NjQ1VjEzMS44NDRIMTI3LjEzNVYxNjEuOTM3Wk02OS4xNzcgMTI1LjE1Nkg1OS4xNDU4VjExMy40MzFINjkuMTc3VjEyNS4xNTZaTTU5LjE0NTggMTMxLjg0NEg2OS4xNzdWMTQzLjUyNUg1OS4xNDU4VjEzMS44NDRaTTc1Ljg2NDUgMTI1LjE1NlY5NS4wNjI1SDEyNy4xMzVWMTI1LjE1Nkg3NS44NjQ1Wk02OS4xNzcgOTUuMDYyNVYxMDYuNzQzSDU5LjE0NThWOTUuMDYyNUg2OS4xNzdaTTU5LjE0NTggMTUwLjI1N0g2OS4xNzdWMTYxLjkzN0g1OS4xNDU4VjE1MC4yNTdaTTEzMy44MjMgMTYxLjkzN1YxNTAuMjU3SDE0My44NTRWMTYxLjkzN0gxMzMuODIzWk0xNDMuODU0IDE0My41NjlIMTMzLjgyM1YxMzEuODQ0SDE0My44NTRWMTQzLjU2OVpNMTMzLjgyMyAxMjUuMTU2VjExMy40MzFIMTQzLjg1NFYxMjUuMTEySDEzMy44MjNWMTI1LjE1NloiIGZpbGw9IiMwMEI1MDkiLz4KPC9nPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzU0MTo1MDYxMSI+CjxyZWN0IHdpZHRoPSIxNjIiIGhlaWdodD0iMTYyIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=);
+                background-size: contain;
+                position: absolute;
+                inset: 0px;
+                color: rgb(255, 255, 255);
+                padding: 6.9px 11px 26.5px;
+                overflow: hidden;
+
+                .title {
+                  font-size: 17px;
+                  font-weight: 400;
+                  letter-spacing: -0.7px;
+                  line-height: 22px;
+                }
+                .star {
+                  font-size: 19px;
+                  font-weight: 700;
+                  letter-spacing: -0.7px;
+                  line-height: 28px;
+                }
+                .watch {
+                  position: absolute;
+                  bottom: 8.5px;
+                  font-size: 13px;
+                  font-weight: 400;
+                  letter-spacing: -0.2px;
+                  line-height: 18px;
+
+                  strong {
+                    font-size: 13px;
+                    font-weight: 400;
+                    letter-spacing: -0.2px;
+                    line-height: 18px;
+                    font-weight: bold;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
