@@ -1,14 +1,8 @@
 import React from "react";
 import "./ThumbnailImage.scss";
 
-const ThumbnailImage = ({ filmsData: { films } }) => {
-  if (films === undefined) return;
-  return (
-    <div className="thumbnailImage">
-      <img className="coverImage" src={films.image_url} alt="poster_image" />
-      {/* <ul className="rankingInfoList" /> */}
-    </div>
-  );
+const ThumbnailImage = () => {
+  return <div className="thumbnailImage" />;
 };
 
 export default ThumbnailImage;

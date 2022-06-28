@@ -17,17 +17,9 @@
     gap: 10px;
 
     .galleryListItem {
-      width: 50%;
-
-      .imageWrapper {
-        @include area(100%, 100%);
-
-        .filmsImage {
-          @include area(100%, 100%);
-          border: none;
-          border-radius: 5px;
-        }
-      }
+      @include area(50%, 100px);
+      display: flex;
+      background-color: #dcdcdc;
     }
   }
 }
