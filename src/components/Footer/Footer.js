@@ -39,11 +39,11 @@ const Footer = () => {
           </article>
           <article className="detailInformation">
             <ul>
-              <li>주식회사 왓챠</li>
+              <li>주식회사 왓챠Classic</li>
               <li>ㅣ</li>
-              <li>대표 박태훈</li>
+              <li>대표 아무개</li>
               <li>ㅣ</li>
-              <li>서울특별시 서초구 강남대로 343 신덕빌딩 3층</li>
+              <li>서울특별시 테헤란로 427</li>
             </ul>
             <ul>
               <li>사업자등록 번호 123-45-67890</li>
