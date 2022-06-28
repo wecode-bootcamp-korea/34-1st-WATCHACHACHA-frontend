@@ -15,18 +15,14 @@ export default function Input({
   handleValid,
   onReset,
 }) {
-  const [isUnValidEmail, setIsUnValidEmail] = useState(false);
-  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [isUnValidInfo, setIsUnValidInfo] = useState(false);
+  const [isValidInfo, setIsValidInfo] = useState(false);
 
   const isValid = handleValid(value);
 
   const UnValidIcon = () => {
     return (
       <>
-        <i
-          className="fa-solid fa-circle-xmark deleteBtn"
-          onClick={inputValueHandle}
-        />
         <i className="fa-solid fa-circle-exclamation warningBtn " />
         <p className="unValidMessage">{errorMessage}</p>
       </>
@@ -34,44 +30,36 @@ export default function Input({
   };
 
   const ValidIcon = () => {
-    return (
-      <>
-        <i
-          className="fa-solid fa-circle-xmark deleteBtn"
-          onClick={inputValueHandle}
-        />
-        <i className="fa-regular fa-lg fa-circle-check checkBtn" />
-      </>
-    );
+    return <i className="fa-regular fa-lg fa-circle-check checkBtn" />;
   };
 
   const isValidHandle = () => {
     if (isValid) {
-      setIsValidEmail(true);
-      setIsUnValidEmail(false);
+      setIsValidInfo(true);
+      setIsUnValidInfo(false);
     } else if (value.length < 1) {
-      setIsUnValidEmail(false);
-      setIsValidEmail(false);
+      setIsUnValidInfo(false);
+      setIsValidInfo(false);
     } else {
-      setIsValidEmail(false);
-      setIsUnValidEmail(true);
+      setIsValidInfo(false);
+      setIsUnValidInfo(true);
     }
   };
 
-  const inputValueHandle = () => {
-    setIsUnValidEmail(false);
-    setIsValidEmail(false);
+  const inputEffectOff = () => {
+    setIsUnValidInfo(false);
+    setIsValidInfo(false);
     onReset();
   };
 
   useEffect(() => {
-    inputValueHandle();
+    inputEffectOff();
   }, [status]);
 
   return (
     <div className="loginFormInput">
       <input
-        className={isUnValidEmail ? unValidClass : null}
+        className={isUnValidInfo ? unValidClass : null}
         type={type === "signPassword" ? "password" : type}
         name={type}
         value={value}
@@ -79,11 +67,11 @@ export default function Input({
         onChange={getUserInfo}
         onKeyUp={isValidHandle}
       />
-      {isUnValidEmail ? <UnValidIcon /> : null}
-      {isValidEmail ? <ValidIcon /> : null}
+      {isUnValidInfo ? <UnValidIcon /> : null}
+      {isValidInfo ? <ValidIcon /> : null}
     </div>
   );
 }
 {
-  /* <i className="fa-solid fa-circle-xmark deleteBtn" /> */
+  /* <i className="fa-solid fa-circle-xmark deleteBtn" /> -> 삭제버튼 */
 }

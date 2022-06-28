@@ -1,6 +1,7 @@
 import React from "react";
 import LoginModal from "./Modal/LoginModal";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./Nav.scss";
 
 const ModalOnBtn = ({ handleModal }) => {
@@ -17,15 +18,20 @@ const ModalOnBtn = ({ handleModal }) => {
 };
 
 const ProfileNav = () => {
+  const navigate = useNavigate();
   return (
     <>
       <li className="evaluationBtn">
         <a>평가하기</a>
       </li>
       <li className="profileIcon">
-        <a>
-          <i className="fa-regular fa-lg fa-user" />
-        </a>
+        <i
+          className="fa-regular fa-lg fa-user"
+          onClick={e => {
+            e.preventDefault();
+            navigate("/profile");
+          }}
+        />
       </li>
     </>
   );
