@@ -3,6 +3,7 @@ import Nav from "./components/Nav/Nav";
 import Footer from "./components/Footer/Footer";
 import Main from "./pages/Main/Main";
 import Detail from "./pages/Details/Detail";
+import Profile from "./pages/Profile/Profile";
 
 const Routers = () => {
   return (
