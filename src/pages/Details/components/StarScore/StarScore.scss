@@ -1,0 +1,14 @@
+.reviewBox {
+  color: #999;
+
+  .star {
+    opacity: 0.1;
+    cursor: pointer;
+    font-size: 35px;
+  }
+
+  .yellowStar {
+    color: #ffd700;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,43 @@
+@import "/src/styles/variables.scss";
+
+.starScoreGraph {
+  @include descriptionLine;
+  padding-top: $padding20;
+
+  .titleWrapper {
+    @include flexCustom(space-between, center);
+
+    .starScoreTitle {
+      @include descriptionTitleFont;
+      margin: 8px 0;
+    }
+
+    .ratingLog {
+      @include flexCustom(flex-start, center);
+      flex-direction: column;
+
+      .averageScore {
+        font-size: 17px;
+        margin-bottom: 5px;
+      }
+
+      .sumPerson {
+        font-size: 14px;
+        color: #787878;
+      }
+    }
+  }
+
+  .graphWrapper {
+    @include area(100%, 100%);
+
+    .graph {
+      @include area(100%, 100%);
+      @include flexCustom(center, flex-start);
+
+      .graphImage {
+        @include area(50%, 50%);
+      }
+    }
+  }
+}

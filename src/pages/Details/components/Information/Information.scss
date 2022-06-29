@@ -1,0 +1,102 @@
+@import "/src/styles/variables.scss";
+
+.information {
+  height: 250px;
+
+  .midWrapper {
+    @include area(930px, 100%);
+    display: flex;
+    padding: $padding20;
+    margin: 0 auto;
+    position: relative;
+
+    .poster {
+      @include area(200px, 250px);
+      position: absolute;
+      bottom: 50px;
+      border: #ffffff;
+      border-radius: 5px;
+
+      .posterImage {
+        @include area(100%, 100%);
+      }
+    }
+
+    .posterWrapper {
+      @include flexCustom(flex-end, flex-start);
+      width: 100%;
+
+      .posterDescription {
+        @include area(100%, 100%);
+        padding-left: 25%;
+
+        .posterTextWrapper {
+          height: 30%;
+          border-bottom: 1px solid;
+
+          .posterTitle {
+            font-size: 33px;
+            font-weight: 700;
+          }
+
+          .posterCategoryWrapper {
+            margin-top: 5px;
+            font-size: 17px;
+            opacity: 0.5;
+
+            .posterRelease {
+              margin-right: $margin10;
+            }
+
+            .posterTextDivide {
+              margin-right: $margin10;
+            }
+
+            .posterCategory {
+              margin-right: $margin10;
+            }
+          }
+        }
+
+        .ratingScoreWrapper {
+          @include flexCustom(flex-start, center);
+          height: 20%;
+          border-bottom: 1px solid;
+          font-size: 17px;
+
+          .scoreAverage {
+            margin-right: $margin05;
+          }
+
+          .ratingScore {
+            margin-right: $margin05;
+          }
+        }
+
+        .posterRatingButton {
+          height: 50%;
+          padding: 15px;
+
+          .buttonWrapper {
+            @include area(100%, 100%);
+            display: flex;
+
+            .ratingScoreStar {
+              @include flexCenter;
+              @include area(35%, 100%);
+              display: flex;
+              flex-direction: column;
+              padding-right: 20px;
+              border-right: 1px solid;
+            }
+
+            .ratingButtonWrapper {
+              @include flexCustom(space-evenly, center);
+              @include area(65%, 100%);
+            }
+          }
+        }
+      }
+    }
+  }
+}

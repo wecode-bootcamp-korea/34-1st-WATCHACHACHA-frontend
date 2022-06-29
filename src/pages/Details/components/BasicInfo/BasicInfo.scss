@@ -1,0 +1,43 @@
+@import "/src/styles/variables.scss";
+
+.basicInfo {
+  @include descriptionLine;
+  line-height: 24px;
+
+  .basicInfoWrapper {
+    @include flexCustom(space-between, center);
+
+    .basicInfoTitle {
+      @include descriptionTitleFont;
+      margin-bottom: $margin10;
+    }
+
+    .basicInfoMore {
+      @include moreButton;
+      background-color: #ffffff;
+    }
+  }
+
+  .simplyInfo {
+    margin-bottom: $margin10;
+    color: #4a4a4a;
+
+    .filmCategory {
+      .categoryRelease {
+        margin-right: $margin05;
+      }
+
+      .categoryDot {
+        margin-right: $margin05;
+      }
+
+      .categoryCountries {
+        margin-right: $margin05;
+      }
+
+      .categoryGenres {
+        margin-right: $margin05;
+      }
+    }
+  }
+}

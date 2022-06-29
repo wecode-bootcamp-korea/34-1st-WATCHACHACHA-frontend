@@ -1,0 +1,104 @@
+@import "/src/styles/variables.scss";
+
+.skThumb {
+  height: 300px;
+  background-color: #e8e8e8;
+}
+
+.skInfo {
+  height: 250px;
+
+  .skMidWrapper {
+    @include area(930px, 100%);
+    display: flex;
+    padding: $padding20;
+    margin: 0 auto;
+    position: relative;
+
+    .skPoster {
+      @include area(200px, 250px);
+      position: absolute;
+      bottom: 50px;
+      border: #ffffff;
+      border-radius: 5px;
+      background-color: #f8f8f8;
+      animation: loading 2.5s infinite;
+    }
+  }
+
+  .skPosterWrapper {
+    @include flexCustom(flex-end, flex-start);
+    @include area(100%, 100%);
+
+    .skPosterDescription {
+      @include area(100%, 100%);
+      position: relative;
+      padding-left: 25%;
+
+      .skTextWrapper {
+        height: 30%;
+        background-color: #f8f8f8;
+        animation: loading 2.5s infinite;
+      }
+
+      .skScoreWrapper {
+        @include flexCustom(flex-start, center);
+        height: 20%;
+        margin-top: 10px;
+        background-color: #f8f8f8;
+        animation: loading 2.5s infinite;
+      }
+
+      .skRatingButton {
+        height: 40%;
+        margin-top: 10px;
+        background-color: #f8f8f8;
+        animation: loading 2.5s infinite;
+      }
+    }
+  }
+}
+
+.skCard {
+  @include area(100%, 700px);
+  background-color: #f8f8f8;
+  padding-top: 20px;
+
+  .skDescriptionCard {
+    @include area(83%, 100%);
+    display: flex;
+    gap: 20px;
+    margin: 0 auto;
+
+    .skDescription {
+      @include area(60%, 100%);
+      @include cardBorder;
+      background-color: #ffffff;
+    }
+
+    .skAside {
+      @include area(40%, 200px);
+      @include cardBorder;
+      align-self: flex-start;
+      background-color: #ffffff;
+    }
+  }
+}
+
+@keyframes loading {
+  0% {
+    background-color: #e8e8e8;
+  }
+  25% {
+    background-color: #f6f6f6;
+  }
+  50% {
+    background-color: #f7f7f7;
+  }
+  75% {
+    background-color: #f8f8f8;
+  }
+  100% {
+    background-color: #e8e8e8;
+  }
+}

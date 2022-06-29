@@ -1,0 +1,43 @@
+@import "/src/styles/variables.scss";
+
+.positiveButton {
+  @include flexCustom(flex-start, center);
+  border: none;
+  background-color: #ffffff;
+  cursor: pointer;
+
+  .seeingIcon {
+    transform: scale(1.5) rotate(90deg);
+    transition: transform 0.5s;
+  }
+
+  .bookMakerIcon {
+    transform: scale(1.5);
+    transition: transform 0.5s;
+  }
+
+  .bookMakerIconPink {
+    color: #ff2f62;
+  }
+
+  .iconText {
+    font-size: 17px;
+    margin-left: 7px;
+  }
+
+  .iconTextPink {
+    color: #ff2f62;
+  }
+}
+
+.positiveButton:hover {
+  .seeingIcon {
+    transform: scale(2.2) rotate(90deg);
+  }
+}
+
+.positiveButton:hover {
+  .bookMakerIcon {
+    transform: scale(2);
+  }
+}

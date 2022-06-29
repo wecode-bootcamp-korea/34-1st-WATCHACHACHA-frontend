@@ -1,0 +1,12 @@
+@import "/src/styles/variables.scss";
+
+.thumbnailImage {
+  @include flexCenter;
+  height: 300px;
+  position: relative;
+  background-color: #dcdcdc;
+
+  .coverImage {
+    @include area(50%, 100%);
+  }
+}

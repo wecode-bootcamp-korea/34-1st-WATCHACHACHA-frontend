@@ -1,0 +1,65 @@
+@import "/src/styles/variables.scss";
+
+.commentsListItem {
+  width: 50%;
+  border: none;
+  border-radius: 5px;
+  padding: 0 $padding10;
+  background-color: #f2f2f2;
+
+  .commentUserInfo {
+    @include flexCustom(flex-start, center);
+    padding: $padding10 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    .imageWrapper {
+      @include flexCenter;
+      @include area(40px, 40px);
+
+      .userImage {
+        @include area(100%, 100%);
+        border: none;
+        border-radius: 50%;
+      }
+    }
+
+    .userId {
+      margin-left: 3px;
+    }
+    .userIcon {
+      margin-right: auto;
+    }
+    .userRatingPoint {
+      padding: 5px 10px;
+      border-radius: 45%;
+      background-color: #ffffff;
+    }
+  }
+  .commentContent {
+    padding: $padding10 0;
+    border-bottom: 1px solid #e5e5e5;
+    line-height: 20px;
+  }
+  .likeWarpper {
+    padding: $padding10 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    .likeIcon {
+      margin-right: 5px;
+    }
+
+    .likeCount {
+      margin-right: 10px;
+    }
+
+    .othersComment {
+      margin-right: 5px;
+    }
+  }
+
+  .likeButton {
+    @include moreButton;
+    margin: $margin10 0;
+    background-color: #f2f2f2;
+  }
+}

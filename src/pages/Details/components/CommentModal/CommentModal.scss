@@ -1,0 +1,84 @@
+@import "/src/styles/variables.scss";
+
+.commentModal {
+  @include area(100vw, 100vh);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.5;
+}
+
+.modalArea {
+  @include area(500px, 450px);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: $padding20;
+  transform: translate(-50%, -50%);
+  font-size: 19px;
+  font-weight: 700;
+
+  .titleWrapper {
+    @include area(100%, 10%);
+    @include flexCustom(space-between, center);
+
+    .closeButton {
+      @include area(40px, 40px);
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+  }
+
+  .commentText {
+    width: 100%;
+    border: none;
+    padding-bottom: 65%;
+    outline: none;
+    font-size: 17px;
+
+    &::placeholder {
+      font-size: 17px;
+    }
+  }
+
+  .saveButtonWrapper {
+    @include flexCustom(space-between, center);
+
+    .iconWrapper {
+      @include flexCustom(flex-start, center);
+
+      .commentIcon {
+        padding-right: $padding10;
+        border-right: 1px solid;
+        margin: $margin10;
+        color: rgb(120, 120, 120);
+      }
+
+      .skullIcon {
+        color: rgb(120, 120, 120);
+      }
+    }
+
+    .saveButton {
+      @include area(125px, 40px);
+      border: none;
+      border-radius: 10px;
+      background-color: #ff2f6e;
+      color: #ffffff;
+
+      &:disabled {
+        opacity: 0.5;
+      }
+
+      &:enabled {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}
