@@ -1,0 +1,64 @@
+@import "/src/styles/variables.scss";
+
+.filmCrew {
+  @include descriptionLine;
+  padding-top: $padding20;
+
+  .filmCrewTitle {
+    @include descriptionTitleFont;
+    margin-bottom: $margin10;
+  }
+
+  .filmCrewList {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    overflow-x: hidden;
+
+    .filmCrewListItem {
+      margin-top: $margin10;
+      min-width: 48%;
+
+      .bundleWrapper {
+        display: flex;
+        margin-bottom: $margin10;
+
+        .imageWrapper {
+          @include flexCenter;
+          @include area(40px, 40px);
+
+          .crewImage {
+            @include area(100%, 100%);
+            border: none;
+            border-radius: 5px;
+          }
+        }
+
+        .filmCrewWrapper {
+          flex: 1 auto;
+          margin-left: $margin10;
+          border-bottom: 1px solid #f0f0f0;
+
+          .crewName {
+            @include fontCustom(17px, 22px);
+            font-weight: 700;
+          }
+
+          .crewPosition {
+            @include fontCustom(14px, 22px);
+            color: #8c8c8c;
+            padding-right: $padding10;
+            border-right: 1px solid;
+          }
+
+          .crewCaster {
+            @include fontCustom(14px, 22px);
+            padding-left: $padding10;
+            color: #8c8c8c;
+          }
+        }
+      }
+    }
+  }
+}

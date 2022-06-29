@@ -1,0 +1,30 @@
+@import "/src/styles/variables.scss";
+
+.comments {
+  padding-top: $margin20;
+
+  .titleWrapper {
+    @include flexCustom(flex-start, center);
+    margin-bottom: $margin10;
+
+    .commentTitle {
+      @include descriptionTitleFont;
+      margin-right: 12px;
+    }
+
+    .commentCount {
+      margin-right: auto;
+      color: #a0a0a0;
+    }
+
+    .commentMore {
+      @include moreButton;
+      background-color: #ffffff;
+    }
+  }
+
+  .commentsList {
+    display: flex;
+    gap: 10px;
+  }
+}

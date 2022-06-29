@@ -1,0 +1,26 @@
+@import "/src/styles/variables.scss";
+
+.aside {
+  @include cardBorder;
+  align-self: flex-start;
+  width: 1000px;
+  min-width: 40%;
+  padding: $padding20;
+  background-color: #ffffff;
+
+  .galleryTitle {
+    @include descriptionTitleFont;
+    margin-bottom: 10px;
+  }
+
+  .galleryList {
+    display: flex;
+    gap: 10px;
+
+    .galleryListItem {
+      @include area(50%, 100px);
+      display: flex;
+      background-color: #dcdcdc;
+    }
+  }
+}

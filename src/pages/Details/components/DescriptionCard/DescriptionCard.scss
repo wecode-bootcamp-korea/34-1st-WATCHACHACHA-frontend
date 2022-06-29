@@ -1,0 +1,17 @@
+.descriptionWrapper {
+  background-color: #f8f8f8;
+
+  .descriptionCard {
+    display: flex;
+    gap: 20px;
+    padding: 28px 0 48px;
+    width: 900px;
+    margin: 0 auto;
+
+    .cardWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

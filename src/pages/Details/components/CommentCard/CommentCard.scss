@@ -1,0 +1,17 @@
+@import "/src/styles/variables.scss";
+
+.commentCard {
+  @include flexCustom(space-between, center);
+  @include cardBorder;
+  padding: 20px;
+  background-color: #ffffff;
+
+  .addComment {
+    @include area(200px, 40px);
+    @include cardBorder;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+}
