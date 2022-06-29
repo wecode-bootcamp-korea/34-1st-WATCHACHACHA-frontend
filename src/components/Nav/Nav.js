@@ -13,6 +13,11 @@ const Nav = () => {
   const [inputData, setInputData] = useState(data);
 
   const [{ LOGIN_DATA, SIGNUP_DATA }] = inputData;
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate("/");
+  };
 
   const handleModal = status => {
     setModalStatus(status);
@@ -27,7 +32,13 @@ const Nav = () => {
       <div className="navBox">
         <ul className="navList">
           <li className="logoBtn">
-            <span className="logo">
+            <span
+              className="logo"
+              onClick={e => {
+                e.preventDefault();
+                goToMain();
+              }}
+            >
               <span className="watchaPointColor">WATCHA</span> CLASSIC
             </span>
           </li>
