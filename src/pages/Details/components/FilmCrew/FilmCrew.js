@@ -4,7 +4,7 @@ import "./FilmCrew.scss";
 const FilmCrew = ({
   filmData,
   filmData: {
-    film: { directors, actors },
+    results: { directors, actors },
   },
 }) => {
   if (filmData === undefined) return;
