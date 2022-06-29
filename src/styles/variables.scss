@@ -3,3 +3,71 @@
   align-items: center;
   justify-content: center;
 }
+
+@mixin btnCss {
+  background: none;
+  letter-spacing: -0.3px;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@mixin loginModalBtnCSS {
+  background: none;
+  padding: 0px;
+  border: none;
+  margin: 0px;
+  cursor: pointer;
+  color: rgb(255, 47, 110);
+}
+
+@mixin loginModalBoxCss {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  line-height: 20px;
+}
+
+@mixin flexCustom($justify, $align) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin area($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin fontCustom($fontSize, $lineHeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+}
+
+@mixin descriptionTitleFont {
+  font-weight: 700;
+  font-size: 19px;
+}
+
+@mixin descriptionLine {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 20px;
+}
+
+@mixin moreButton {
+  font-size: 16px;
+  border: none;
+  color: #ff2f6e;
+  cursor: pointer;
+}
+
+@mixin cardBorder {
+  border: 1px solid #e3e3e3;
+  border-radius: 5px;
+}
+
+$margin05: 5px;
+$margin10: 10px;
+$margin20: 20px;
+$padding10: 10px;
+$padding20: 20px;
