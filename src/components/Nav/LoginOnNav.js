@@ -6,7 +6,7 @@ const LoginOnNav = () => {
   const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState();
 
-  const loginService = e => {
+  const getUserInfoData = e => {
     e.preventDefault();
     fetch("api주소")
       .then(response => response.json())
