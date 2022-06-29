@@ -1,13 +1,24 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Profile.scss";
+import { useParams } from "react-router-dom";
+import ProfileSetting from "./ProfileSetting";
 
 const Profile = () => {
-  const [modalStatus, setModalStatus] = useState("");
+  const [modalStatus, setModalStatus] = useState(false);
+  const [userInfo, setUserInfo] = useState([]);
 
-  const handleModal = status => {
-    setModalStatus(status);
-  };
+  const params = useParams();
+  const { username, rate_count, watch_list_count } = userInfo;
+
+  useEffect(() => {
+    const userId = params.id;
+    fetch("http://localhost:3000/data/userData.json")
+      .then(res => res.json())
+      .then(data => {
+        setUserInfo(data[userId - 1]);
+      });
+  }, []);
 
   return (
     <section className="profileBackground">
@@ -15,7 +26,7 @@ const Profile = () => {
         <div className="profileContain">
           <div className="profileBox">
             <div className="profileTop">
-              <i class="fa-solid fa-lg fa-gear" />
+              <i className="fa-solid fa-lg fa-gear" />
             </div>
             <div className="profileBottom">
               <div className="profileUser">
@@ -26,7 +37,7 @@ const Profile = () => {
                     </div>
                   </div>
                   <div className="profileUserBox">
-                    <h1 className="profileUserName">HyunB Lee</h1>
+                    <h1 className="profileUserName">{username}</h1>
                     <div className="profileUserContent">
                       <div>프로필이 없습니다.</div>
                     </div>
@@ -48,9 +59,9 @@ const Profile = () => {
                 <a>
                   <ul>
                     <li className="title">영화</li>
-                    <li className="star">★8</li>
+                    <li className="star">★{rate_count}</li>
                     <li className="watch">
-                      보고싶어요<strong> 0</strong>
+                      보고싶어요<strong>{watch_list_count}</strong>
                     </li>
                   </ul>
                 </a>
@@ -61,8 +72,9 @@ const Profile = () => {
       </div>
       <div
         className={modalStatus ? "modalBackground" : null}
-        onClick={() => handleModal("")}
+        onClick={() => setModalStatus(false)}
       />
+      {modalStatus && <ProfileSetting />}
     </section>
   );
 };

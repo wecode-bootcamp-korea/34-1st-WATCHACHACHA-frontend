@@ -1,0 +1,87 @@
+.setting {
+  text-align: center;
+  padding: 40px 0px;
+  overflow: auto;
+  position: absolute;
+  inset: 0px;
+  z-index: 11;
+
+  .settingBox {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    text-align: left;
+    width: 375px;
+    height: auto;
+    min-height: 540px;
+    overflow: auto;
+
+    .settingHeader {
+      left: 0px;
+      background: rgb(255, 255, 255);
+      box-sizing: border-box;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      line-height: 22px;
+      width: 100%;
+      padding: 0px 16px;
+      border-bottom: 1px solid rgb(227, 227, 227);
+      position: absolute;
+      top: 0px;
+      text-align: left;
+      height: auto;
+      display: block;
+
+      .settingHeaderIconBox {
+        display: flex;
+        -webkit-box-pack: justify;
+        justify-content: space-between;
+
+        .iconContain {
+          font-size: 17px;
+          font-weight: 700;
+          letter-spacing: -0.5px;
+          line-height: 22px;
+          text-align: left;
+
+          .xButton {
+            background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9IiNGRjJGNkUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgMTIgMTIpIj4KICAgICAgICA8cmVjdCB3aWR0aD0iMiIgaGVpZ2h0PSIxOCIgeD0iMTEiIHk9IjMiIHJ4PSIxIi8+CiAgICAgICAgPHJlY3Qgd2lkdGg9IjE4IiBoZWlnaHQ9IjIiIHg9IjMiIHk9IjExIiByeD0iMSIvPgogICAgPC9nPgo8L3N2Zz4K);
+            padding: 0px;
+            border: none;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            margin: 10px 0px;
+          }
+        }
+      }
+
+      .settingHeaderTextBox {
+        display: flex;
+        transform: translate3d(0px, 0px, 0px);
+        -webkit-box-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        align-items: center;
+        height: 30px;
+        margin: 0px 4px 10px;
+        opacity: 1;
+        transition: all 150ms ease 0s;
+
+        .headerText {
+          display: inline-block;
+          font-weight: 700;
+          letter-spacing: -1.2px;
+          font-size: 22px;
+          line-height: 29px;
+          white-space: nowrap;
+          width: 100%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
