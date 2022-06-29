@@ -8,7 +8,7 @@ const StarScoreGraph = () => {
         <h2 className="starScoreTitle">별점 그래프</h2>
         <div className="ratingLog">
           <p className="averageScore">평균 ★3.9</p>
-          <p className="sumPerson">{`(${"27만명"})`}</p>
+          <p className="sumPerson">`(27만명)`</p>
         </div>
       </div>
       <div className="graphWrapper">

@@ -5,27 +5,25 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import "./PositiveButton.scss";
 
 const PositiveButton = ({ isSeeingCondition, setIsSeeingCondition }) => {
-  const seeingButton = () => (
-    <FontAwesomeIcon className="seeingIcon" icon={faPlus} size="1x" />
-  );
-
-  const bookMakerButton = () => (
-    <FontAwesomeIcon
-      className={
-        isSeeingCondition ? "bookMakerIcon" : "bookMakerIcon bookMakerIconPink"
-      }
-      icon={faBookmark}
-      size="1x"
-    />
-  );
+  const wishFilmSend = () => {
+    changedSeeingButton();
+  };
 
   const changedSeeingButton = () =>
     setTimeout(() => {
       setIsSeeingCondition(!isSeeingCondition);
-    }, 100);
+    }, 200);
+  clearTimeout(changedSeeingButton);
+
   return (
-    <button onClick={changedSeeingButton} className="positiveButton">
-      {isSeeingCondition ? seeingButton() : bookMakerButton()}
+    <button onClick={wishFilmSend} className="positiveButton">
+      <FontAwesomeIcon
+        className={
+          isSeeingCondition ? "seeingIcon" : "bookMakerIcon bookMakerIconPink"
+        }
+        icon={isSeeingCondition ? faPlus : faBookmark}
+        size="1x"
+      />
       <div className={isSeeingCondition ? "iconText" : "iconText iconTextPink"}>
         보고싶어요
       </div>

@@ -11,9 +11,10 @@ const Information = ({
   setIsSeeingCondition,
   isCommentCondition,
   addCommentButton,
+  filmData: {
+    film: { name, release_date, image_url, genre, countries },
+  },
 }) => {
-  const data = null;
-
   const [hovered, setHovered] = useState(null);
   const [clicked, setClicked] = useState(null);
 
@@ -21,25 +22,31 @@ const Information = ({
     <section className="information">
       <div className="midWrapper">
         <div className="poster">
-          <img className="posterImage" src={data} alt="poster_image" />
+          <img className="posterImage" src={image_url} alt="poster_image" />
         </div>
         <div className="posterWrapper">
           <div className="posterDescription">
             <div className="posterTextWrapper">
-              <h1 className="posterTitle">{data}</h1>
+              <h1 className="posterTitle">{name}</h1>
               <p className="posterCategoryWrapper">
-                <span className="posterRelease">{data}</span>
+                <span className="posterRelease">{release_date}</span>
                 <span className="posterTextDivide">・</span>
-                <span className="posterCategory">{data}</span>
+                <span className="posterCategory">{genre[0]}</span>
+                <span
+                  style={genre[1] ? { display: "inline" } : { display: "none" }}
+                  className="posterCategory"
+                >
+                  {genre[1]}
+                </span>
                 <span className="posterTextDivide">・</span>
-                <span className="posterCountries">{data}</span>
+                <span className="posterCountries">{countries}</span>
               </p>
             </div>
             <div className="ratingScoreWrapper">
               <span className="scoreAverage">평균</span>
               <span className="scoreStar">★</span>
-              <span className="ratingScore">{data}</span>
-              <span className="ratingSumPerson">{data}</span>
+              <span className="ratingScore">3.9</span>
+              <span className="ratingSumPerson">27만명</span>
             </div>
             <div className="posterRatingButton">
               <div className="buttonWrapper">

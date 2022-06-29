@@ -11,13 +11,14 @@
 
   .filmCrewList {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 10px;
     overflow-x: hidden;
 
     .filmCrewListItem {
-      width: 50%;
       margin-top: $margin10;
+      min-width: 48%;
 
       .bundleWrapper {
         display: flex;

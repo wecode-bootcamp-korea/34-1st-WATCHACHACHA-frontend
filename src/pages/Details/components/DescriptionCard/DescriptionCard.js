@@ -8,6 +8,7 @@ const DescriptionCard = ({
   isSeeingCondition,
   isCommentCondition,
   addCommentButton,
+  filmData,
 }) => {
   return (
     <div className="descriptionWrapper">
@@ -19,7 +20,7 @@ const DescriptionCard = ({
               addCommentButton={addCommentButton}
             />
           )}
-          <Description />
+          <Description filmData={filmData} />
         </div>
         <Aside />
       </div>

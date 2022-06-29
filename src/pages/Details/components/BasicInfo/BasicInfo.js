@@ -1,8 +1,20 @@
 import React from "react";
 import "./BasicInfo.scss";
 
-const BasicInfo = () => {
-  const data = null;
+const BasicInfo = ({
+  filmData,
+  filmData: {
+    film: {
+      name,
+      release_date,
+      running_time_min,
+      descriptions,
+      genre,
+      countries,
+    },
+  },
+}) => {
+  if (filmData === undefined) return;
   return (
     <div className="basicInfo">
       <div className="basicInfoWrapper">
@@ -10,17 +22,23 @@ const BasicInfo = () => {
         <button className="basicInfoMore">더보기</button>
       </div>
       <div className="simplyInfo">
-        <p className="filmTitle">{data}</p>
+        <p className="filmTitle">{name}</p>
         <p className="filmCategory">
-          <span className="categoryRelease">{data}</span>
+          <span className="categoryRelease">{release_date}</span>
           <span className="categoryDot">·</span>
-          <span className="categoryCountries">{data}</span>
+          <span className="categoryCountries">{countries}</span>
           <span className="categoryDot">·</span>
-          <span className="categoryGenres">{data}</span>
+          <span className="categoryGenres">{genre[0]}</span>
+          <span
+            style={genre[1] ? { display: "inline" } : { display: "none" }}
+            className="categoryGenres"
+          >
+            {genre[1]}
+          </span>
         </p>
-        <p className="showingTime">{data}</p>
+        <p className="showingTime">{`${running_time_min} 분`}</p>
       </div>
-      <p className="filmDescription">{data}</p>
+      <p className="filmDescription">{descriptions}</p>
     </div>
   );
 };

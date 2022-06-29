@@ -15,27 +15,29 @@ const Detail = () => {
   const addCommentButton = () => setIsCommentCondition(!isCommentCondition);
 
   useEffect(() => {
-    fetch(`data/detailData.json`)
+    fetch(`http://10.58.7.17:8000/films/1`)
       .then(res => res.json())
-      .then(setFilmsData);
-    setIsLoading(false);
+      .then(res => setFilmsData(res))
+      .then(() => setIsLoading(false));
   }, []);
 
   if (isLoading) return <SkeletonUi />;
 
   return (
     <div className="detailPage">
-      <ThumbnailImage filmsData={filmsData} />
+      <ThumbnailImage />
       <Information
         isSeeingCondition={isSeeingCondition}
         setIsSeeingCondition={setIsSeeingCondition}
         isCommentCondition={isCommentCondition}
         addCommentButton={addCommentButton}
+        filmData={filmsData}
       />
       <DescriptionCard
         isSeeingCondition={isSeeingCondition}
         isCommentCondition={isCommentCondition}
         addCommentButton={addCommentButton}
+        filmData={filmsData}
       />
     </div>
   );

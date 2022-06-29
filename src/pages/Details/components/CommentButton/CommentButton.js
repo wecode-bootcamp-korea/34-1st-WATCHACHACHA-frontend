@@ -11,7 +11,7 @@ const CommentButton = ({ isCommentCondition, addCommentButton }) => {
         <FontAwesomeIcon icon={faPen} className="penIcon" />
         <div className="iconText">코멘트</div>
       </button>
-      {!isCommentCondition ? <CommentModal /> : null}
+      {!isCommentCondition && <CommentModal />}
     </div>
   );
 };
