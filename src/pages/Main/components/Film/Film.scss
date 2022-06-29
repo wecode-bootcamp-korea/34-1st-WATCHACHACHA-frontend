@@ -1,0 +1,40 @@
+.film {
+  width: 250px;
+  height: 420px;
+  margin-top: 15px;
+  margin-right: 25px;
+  padding: 1px;
+
+  .filmDetail {
+    text-decoration: none;
+
+    .posterBox {
+      height: 350px;
+
+      .filmPosters {
+        height: 350px;
+        width: 250px;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        object-fit: cover;
+      }
+    }
+
+    .filmDescription {
+      margin-top: 8px;
+      color: gray;
+
+      .filmName {
+        margin-bottom: 10px;
+        font-weight: bold;
+        color: gray;
+      }
+      .filmYear,
+      .filmAverage {
+        margin-top: 5px;
+        font-size: 14px;
+        color: gray;
+      }
+    }
+  }
+}
