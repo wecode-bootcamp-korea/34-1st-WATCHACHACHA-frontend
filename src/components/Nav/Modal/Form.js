@@ -97,18 +97,15 @@ export default function Form({
       .then(result => {
         if (result.access_token) {
           localStorage.setItem("token", result.access_token);
-          localStorage.setItem("userEmail", email);
           handleModal("");
           handleProfileNav("loginSuccess");
           navigate("/");
-          const userEmail = localStorage.getItem("userEmail");
-          console.log(userEmail);
         } else {
           alert(LOGIN_ERROR_MESSAGE[result.message]);
         }
-      })
-      .catch(error => console.log(error));
+      });
   };
+
   const signupService = e => {
     e.preventDefault();
     fetch("http://10.58.2.194:8000/users/signup", {
