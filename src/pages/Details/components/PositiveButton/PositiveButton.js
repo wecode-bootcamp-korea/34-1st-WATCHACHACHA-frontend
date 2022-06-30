@@ -16,10 +16,12 @@ const PositiveButton = ({
     postUserId();
   };
 
-  const changedSeeingButton = () =>
+  const changedSeeingButton = () => {
     setTimeout(() => {
       setIsSeeingCondition(!isSeeingCondition);
     }, 200);
+  };
+
   clearTimeout(changedSeeingButton);
 
   return (
