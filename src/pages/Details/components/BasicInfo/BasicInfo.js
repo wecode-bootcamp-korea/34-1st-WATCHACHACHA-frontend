@@ -4,7 +4,7 @@ import "./BasicInfo.scss";
 const BasicInfo = ({
   filmData,
   filmData: {
-    film: {
+    results: {
       name,
       release_date,
       running_time_min,
