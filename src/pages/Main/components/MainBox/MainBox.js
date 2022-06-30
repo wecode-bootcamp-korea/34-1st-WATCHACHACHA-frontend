@@ -12,9 +12,7 @@ const MainBox = ({ movies, theme }) => {
   const toNext = () => {
     slidePx > -4125 && setSlidePx(slidePx - 1375);
   };
-
   if (!movies) return;
-
   return (
     <div className="mainBox">
       <p className="filmTheme">{theme.title}</p>
