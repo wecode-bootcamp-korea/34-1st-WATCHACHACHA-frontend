@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import LoginModal from "./Modal/LoginModal";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import data from "./data";
 import LogoutNav from "./LogoutNav";
@@ -42,9 +41,11 @@ const Nav = () => {
               <span className="watchaPointColor">WATCHA</span> CLASSIC
             </span>
           </li>
+
           <li className="movieBtn">
             <button>영화</button>
           </li>
+
           <li className="search">
             <form className="searchBox">
               <input

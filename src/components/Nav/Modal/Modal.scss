@@ -6,9 +6,9 @@
   .loginModalContainer {
     position: absolute;
     top: 50px;
-    left: 50%;
     z-index: 11;
     position: fixed;
+    left: 50%;
     transform: translate(-50%, 0);
 
     .loginModal {

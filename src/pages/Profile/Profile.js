@@ -1,24 +1,30 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Profile.scss";
-import { useParams } from "react-router-dom";
-import ProfileSetting from "./ProfileSetting";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
-  const [modalStatus, setModalStatus] = useState(false);
-  const [userInfo, setUserInfo] = useState([]);
+  const navigate = useNavigate();
+  const [userInfo, setUserInfo] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
-  const params = useParams();
-  const { username, rate_count, watch_list_count } = userInfo;
+  const goToWishList = () => {
+    navigate("/cart");
+  };
 
   useEffect(() => {
-    const userId = params.id;
-    fetch("http://localhost:3000/data/userData.json")
+    fetch("http://10.58.2.194:8000/users", {
+      method: "GET",
+      headers: { Authorization: localStorage.getItem("token") },
+    })
       .then(res => res.json())
       .then(data => {
-        setUserInfo(data[userId - 1]);
-      });
+        setUserInfo(data);
+      })
+      .then(() => setIsLoading(false));
   }, []);
+
+  if (isLoading) return;
 
   return (
     <section className="profileBackground">
@@ -37,7 +43,9 @@ const Profile = () => {
                     </div>
                   </div>
                   <div className="profileUserBox">
-                    <h1 className="profileUserName">{username}</h1>
+                    <h1 className="profileUserName">
+                      {userInfo.results.username}
+                    </h1>
                     <div className="profileUserContent">
                       <div>프로필이 없습니다.</div>
                     </div>
@@ -56,25 +64,21 @@ const Profile = () => {
                 </ul>
               </div>
               <div className="profileLike">
-                <a>
+                <div className="profileLikeBox" onClick={goToWishList}>
                   <ul>
                     <li className="title">영화</li>
-                    <li className="star">★{rate_count}</li>
+                    <li className="star">★3</li>
                     <li className="watch">
-                      보고싶어요<strong>{watch_list_count}</strong>
+                      보고싶어요
+                      <strong>{userInfo.results.watchlist_count}</strong>
                     </li>
                   </ul>
-                </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div
-        className={modalStatus ? "modalBackground" : null}
-        onClick={() => setModalStatus(false)}
-      />
-      {modalStatus && <ProfileSetting />}
     </section>
   );
 };
