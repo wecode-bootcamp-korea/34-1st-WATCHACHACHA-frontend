@@ -11,13 +11,15 @@ const Information = ({
   setIsSeeingCondition,
   isCommentCondition,
   addCommentButton,
+  filmData,
   filmData: {
     results: { name, release_date, image_url, genre, countries },
   },
+  getUserName,
+  postUserId,
 }) => {
   const [hovered, setHovered] = useState(null);
   const [clicked, setClicked] = useState(null);
-
   return (
     <section className="information">
       <div className="midWrapper">
@@ -65,10 +67,13 @@ const Information = ({
                   <PositiveButton
                     isSeeingCondition={isSeeingCondition}
                     setIsSeeingCondition={setIsSeeingCondition}
+                    getUserName={getUserName}
+                    postUserId={postUserId}
                   />
                   <CommentButton
                     isCommentCondition={isCommentCondition}
                     addCommentButton={addCommentButton}
+                    filmData={filmData}
                   />
                 </div>
               </div>

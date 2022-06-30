@@ -20,7 +20,7 @@ const CommentModal = ({ addCommentButton }) => {
       <div onClick={addCommentButton} className="commentModal" />
       <div className="modalArea">
         <div className="titleWrapper">
-          <h2>터미네이터</h2>
+          <h2>치킨</h2>
           <button onClick={addCommentButton} className="closeButton">
             <FontAwesomeIcon icon={faXmark} size="2x" className="penIcon" />
           </button>
