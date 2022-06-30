@@ -1,14 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./WishList.scss";
-const WishList = () => {
-  //{wish}
+const WishList = ({ wish }) => {
   return (
     <div>
-      <li className="wishFilm">
-        {/* <li className="film" id={wish.id}> */}
-        {/* <Link to={`/detail/${id}`} className="filmDetail"> */}
-        <Link to="/detail/" className="wishFilmDetail">
+      <li className="wishFilm" id={wish.id}>
+        <Link to={`/detail/${wish.id}`} className="wishFilmDetail">
           <div className="wishPosterBox">
             <img
               src="/images/poster/copyrightfree.jpg"
@@ -17,7 +14,7 @@ const WishList = () => {
             />
           </div>
           <div className="wishFilmDescription">
-            <p className="wishFilmName">타이타닉</p>
+            <p className="wishFilmName">{wish.name}</p>
           </div>
         </Link>
       </li>

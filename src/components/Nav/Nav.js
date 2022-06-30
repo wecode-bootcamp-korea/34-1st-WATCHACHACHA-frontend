@@ -46,7 +46,7 @@ const Nav = () => {
             <button>영화</button>
           </li>
           <li className="search">
-            <form className="searvchBox">
+            <form className="searchBox">
               <input
                 type="text"
                 placeholder="콘텐츠, 인물, 컬렉션, 유저를 검색해보세요."
