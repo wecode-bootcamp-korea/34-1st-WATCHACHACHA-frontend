@@ -4,17 +4,9 @@ import "./Nav.scss";
 
 const LoginOnNav = () => {
   const navigate = useNavigate();
-  const [userInfo, setUserInfo] = useState();
 
-  const getUserInfoData = e => {
-    e.preventDefault();
-    fetch("api주소")
-      .then(response => response.json())
-      .then(result => {
-        if (result.access_token) {
-          setUserInfo(result);
-        }
-      });
+  const goToProfile = () => {
+    navigate("/profile");
   };
 
   return (
@@ -27,6 +19,7 @@ const LoginOnNav = () => {
           className="fa-regular fa-lg fa-user"
           onClick={e => {
             e.preventDefault();
+            goToProfile();
           }}
         />
       </li>

@@ -12,7 +12,7 @@ const Information = ({
   isCommentCondition,
   addCommentButton,
   filmData: {
-    film: { name, release_date, image_url, genre, countries },
+    results: { name, release_date, image_url, genre, countries },
   },
 }) => {
   const [hovered, setHovered] = useState(null);

@@ -18,7 +18,7 @@ const Detail = () => {
   const addCommentButton = () => setIsCommentCondition(!isCommentCondition);
 
   useEffect(() => {
-    fetch(`http://10.58.7.17:8000/films/${params.id}`)
+    fetch(`http://10.58.2.194:8000/films/${params.id}`)
       .then(res => res.json())
       .then(res => setFilmsData(res))
       .then(() => setIsLoading(false));
