@@ -1,12 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./Profile.scss";
-
-import ProfileSetting from "./ProfileSetting";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
+  const navigate = useNavigate();
   const [userInfo, setUserInfo] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+
+  const goToWishList = () => {
+    navigate("/cart");
+  };
 
   useEffect(() => {
     fetch("http://10.58.2.194:8000/users", {
@@ -60,18 +64,16 @@ const Profile = () => {
                 </ul>
               </div>
               <div className="profileLike">
-                <a>
+                <div className="profileLikeBox" onClick={goToWishList}>
                   <ul>
                     <li className="title">영화</li>
-                    <li className="star">
-                      ★{userInfo.results.watchlist_count}
-                    </li>
+                    <li className="star">★3</li>
                     <li className="watch">
                       보고싶어요
-                      <strong>8</strong>
+                      <strong>{userInfo.results.watchlist_count}</strong>
                     </li>
                   </ul>
-                </a>
+                </div>
               </div>
             </div>
           </div>

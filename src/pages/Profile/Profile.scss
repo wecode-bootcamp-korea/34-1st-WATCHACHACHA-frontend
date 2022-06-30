@@ -165,7 +165,7 @@
             width: 100%;
             padding: 20px 0px 20px 0px;
 
-            a {
+            .profileLikeBox {
               display: inline-block;
               position: relative;
               background: linear-gradient(
@@ -177,6 +177,7 @@
               width: 200px;
               height: 200px;
               border-radius: 6px;
+              cursor: pointer;
 
               ul {
                 list-style: none;
