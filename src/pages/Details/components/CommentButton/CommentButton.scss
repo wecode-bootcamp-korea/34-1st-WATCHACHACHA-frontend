@@ -2,7 +2,7 @@
 
 .commentButton {
   @include flexCustom(flex-start, center);
-  border: none;
+  border: 0;
   background-color: #ffffff;
   cursor: pointer;
 

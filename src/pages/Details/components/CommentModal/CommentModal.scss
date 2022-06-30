@@ -28,7 +28,7 @@
 
     .closeButton {
       @include area(40px, 40px);
-      border: none;
+      border: 0;
       border-radius: 50%;
       cursor: pointer;
     }
@@ -36,9 +36,9 @@
 
   .commentText {
     width: 100%;
-    border: none;
+    border: 0;
     padding-bottom: 65%;
-    outline: none;
+    outline: 0;
     font-size: 17px;
 
     &::placeholder {
@@ -66,10 +66,10 @@
 
     .saveButton {
       @include area(125px, 40px);
-      border: none;
+      border: 0;
       border-radius: 10px;
       background-color: #ff2f6e;
-      color: #ffffff;
+      color: #fff;
 
       &:disabled {
         opacity: 0.5;

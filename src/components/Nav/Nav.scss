@@ -8,18 +8,15 @@
   justify-content: center;
   width: 100%;
   border-bottom: 1px solid #dbdbdb;
-
   .navBox {
     display: flex;
     width: 1350px;
     height: 62px;
     padding: 0px;
-
     .navList {
       display: flex;
       align-items: center;
       width: 100%;
-
       .movieBtn {
         margin-left: 50px;
         button {
@@ -54,7 +51,6 @@
           }
         }
       }
-
       .loginBtn {
         margin-left: 20px;
         button {
@@ -63,7 +59,6 @@
           color: #74747b;
         }
       }
-
       .signInBtn {
         margin-left: 20px;
         button {
@@ -96,13 +91,11 @@
     }
   }
 }
-
 .logo {
   font-size: 30px;
   font-weight: 400;
   letter-spacing: -1.5px;
   cursor: pointer;
-
   .watchaPointColor {
     color: #f70554;
     font-weight: bolder;
