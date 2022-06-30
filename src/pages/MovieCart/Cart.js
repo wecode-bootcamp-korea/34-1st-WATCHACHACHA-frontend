@@ -5,13 +5,13 @@ import "./Cart.scss";
 const Cart = () => {
   const [wish, setWish] = useState([]);
   useEffect(() => {
-    fetch("http://10.58.2.194:8000/users", {
+    fetch("http://10.58.2.194:8000/users/watchlist", {
       method: "GET",
       headers: { Authorization: localStorage.getItem("token") },
     })
       .then(res => res.json())
       .then(data => setWish(data));
-  });
+  }, []);
   if (wish.length === 0) return <>loading...</>;
   return (
     <>

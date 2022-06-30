@@ -1,5 +1,5 @@
 .wishFilm {
-  margin: 30px 10px 30px 10px;
+  margin: 20px 10px 30px 10px;
 
   .wishFilmDetail {
     text-decoration: none;
@@ -10,6 +10,9 @@
       width: 158px;
       height: 220px;
       border-radius: 3px;
+    }
+    .wishFilmName {
+      padding-top: 5px;
     }
   }
 }
