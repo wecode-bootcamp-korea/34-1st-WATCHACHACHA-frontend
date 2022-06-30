@@ -4,9 +4,16 @@ import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 import "./PositiveButton.scss";
 
-const PositiveButton = ({ isSeeingCondition, setIsSeeingCondition }) => {
+const PositiveButton = ({
+  isSeeingCondition,
+  setIsSeeingCondition,
+  getUserName,
+  postUserId,
+}) => {
   const wishFilmSend = () => {
     changedSeeingButton();
+    getUserName();
+    postUserId();
   };
 
   const changedSeeingButton = () =>

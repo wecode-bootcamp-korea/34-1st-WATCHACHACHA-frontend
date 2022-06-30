@@ -15,14 +15,33 @@ const Detail = () => {
   const [isSeeingCondition, setIsSeeingCondition] = useState(true);
   const [isCommentCondition, setIsCommentCondition] = useState(true);
 
+  const [userName, setUserName] = useState([]);
+
   const addCommentButton = () => setIsCommentCondition(!isCommentCondition);
 
   useEffect(() => {
-    fetch(`http://10.58.7.17:8000/films/${params.id}`)
+    fetch(`http://10.58.2.194:8000/films/${params.id}`)
       .then(res => res.json())
       .then(res => setFilmsData(res))
       .then(() => setIsLoading(false));
   }, []);
+
+  const getUserName = () => {
+    fetch("http://10.58.2.194:8000/users", {
+      method: "GET",
+      headers: { Authorization: localStorage.getItem("token") },
+    })
+      .then(res => res.json())
+      .then(data => setUserName(data));
+  };
+
+  const postUserId = () => {
+    fetch("http://10.58.2.194:8000/users/watchlist", {
+      method: "POST",
+      headers: { Authorization: localStorage.getItem("token") },
+      body: JSON.stringify({ film_id: params.id }),
+    });
+  };
 
   if (isLoading) return <SkeletonUi />;
 
@@ -35,12 +54,15 @@ const Detail = () => {
         isCommentCondition={isCommentCondition}
         addCommentButton={addCommentButton}
         filmData={filmsData}
+        getUserName={getUserName}
+        postUserId={postUserId}
       />
       <DescriptionCard
         isSeeingCondition={isSeeingCondition}
         isCommentCondition={isCommentCondition}
         addCommentButton={addCommentButton}
         filmData={filmsData}
+        userName={userName}
       />
     </div>
   );
